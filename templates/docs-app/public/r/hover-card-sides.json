@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-sides",
+  "registryDependencies": [
+    "button",
+    "hover-card"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/hover-card-sides.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@/registry/ui/hover-card\"\n\nconst HOVER_CARD_SIDES = [\"left\", \"top\", \"bottom\", \"right\"] as const\n\nexport function HoverCardSides() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {HOVER_CARD_SIDES.map((side) => (\n        <HoverCard key={side}>\n          <HoverCardTrigger\n            delay={100}\n            closeDelay={100}\n            render={<Button variant=\"outline\" className=\"capitalize\" />}\n          >\n            {side}\n          </HoverCardTrigger>\n          <HoverCardContent side={side}>\n            <div className=\"flex flex-col gap-1\">\n              <h4 className=\"font-medium\">Hover Card</h4>\n              <p>This hover card appears on the {side} side of the trigger.</p>\n            </div>\n          </HoverCardContent>\n        </HoverCard>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

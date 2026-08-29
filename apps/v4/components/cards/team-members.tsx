@@ -2,19 +2,15 @@
 
 import { ChevronDownIcon } from "lucide-react"
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/new-york-v4/ui/avatar"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar"
+import { Button } from "@/registry/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+} from "@/registry/ui/card"
 import {
   Command,
   CommandEmpty,
@@ -22,7 +18,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york-v4/ui/command"
+} from "@/registry/ui/command"
 import {
   Item,
   ItemActions,
@@ -30,12 +26,8 @@ import {
   ItemDescription,
   ItemGroup,
   ItemTitle,
-} from "@/registry/new-york-v4/ui/item"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+} from "@/registry/ui/item"
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/ui/popover"
 
 const teamMembers = [
   {
@@ -100,14 +92,16 @@ export function CardsTeamMembers() {
               </ItemContent>
               <ItemActions>
                 <Popover>
-                  <PopoverTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="ml-auto shadow-none"
-                    >
-                      {member.role} <ChevronDownIcon />
-                    </Button>
+                  <PopoverTrigger
+                    render={
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="ml-auto shadow-none"
+                      />
+                    }
+                  >
+                    {member.role} <ChevronDownIcon />
                   </PopoverTrigger>
                   <PopoverContent className="p-0" align="end">
                     <Command>

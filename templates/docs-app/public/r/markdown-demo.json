@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "markdown-demo",
+  "files": [
+    {
+      "path": "registry/examples/markdown-demo.tsx",
+      "content": "\"use client\"\n\nimport { Markdown } from \"@/components/markdown\"\n\nconst markdown = `## Getting started\n\nMarkdown lets you write formatted text with a simple syntax.\n\n### Features\n\n- **Bold** and *italic* text\n- [Links](https://example.com) and \\`inline code\\`\n- Ordered and unordered lists\n- Tables, blockquotes, and code blocks\n\n| Syntax | Result |\n| --- | --- |\n| \\`**bold**\\` | **bold** |\n| \\`*italic*\\` | *italic* |\n| \\`\\`code\\`\\` | \\`code\\` |\n\nHow about a quote? How does this look?\n\n> The best way to learn markdown is to write it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.\n\nNow let's try a code block. It should have line numbers, a copy button and syntax highlighting.\n\n\\`\\`\\`tsx\nexport function Greeting({ name }: { name: string }) {\n  return <p>Hello, {name}!</p>\n}\n\\`\\`\\`\n\nIf you need more plugins, you can pass them to the \\`Markdown\\` component.\n`\n\nexport function MarkdownDemo() {\n  return (\n    <div className=\"max-w-md\">\n      <Markdown>{markdown}</Markdown>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

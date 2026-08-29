@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shimmer-angle",
+  "files": [
+    {
+      "path": "registry/examples/shimmer-angle.tsx",
+      "content": "export function ShimmerAngle() {\n  return (\n    <div className=\"mx-auto grid w-full max-w-lg gap-6 text-center text-sm text-muted-foreground sm:grid-cols-2\">\n      <div className=\"flex flex-col gap-3\">\n        <p className=\"shimmer\">Generating response&hellip;</p>\n        <p className=\"font-mono text-xs\">shimmer</p>\n      </div>\n      <div className=\"flex flex-col gap-3\">\n        <p className=\"shimmer shimmer-angle-45\">Generating response&hellip;</p>\n        <p className=\"font-mono text-xs\">shimmer-angle-45</p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

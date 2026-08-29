@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-alignments",
+  "registryDependencies": [
+    "button",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/popover-alignments.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/ui/popover\"\n\nexport function PopoverAlignments() {\n  return (\n    <>\n      <div className=\"flex gap-6\">\n        <Popover>\n          <PopoverTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n            Start\n          </PopoverTrigger>\n          <PopoverContent align=\"start\" className=\"w-40\">\n            Aligned to start\n          </PopoverContent>\n        </Popover>\n        <Popover>\n          <PopoverTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n            Center\n          </PopoverTrigger>\n          <PopoverContent align=\"center\" className=\"w-40\">\n            Aligned to center\n          </PopoverContent>\n        </Popover>\n        <Popover>\n          <PopoverTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n            End\n          </PopoverTrigger>\n          <PopoverContent align=\"end\" className=\"w-40\">\n            Aligned to end\n          </PopoverContent>\n        </Popover>\n      </div>\n    </>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

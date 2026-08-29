@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-spinner",
+  "registryDependencies": [
+    "button",
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/button-spinner.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\"\nimport { Spinner } from \"@/registry/ui/spinner\"\n\nexport default function ButtonLoading() {\n  return (\n    <div className=\"flex gap-2\">\n      <Button variant=\"outline\" disabled>\n        <Spinner data-icon=\"inline-start\" />\n        Generating\n      </Button>\n      <Button variant=\"secondary\" disabled>\n        Downloading\n        <Spinner data-icon=\"inline-start\" />\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

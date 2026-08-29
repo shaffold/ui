@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-fade-horizontal",
+  "files": [
+    {
+      "path": "registry/examples/scroll-fade-horizontal.tsx",
+      "content": "const tags = [\n  \"Design\",\n  \"Engineering\",\n  \"Marketing\",\n  \"Product\",\n  \"Research\",\n  \"Sales\",\n  \"Support\",\n  \"Operations\",\n  \"Finance\",\n  \"Legal\",\n  \"People\",\n  \"Security\",\n]\n\nexport function ScrollFadeHorizontal() {\n  return (\n    <div className=\"mx-auto w-full max-w-xs overflow-hidden rounded-2xl border\">\n      <div className=\"scroll-fade-x scrollbar-none overflow-x-auto\">\n        <div className=\"flex w-max gap-1.5 p-1.5\">\n          {tags.map((tag) => (\n            <div\n              key={tag}\n              className=\"shrink-0 rounded-lg bg-muted px-3 py-2.5 text-sm\"\n            >\n              {tag}\n            </div>\n          ))}\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

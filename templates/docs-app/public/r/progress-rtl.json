@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-rtl",
+  "files": [
+    {
+      "path": "registry/examples/progress-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@/styles/base-nova/ui-rtl/progress\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      label: \"Upload progress\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      label: \"تقدم الرفع\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      label: \"התקדמות העלאה\",\n    },\n  },\n}\n\nfunction toArabicNumerals(num: number): string {\n  const arabicNumerals = [\"٠\", \"١\", \"٢\", \"٣\", \"٤\", \"٥\", \"٦\", \"٧\", \"٨\", \"٩\"]\n  return num\n    .toString()\n    .split(\"\")\n    .map((digit) => arabicNumerals[parseInt(digit, 10)])\n    .join(\"\")\n}\n\nexport function ProgressRtl() {\n  const { dir, t, language } = useTranslation(translations, \"ar\")\n\n  const formatNumber = (num: number): string => {\n    if (language === \"ar\") {\n      return toArabicNumerals(num)\n    }\n    return num.toString()\n  }\n\n  return (\n    <Progress value={56} className=\"w-full max-w-sm\" dir={dir}>\n      <ProgressLabel>{t.label}</ProgressLabel>\n      <ProgressValue>\n        {(value) => (\n          <span className=\"ms-auto\">\n            {formatNumber(parseFloat(value ?? \"0\"))}%\n          </span>\n        )}\n      </ProgressValue>\n    </Progress>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

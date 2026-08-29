@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-invalid",
+  "registryDependencies": [
+    "input-otp"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-otp-invalid.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@/registry/ui/input-otp\"\n\nexport function InputOTPInvalid() {\n  const [value, setValue] = React.useState(\"000000\")\n\n  return (\n    <InputOTP maxLength={6} value={value} onChange={setValue}>\n      <InputOTPGroup>\n        <InputOTPSlot index={0} aria-invalid />\n        <InputOTPSlot index={1} aria-invalid />\n      </InputOTPGroup>\n      <InputOTPSeparator />\n      <InputOTPGroup>\n        <InputOTPSlot index={2} aria-invalid />\n        <InputOTPSlot index={3} aria-invalid />\n      </InputOTPGroup>\n      <InputOTPSeparator />\n      <InputOTPGroup>\n        <InputOTPSlot index={4} aria-invalid />\n        <InputOTPSlot index={5} aria-invalid />\n      </InputOTPGroup>\n    </InputOTP>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

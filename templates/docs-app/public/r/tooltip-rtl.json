@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-rtl",
+  "files": [
+    {
+      "path": "registry/examples/tooltip-rtl.tsx",
+      "content": "\"use client\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Button } from \"@/styles/base-nova/ui-rtl/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/styles/base-nova/ui-rtl/tooltip\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      content: \"Add to library\",\n      \"inline-start\": \"Inline Start\",\n      left: \"Left\",\n      top: \"Top\",\n      bottom: \"Bottom\",\n      right: \"Right\",\n      \"inline-end\": \"Inline End\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      content: \"إضافة إلى المكتبة\",\n      \"inline-start\": \"بداية السطر\",\n      left: \"يسار\",\n      top: \"أعلى\",\n      bottom: \"أسفل\",\n      right: \"يمين\",\n      \"inline-end\": \"نهاية السطر\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      content: \"הוסף לספרייה\",\n      \"inline-start\": \"תחילת השורה\",\n      left: \"שמאל\",\n      top: \"למעלה\",\n      bottom: \"למטה\",\n      right: \"ימין\",\n      \"inline-end\": \"סוף השורה\",\n    },\n  },\n}\n\nconst physicalSides = [\"left\", \"top\", \"bottom\", \"right\"] as const\nconst logicalSides = [\"inline-start\", \"inline-end\"] as const\n\nexport function TooltipRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <div className=\"grid gap-4\">\n      <div className=\"flex flex-wrap justify-center gap-2\">\n        {physicalSides.map((side) => (\n          <Tooltip key={side}>\n            <TooltipTrigger render={<Button variant=\"outline\" />}>\n              {t[side]}\n            </TooltipTrigger>\n            <TooltipContent side={side} dir={dir}>\n              {t.content}\n            </TooltipContent>\n          </Tooltip>\n        ))}\n      </div>\n      <div className=\"flex flex-wrap justify-center gap-2\">\n        {logicalSides.map((side) => (\n          <Tooltip key={side}>\n            <TooltipTrigger render={<Button variant=\"outline\" />}>\n              {t[side]}\n            </TooltipTrigger>\n            <TooltipContent side={side} dir={dir}>\n              {t.content}\n            </TooltipContent>\n          </Tooltip>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

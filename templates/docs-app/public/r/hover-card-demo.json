@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-demo",
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "hover-card"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/hover-card-demo.tsx",
+      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/ui/avatar\"\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@/registry/ui/hover-card\"\n\nexport default function HoverCardDemo() {\n  return (\n    <HoverCard>\n      <HoverCardTrigger\n        delay={10}\n        closeDelay={100}\n        render={<Button variant=\"link\" />}\n      >\n        Hover Here\n      </HoverCardTrigger>\n      <HoverCardContent className=\"flex w-64 flex-col gap-0.5\">\n        <div className=\"font-semibold\">@nextjs</div>\n        <div>The React Framework – created and maintained by @vercel.</div>\n        <div className=\"mt-1 text-xs text-muted-foreground\">\n          Joined December 2021\n        </div>\n      </HoverCardContent>\n    </HoverCard>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "docs-nav",
+  "files": [
+    {
+      "path": "lib/docs-nav.ts",
+      "content": "export type DocsNavGroup = {\n  title: string\n  items: { title: string; href: string }[]\n}\n\n// Docs navigation. Replace/extend for your design system's pages.\nexport const docsNav: DocsNavGroup[] = [\n  {\n    title: \"Getting Started\",\n    items: [\n      { title: \"Introduction\", href: \"/\" },\n      { title: \"Installation\", href: \"/docs/installation\" },\n    ],\n  },\n  {\n    title: \"Components\",\n    items: [\n      { title: \"Button\", href: \"/docs/button\" },\n      { title: \"Tabs\", href: \"/docs/tabs\" },\n      { title: \"Dialog\", href: \"/docs/dialog\" },\n    ],\n  },\n]\n",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:lib"
+}

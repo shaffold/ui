@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "message-group",
+  "registryDependencies": [
+    "avatar",
+    "bubble",
+    "message"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/message-group.tsx",
+      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/ui/avatar\"\nimport { Bubble, BubbleContent } from \"@/registry/ui/bubble\"\nimport {\n  Message,\n  MessageAvatar,\n  MessageContent,\n  MessageGroup,\n} from \"@/registry/ui/message\"\n\nexport function MessageGroupDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-6 py-12\">\n      <MessageGroup>\n        <Message>\n          <MessageAvatar />\n          <MessageContent>\n            <Bubble variant=\"muted\">\n              <BubbleContent>I checked the registry addresses.</BubbleContent>\n            </Bubble>\n          </MessageContent>\n        </Message>\n        <Message>\n          <MessageAvatar>\n            <Avatar>\n              <AvatarImage src=\"/avatars/02.png\" alt=\"@avatar\" />\n              <AvatarFallback>CN</AvatarFallback>\n            </Avatar>\n          </MessageAvatar>\n          <MessageContent>\n            <Bubble variant=\"muted\">\n              <BubbleContent>\n                The component and example JSON now live under the UI registry.\n              </BubbleContent>\n            </Bubble>\n          </MessageContent>\n        </Message>\n      </MessageGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

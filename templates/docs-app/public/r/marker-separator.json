@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marker-separator",
+  "registryDependencies": [
+    "marker"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/marker-separator.tsx",
+      "content": "import { Marker, MarkerContent } from \"@/registry/ui/marker\"\n\nexport function MarkerSeparatorDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Marker variant=\"separator\">\n        <MarkerContent>Today</MarkerContent>\n      </Marker>\n      <Marker variant=\"separator\">\n        <MarkerContent>Worked for 42s</MarkerContent>\n      </Marker>\n      <Marker variant=\"separator\">\n        <MarkerContent>Conversation compacted</MarkerContent>\n      </Marker>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

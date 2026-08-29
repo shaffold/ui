@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet-no-close-button",
+  "registryDependencies": [
+    "button",
+    "sheet"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/sheet-no-close-button.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\"\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@/registry/ui/sheet\"\n\nexport default function SheetNoCloseButton() {\n  return (\n    <Sheet>\n      <SheetTrigger render={<Button variant=\"outline\" />}>\n        Open Sheet\n      </SheetTrigger>\n      <SheetContent showCloseButton={false}>\n        <SheetHeader>\n          <SheetTitle>No Close Button</SheetTitle>\n          <SheetDescription>\n            This sheet doesn&apos;t have a close button in the top-right corner.\n            Click outside to close.\n          </SheetDescription>\n        </SheetHeader>\n      </SheetContent>\n    </Sheet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

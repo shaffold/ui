@@ -1,19 +1,15 @@
 import { Copy } from "lucide-react"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Input } from "@/registry/new-york-v4/ui/input"
-import { Label } from "@/registry/new-york-v4/ui/label"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+import { Button } from "@/registry/ui/button"
+import { Input } from "@/registry/ui/input"
+import { Label } from "@/registry/ui/label"
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/ui/popover"
 
 export function PresetShare() {
   return (
     <Popover>
-      <PopoverTrigger asChild>
-        <Button variant="secondary">Share</Button>
+      <PopoverTrigger render={<Button variant="secondary" />}>
+        Share
       </PopoverTrigger>
       <PopoverContent align="end" className="flex w-[520px] flex-col gap-4">
         <div className="flex flex-col gap-1 text-center sm:text-left">

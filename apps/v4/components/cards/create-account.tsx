@@ -1,20 +1,20 @@
 "use client"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+} from "@/registry/ui/card"
 import {
   Field,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@/registry/new-york-v4/ui/field"
-import { Input } from "@/registry/new-york-v4/ui/input"
+} from "@/registry/ui/field"
+import { Input } from "@/registry/ui/input"
 
 export function CardsCreateAccount() {
   return (

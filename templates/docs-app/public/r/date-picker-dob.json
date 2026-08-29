@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-dob",
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "field",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/date-picker-dob.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport { Calendar } from \"@/registry/ui/calendar\"\nimport { Field, FieldLabel } from \"@/registry/ui/field\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/ui/popover\"\n\nexport function DatePickerSimple() {\n  const [open, setOpen] = React.useState(false)\n  const [date, setDate] = React.useState<Date | undefined>(undefined)\n\n  return (\n    <Field className=\"mx-auto w-44\">\n      <FieldLabel htmlFor=\"date\">Date of birth</FieldLabel>\n      <Popover open={open} onOpenChange={setOpen}>\n        <PopoverTrigger\n          render={\n            <Button\n              variant=\"outline\"\n              id=\"date\"\n              className=\"justify-start font-normal\"\n            />\n          }\n        >\n          {date ? date.toLocaleDateString() : \"Select date\"}\n        </PopoverTrigger>\n        <PopoverContent className=\"w-auto overflow-hidden p-0\" align=\"start\">\n          <Calendar\n            mode=\"single\"\n            selected={date}\n            defaultMonth={date}\n            captionLayout=\"dropdown\"\n            onSelect={(date) => {\n              setDate(date)\n              setOpen(false)\n            }}\n          />\n        </PopoverContent>\n      </Popover>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

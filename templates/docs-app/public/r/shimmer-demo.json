@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shimmer-demo",
+  "files": [
+    {
+      "path": "registry/examples/shimmer-demo.tsx",
+      "content": "export function ShimmerDemo() {\n  return (\n    <p className=\"shimmer text-sm text-muted-foreground\">\n      Generating response&hellip;\n    </p>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shimmer-rtl",
+  "files": [
+    {
+      "path": "registry/examples/shimmer-rtl.tsx",
+      "content": "export function ShimmerRtl() {\n  return (\n    <div className=\"mx-auto grid w-full max-w-lg gap-6 text-center text-sm text-muted-foreground sm:grid-cols-2\">\n      <div className=\"flex flex-col gap-3\">\n        <p dir=\"ltr\" className=\"shimmer\">\n          Generating response&hellip;\n        </p>\n        <p className=\"font-mono text-xs\">dir=&quot;ltr&quot;</p>\n      </div>\n      <div className=\"flex flex-col gap-3\">\n        <p dir=\"rtl\" className=\"shimmer\">\n          جارٍ إنشاء الرد&hellip;\n        </p>\n        <p className=\"font-mono text-xs\">dir=&quot;rtl&quot;</p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

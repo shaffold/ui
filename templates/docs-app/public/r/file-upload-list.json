@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "file-upload-list",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "item",
+    "progress"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/file-upload-list.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FileIcon } from \"lucide-react\"\n\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemGroup,\n  ItemMedia,\n  ItemTitle,\n} from \"@/registry/ui/item\"\nimport { Progress } from \"@/registry/ui/progress\"\n\nexport function FileUploadList() {\n  const files = React.useMemo(\n    () => [\n      {\n        id: \"1\",\n        name: \"document.pdf\",\n        progress: 45,\n        timeRemaining: \"2m 30s\",\n      },\n      {\n        id: \"2\",\n        name: \"presentation.pptx\",\n        progress: 78,\n        timeRemaining: \"45s\",\n      },\n      {\n        id: \"3\",\n        name: \"spreadsheet.xlsx\",\n        progress: 12,\n        timeRemaining: \"5m 12s\",\n      },\n      {\n        id: \"4\",\n        name: \"image.jpg\",\n        progress: 100,\n        timeRemaining: \"Complete\",\n      },\n    ],\n    []\n  )\n\n  return (\n    <ItemGroup>\n      {files.map((file) => (\n        <Item key={file.id} size=\"xs\" className=\"px-0\">\n          <ItemMedia variant=\"icon\">\n            <FileIcon className=\"size-5\" />\n          </ItemMedia>\n          <ItemContent className=\"inline-block truncate\">\n            <ItemTitle className=\"inline\">{file.name}</ItemTitle>\n          </ItemContent>\n          <ItemContent>\n            <Progress value={file.progress} className=\"w-32\" />\n          </ItemContent>\n          <ItemActions className=\"w-16 justify-end\">\n            <span className=\"text-sm text-muted-foreground\">\n              {file.timeRemaining}\n            </span>\n          </ItemActions>\n        </Item>\n      ))}\n    </ItemGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "attachment-trigger",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "attachment",
+    "dialog"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/attachment-trigger.tsx",
+      "content": "import { CopyIcon, FileSearchIcon, XIcon } from \"lucide-react\"\n\nimport {\n  Attachment,\n  AttachmentAction,\n  AttachmentActions,\n  AttachmentContent,\n  AttachmentDescription,\n  AttachmentMedia,\n  AttachmentTitle,\n  AttachmentTrigger,\n} from \"@/registry/ui/attachment\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/registry/ui/dialog\"\n\nexport function AttachmentTriggerDemo() {\n  return (\n    <div className=\"mx-auto w-full max-w-sm py-12\">\n      <Dialog>\n        <Attachment className=\"w-full\">\n          <AttachmentMedia>\n            <FileSearchIcon />\n          </AttachmentMedia>\n          <AttachmentContent>\n            <AttachmentTitle>research-summary.pdf</AttachmentTitle>\n            <AttachmentDescription>Open preview dialog</AttachmentDescription>\n          </AttachmentContent>\n          <AttachmentActions>\n            <AttachmentAction aria-label=\"Copy link\">\n              <CopyIcon />\n            </AttachmentAction>\n            <AttachmentAction aria-label=\"Remove research-summary.pdf\">\n              <XIcon />\n            </AttachmentAction>\n          </AttachmentActions>\n          <DialogTrigger\n            render={\n              <AttachmentTrigger aria-label=\"Preview research-summary.pdf\" />\n            }\n          />\n        </Attachment>\n        <DialogContent className=\"sm:max-w-md\">\n          <DialogHeader>\n            <DialogTitle>research-summary.pdf</DialogTitle>\n            <DialogDescription>\n              The attachment trigger fills the card and opens the dialog, while\n              the actions stay independently clickable above it.\n            </DialogDescription>\n          </DialogHeader>\n        </DialogContent>\n      </Dialog>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

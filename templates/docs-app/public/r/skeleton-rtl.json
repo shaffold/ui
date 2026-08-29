@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-rtl",
+  "files": [
+    {
+      "path": "registry/examples/skeleton-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Skeleton } from \"@/styles/base-nova/ui-rtl/skeleton\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {},\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {},\n  },\n  he: {\n    dir: \"rtl\",\n    values: {},\n  },\n}\n\nexport function SkeletonRtl() {\n  const { dir } = useTranslation(translations, \"ar\")\n\n  return (\n    <div className=\"flex items-center gap-4\" dir={dir}>\n      <Skeleton className=\"h-12 w-12 rounded-full\" />\n      <div className=\"space-y-2\">\n        <Skeleton className=\"h-4 w-[250px]\" />\n        <Skeleton className=\"h-4 w-[200px]\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

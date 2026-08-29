@@ -11,7 +11,7 @@ import { GitHubLink } from "@/components/github-link"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeSwitcher } from "@/components/mode-switcher"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+import { Separator } from "@/registry/ui/separator"
 import { Button } from "@/styles/radix-nova/ui/button"
 
 export function SiteHeader() {
@@ -46,11 +46,13 @@ export function SiteHeader() {
             <DesignerActions />
             <div className="flex items-center gap-2 group-has-data-[slot=designer]/layout:hidden">
               <Separator orientation="vertical" />
-              <Button asChild size="sm" className="h-[31px] rounded-lg">
-                <Link href="/create">
-                  <HugeiconsIcon icon={PlusSignIcon} />
-                  New
-                </Link>
+              <Button
+                size="sm"
+                className="h-[31px] rounded-lg"
+                render={<Link href="/create" />}
+              >
+                <HugeiconsIcon icon={PlusSignIcon} />
+                New
               </Button>
             </div>
           </div>

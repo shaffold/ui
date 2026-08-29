@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-time",
+  "dependencies": [
+    "date-fns",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "field",
+    "input",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/date-picker-time.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\nimport { ChevronDownIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport { Calendar } from \"@/registry/ui/calendar\"\nimport { Field, FieldGroup, FieldLabel } from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/ui/popover\"\n\nexport function DatePickerTime() {\n  const [open, setOpen] = React.useState(false)\n  const [date, setDate] = React.useState<Date | undefined>(undefined)\n\n  return (\n    <FieldGroup className=\"mx-auto max-w-xs flex-row\">\n      <Field>\n        <FieldLabel htmlFor=\"date-picker-optional\">Date</FieldLabel>\n        <Popover open={open} onOpenChange={setOpen}>\n          <PopoverTrigger\n            render={\n              <Button\n                variant=\"outline\"\n                id=\"date-picker-optional\"\n                className=\"w-32 justify-between font-normal\"\n              />\n            }\n          >\n            {date ? format(date, \"PPP\") : \"Select date\"}\n            <ChevronDownIcon data-icon=\"inline-end\" />\n          </PopoverTrigger>\n          <PopoverContent className=\"w-auto overflow-hidden p-0\" align=\"start\">\n            <Calendar\n              mode=\"single\"\n              selected={date}\n              captionLayout=\"dropdown\"\n              defaultMonth={date}\n              onSelect={(date) => {\n                setDate(date)\n                setOpen(false)\n              }}\n            />\n          </PopoverContent>\n        </Popover>\n      </Field>\n      <Field className=\"w-32\">\n        <FieldLabel htmlFor=\"time-picker-optional\">Time</FieldLabel>\n        <Input\n          type=\"time\"\n          id=\"time-picker-optional\"\n          step=\"1\"\n          defaultValue=\"10:30:00\"\n          className=\"appearance-none bg-background [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none\"\n        />\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

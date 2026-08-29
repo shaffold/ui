@@ -53,10 +53,11 @@ export default function IndexPage() {
         <PageHeaderHeading className="max-w-4xl">{title}</PageHeaderHeading>
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
-          <Button asChild className="h-[31px] rounded-lg">
-            <Link href="/create?preset=b27GcrRo">
-              Build Your Own <IconArrowRight data-icon="inline-end" />
-            </Link>
+          <Button
+            className="h-[31px] rounded-lg"
+            render={<Link href="/create?preset=b27GcrRo" />}
+          >
+            Build Your Own <IconArrowRight data-icon="inline-end" />
           </Button>
         </PageActions>
       </PageHeader>

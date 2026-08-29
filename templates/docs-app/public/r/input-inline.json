@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-inline",
+  "registryDependencies": [
+    "button",
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-inline.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\"\nimport { Field } from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\n\nexport function InputInline() {\n  return (\n    <Field orientation=\"horizontal\">\n      <Input type=\"search\" placeholder=\"Search...\" />\n      <Button>Search</Button>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -11,24 +11,24 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+} from "@/registry/ui/card"
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@/registry/new-york-v4/ui/chart"
+} from "@/registry/ui/chart"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
+} from "@/registry/ui/select"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/new-york-v4/ui/toggle-group"
+} from "@/registry/ui/toggle-group"
 
 export const description = "An interactive area chart"
 

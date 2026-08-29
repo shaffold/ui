@@ -6,7 +6,7 @@ import type { Popover as PopoverPrimitive } from "radix-ui"
 
 import { cn } from "@/lib/utils"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -14,18 +14,14 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york-v4/ui/command"
+} from "@/registry/ui/command"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/new-york-v4/ui/hover-card"
-import { Label } from "@/registry/new-york-v4/ui/label"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+} from "@/registry/ui/hover-card"
+import { Label } from "@/registry/ui/label"
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/ui/popover"
 
 import { type Model, type ModelType } from "../data/models"
 
@@ -43,8 +39,8 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
   return (
     <div className="grid gap-3">
       <HoverCard openDelay={200}>
-        <HoverCardTrigger asChild>
-          <Label htmlFor="model">Model</Label>
+        <HoverCardTrigger render={<Label htmlFor="model" />}>
+          Model
         </HoverCardTrigger>
         <HoverCardContent
           align="start"
@@ -56,17 +52,19 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
         </HoverCardContent>
       </HoverCard>
       <Popover open={open} onOpenChange={setOpen} {...props}>
-        <PopoverTrigger asChild>
-          <Button
-            variant="outline"
-            role="combobox"
-            aria-expanded={open}
-            aria-label="Select a model"
-            className="w-full justify-between"
-          >
-            {selectedModel ? selectedModel.name : "Select a model..."}
-            <ChevronsUpDown className="text-muted-foreground" />
-          </Button>
+        <PopoverTrigger
+          render={
+            <Button
+              variant="outline"
+              role="combobox"
+              aria-expanded={open}
+              aria-label="Select a model"
+              className="w-full justify-between"
+            />
+          }
+        >
+          {selectedModel ? selectedModel.name : "Select a model..."}
+          <ChevronsUpDown className="text-muted-foreground" />
         </PopoverTrigger>
         <PopoverContent align="end" className="w-[250px] p-0">
           <HoverCard>

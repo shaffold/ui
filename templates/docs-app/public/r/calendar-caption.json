@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-caption",
+  "registryDependencies": [
+    "calendar"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/calendar-caption.tsx",
+      "content": "\"use client\"\n\nimport { Calendar } from \"@/registry/ui/calendar\"\n\nexport function CalendarCaption() {\n  return (\n    <Calendar\n      mode=\"single\"\n      captionLayout=\"dropdown\"\n      className=\"rounded-lg border\"\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

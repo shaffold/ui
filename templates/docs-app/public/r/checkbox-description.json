@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-description",
+  "registryDependencies": [
+    "checkbox",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/checkbox-description.tsx",
+      "content": "import { Checkbox } from \"@/registry/ui/checkbox\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n} from \"@/registry/ui/field\"\n\nexport function CheckboxDescription() {\n  return (\n    <FieldGroup className=\"mx-auto w-72\">\n      <Field orientation=\"horizontal\">\n        <Checkbox\n          id=\"terms-checkbox-desc\"\n          name=\"terms-checkbox-desc\"\n          defaultChecked\n        />\n        <FieldContent>\n          <FieldLabel htmlFor=\"terms-checkbox-desc\">\n            Accept terms and conditions\n          </FieldLabel>\n          <FieldDescription>\n            By clicking this checkbox, you agree to the terms and conditions.\n          </FieldDescription>\n        </FieldContent>\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "native-select-rtl",
+  "files": [
+    {
+      "path": "registry/examples/native-select-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@/styles/base-nova/ui-rtl/native-select\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      placeholder: \"Select status\",\n      todo: \"Todo\",\n      inProgress: \"In Progress\",\n      done: \"Done\",\n      cancelled: \"Cancelled\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      placeholder: \"اختر الحالة\",\n      todo: \"مهام\",\n      inProgress: \"قيد التنفيذ\",\n      done: \"منجز\",\n      cancelled: \"ملغي\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      placeholder: \"בחר סטטוס\",\n      todo: \"לעשות\",\n      inProgress: \"בתהליך\",\n      done: \"הושלם\",\n      cancelled: \"בוטל\",\n    },\n  },\n}\n\nexport function NativeSelectRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <NativeSelect dir={dir}>\n      <NativeSelectOption value=\"\">{t.placeholder}</NativeSelectOption>\n      <NativeSelectOption value=\"todo\">{t.todo}</NativeSelectOption>\n      <NativeSelectOption value=\"in-progress\">\n        {t.inProgress}\n      </NativeSelectOption>\n      <NativeSelectOption value=\"done\">{t.done}</NativeSelectOption>\n      <NativeSelectOption value=\"cancelled\">{t.cancelled}</NativeSelectOption>\n    </NativeSelect>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

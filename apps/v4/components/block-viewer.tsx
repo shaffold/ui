@@ -33,18 +33,18 @@ import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 import { getIconForLanguageExtension } from "@/components/icons"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
 import { type Style } from "@/registry/_legacy-styles"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/new-york-v4/ui/collapsible"
+} from "@/registry/ui/collapsible"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/new-york-v4/ui/resizable"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+} from "@/registry/ui/resizable"
+import { Separator } from "@/registry/ui/separator"
 import {
   Sidebar,
   SidebarGroup,
@@ -55,12 +55,9 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarProvider,
-} from "@/registry/new-york-v4/ui/sidebar"
-import { Tabs, TabsList, TabsTrigger } from "@/registry/new-york-v4/ui/tabs"
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/new-york-v4/ui/toggle-group"
+} from "@/registry/ui/sidebar"
+import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/tabs"
+import { ToggleGroup, ToggleGroupItem } from "@/registry/ui/toggle-group"
 
 type BlockViewerContext = {
   item: z.infer<typeof registryItemSchema>
@@ -193,13 +190,16 @@ function BlockViewerToolbar({ styleName }: { styleName: Style["name"] }) {
               size="icon"
               variant="ghost"
               className="size-6 rounded-sm p-0"
-              asChild
               title="Open in New Tab"
+              render={
+                <Link
+                  href={`/view/${styleName}/${item.name}`}
+                  target="_blank"
+                />
+              }
             >
-              <Link href={`/view/${styleName}/${item.name}`} target="_blank">
-                <span className="sr-only">Open in New Tab</span>
-                <Fullscreen />
-              </Link>
+              <span className="sr-only">Open in New Tab</span>
+              <Fullscreen />
             </Button>
             <Separator orientation="vertical" className="h-4!" />
             <Button
@@ -426,19 +426,21 @@ function Tree({ item, index }: { item: FileTree; index: number }) {
         className="group/collapsible [&[data-state=open]>button>svg:first-child]:rotate-90"
         defaultOpen
       >
-        <CollapsibleTrigger asChild>
-          <SidebarMenuButton
-            className="rounded-none pl-(--index) whitespace-nowrap hover:bg-muted-foreground/15 focus:bg-muted-foreground/15 focus-visible:bg-muted-foreground/15 active:bg-muted-foreground/15 data-[active=true]:bg-muted-foreground/15"
-            style={
-              {
-                "--index": `${index * (index === 1 ? 1 : 1.2)}rem`,
-              } as React.CSSProperties
-            }
-          >
-            <ChevronRight className="transition-transform" />
-            <Folder />
-            {item.name}
-          </SidebarMenuButton>
+        <CollapsibleTrigger
+          render={
+            <SidebarMenuButton
+              className="rounded-none pl-(--index) whitespace-nowrap hover:bg-muted-foreground/15 focus:bg-muted-foreground/15 focus-visible:bg-muted-foreground/15 active:bg-muted-foreground/15 data-[active=true]:bg-muted-foreground/15"
+              style={
+                {
+                  "--index": `${index * (index === 1 ? 1 : 1.2)}rem`,
+                } as React.CSSProperties
+              }
+            />
+          }
+        >
+          <ChevronRight className="transition-transform" />
+          <Folder />
+          {item.name}
         </CollapsibleTrigger>
         <CollapsibleContent>
           <SidebarMenuSub className="m-0 w-full translate-x-0 border-none p-0">

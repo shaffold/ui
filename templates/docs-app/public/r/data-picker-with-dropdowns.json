@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "data-picker-with-dropdowns",
+  "dependencies": [
+    "date-fns",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "field",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/data-picker-with-dropdowns.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\nimport { ChevronDownIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport { Calendar } from \"@/registry/ui/calendar\"\nimport { Field, FieldLabel } from \"@/registry/ui/field\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/ui/popover\"\n\nexport function DataPickerWithDropdowns() {\n  const [date, setDate] = React.useState<Date>()\n  const [open, setOpen] = React.useState(false)\n\n  return (\n    <Field className=\"mx-auto w-72\">\n      <Popover open={open} onOpenChange={setOpen}>\n        <FieldLabel htmlFor=\"date-picker-with-dropdowns-desktop\">\n          Date\n        </FieldLabel>\n        <PopoverTrigger\n          render={\n            <Button\n              variant=\"outline\"\n              id=\"date-picker-with-dropdowns-desktop\"\n              className=\"justify-start px-2.5 font-normal\"\n            />\n          }\n        >\n          <ChevronDownIcon className=\"ml-auto\" />\n          {date ? format(date, \"PPP\") : <span>Pick a date</span>}\n        </PopoverTrigger>\n        <PopoverContent className=\"w-auto p-0\" align=\"start\">\n          <Calendar\n            mode=\"single\"\n            selected={date}\n            onSelect={setDate}\n            captionLayout=\"dropdown\"\n          />\n          <div className=\"flex gap-2 border-t p-2\">\n            <Button\n              variant=\"outline\"\n              size=\"sm\"\n              className=\"w-full\"\n              onClick={() => setOpen(false)}\n            >\n              Done\n            </Button>\n          </div>\n        </PopoverContent>\n      </Popover>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

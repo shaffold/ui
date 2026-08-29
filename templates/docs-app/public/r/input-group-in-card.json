@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-group-in-card",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "card",
+    "field",
+    "input",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-group-in-card.tsx",
+      "content": "import { ExternalLinkIcon, MailIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\"\nimport { Field, FieldGroup, FieldLabel } from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n  InputGroupTextarea,\n} from \"@/registry/ui/input-group\"\n\nexport function InputGroupInCard() {\n  return (\n    <Card className=\"w-full\">\n      <CardHeader>\n        <CardTitle>Card with Input Group</CardTitle>\n        <CardDescription>This is a card with an input group.</CardDescription>\n      </CardHeader>\n      <CardContent>\n        <FieldGroup>\n          <Field>\n            <FieldLabel htmlFor=\"email-input\">Email Address</FieldLabel>\n            <InputGroup>\n              <InputGroupInput\n                id=\"email-input\"\n                type=\"email\"\n                placeholder=\"you@example.com\"\n              />\n              <InputGroupAddon align=\"inline-end\">\n                <MailIcon />\n              </InputGroupAddon>\n            </InputGroup>\n          </Field>\n          <Field>\n            <FieldLabel htmlFor=\"website-input\">Website URL</FieldLabel>\n            <InputGroup>\n              <InputGroupAddon>\n                <InputGroupText>https://</InputGroupText>\n              </InputGroupAddon>\n              <InputGroupInput id=\"website-input\" placeholder=\"example.com\" />\n              <InputGroupAddon align=\"inline-end\">\n                <ExternalLinkIcon />\n              </InputGroupAddon>\n            </InputGroup>\n          </Field>\n          <Field>\n            <FieldLabel htmlFor=\"feedback-textarea\">\n              Feedback & Comments\n            </FieldLabel>\n            <InputGroup>\n              <InputGroupTextarea\n                id=\"feedback-textarea\"\n                placeholder=\"Share your thoughts...\"\n                className=\"min-h-[100px]\"\n              />\n              <InputGroupAddon align=\"block-end\">\n                <InputGroupText>0/500 characters</InputGroupText>\n              </InputGroupAddon>\n            </InputGroup>\n          </Field>\n        </FieldGroup>\n      </CardContent>\n      <CardFooter className=\"justify-end gap-2\">\n        <Button variant=\"outline\">Cancel</Button>\n        <Button>Submit</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-required",
+  "registryDependencies": [
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-required.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\n\nexport function InputRequired() {\n  return (\n    <Field>\n      <FieldLabel htmlFor=\"input-required\">\n        Required Field <span className=\"text-destructive\">*</span>\n      </FieldLabel>\n      <Input\n        id=\"input-required\"\n        placeholder=\"This field is required\"\n        required\n      />\n      <FieldDescription>This field must be filled out.</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

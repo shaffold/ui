@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-icons",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/tabs-icons.tsx",
+      "content": "import { AppWindowIcon, CodeIcon } from \"lucide-react\"\n\nimport { Tabs, TabsList, TabsTrigger } from \"@/registry/ui/tabs\"\n\nexport function TabsIcons() {\n  return (\n    <Tabs defaultValue=\"preview\">\n      <TabsList>\n        <TabsTrigger value=\"preview\">\n          <AppWindowIcon />\n          Preview\n        </TabsTrigger>\n        <TabsTrigger value=\"code\">\n          <CodeIcon />\n          Code\n        </TabsTrigger>\n      </TabsList>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

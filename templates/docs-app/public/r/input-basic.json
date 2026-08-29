@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-basic",
+  "registryDependencies": [
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-basic.tsx",
+      "content": "import { Input } from \"@/registry/ui/input\"\n\nexport function InputBasic() {\n  return <Input placeholder=\"Enter text\" />\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

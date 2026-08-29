@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-destructive",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert-dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/alert-dialog-destructive.tsx",
+      "content": "import { Trash2Icon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/registry/ui/alert-dialog\"\nimport { Button } from \"@/registry/ui/button\"\n\nexport function AlertDialogDestructive() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger\n        render={<Button variant=\"destructive\">Delete Chat</Button>}\n      />\n      <AlertDialogContent size=\"sm\">\n        <AlertDialogHeader>\n          <AlertDialogMedia className=\"bg-destructive/10 text-destructive dark:bg-destructive/20 dark:text-destructive\">\n            <Trash2Icon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Delete chat?</AlertDialogTitle>\n          <AlertDialogDescription>\n            This will permanently delete this chat conversation. View{\" \"}\n            <a href=\"#\">Settings</a> delete any memories saved during this chat.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel variant=\"outline\">Cancel</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">Delete</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

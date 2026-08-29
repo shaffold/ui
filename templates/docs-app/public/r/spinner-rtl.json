@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-rtl",
+  "files": [
+    {
+      "path": "registry/examples/spinner-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport {\n  Item,\n  ItemContent,\n  ItemMedia,\n  ItemTitle,\n} from \"@/styles/base-nova/ui-rtl/item\"\nimport { Spinner } from \"@/styles/base-nova/ui-rtl/spinner\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      title: \"Processing payment...\",\n      amount: \"$100.00\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      title: \"جاري معالجة الدفع...\",\n      amount: \"١٠٠.٠٠ دولار\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      title: \"מעבד תשלום...\",\n      amount: \"$100.00\",\n    },\n  },\n}\n\nexport function SpinnerRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <div\n      className=\"flex w-full max-w-xs flex-col gap-4 [--radius:1rem]\"\n      dir={dir}\n    >\n      <Item variant=\"muted\" dir={dir}>\n        <ItemMedia>\n          <Spinner />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle className=\"line-clamp-1\">{t.title}</ItemTitle>\n        </ItemContent>\n        <ItemContent className=\"flex-none justify-end\">\n          <span className=\"text-sm tabular-nums\">{t.amount}</span>\n        </ItemContent>\n      </Item>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-rtl",
+  "files": [
+    {
+      "path": "registry/examples/carousel-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Card, CardContent } from \"@/styles/base-nova/ui-rtl/card\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@/styles/base-nova/ui-rtl/carousel\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {},\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {},\n  },\n  he: {\n    dir: \"rtl\",\n    values: {},\n  },\n}\n\nfunction toArabicNumerals(num: number): string {\n  const arabicNumerals = [\"٠\", \"١\", \"٢\", \"٣\", \"٤\", \"٥\", \"٦\", \"٧\", \"٨\", \"٩\"]\n  return num\n    .toString()\n    .split(\"\")\n    .map((digit) => arabicNumerals[parseInt(digit, 10)])\n    .join(\"\")\n}\n\nexport function CarouselRtl() {\n  const { dir, language } = useTranslation(translations, \"ar\")\n\n  const formatNumber = (num: number): string => {\n    if (language === \"ar\") {\n      return toArabicNumerals(num)\n    }\n    return num.toString()\n  }\n\n  return (\n    <Carousel\n      dir={dir}\n      className=\"w-full max-w-[12rem] sm:max-w-xs\"\n      opts={{\n        direction: dir,\n      }}\n    >\n      <CarouselContent>\n        {Array.from({ length: 5 }).map((_, index) => (\n          <CarouselItem key={index}>\n            <div className=\"p-1\">\n              <Card>\n                <CardContent className=\"flex aspect-square items-center justify-center p-6\">\n                  <span className=\"text-4xl font-semibold\">\n                    {formatNumber(index + 1)}\n                  </span>\n                </CardContent>\n              </Card>\n            </div>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious />\n      <CarouselNext />\n    </Carousel>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

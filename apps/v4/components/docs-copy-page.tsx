@@ -3,20 +3,19 @@
 import { IconCheck, IconChevronDown, IconCopy } from "@tabler/icons-react"
 
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/new-york-v4/ui/dropdown-menu"
+} from "@/registry/ui/dropdown-menu"
 import {
   Popover,
-  PopoverAnchor,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+} from "@/registry/ui/popover"
+import { Separator } from "@/registry/ui/separator"
 
 function getPromptUrl(baseURL: string, url: string) {
   return `${baseURL}?q=${encodeURIComponent(
@@ -169,7 +168,6 @@ export function DocsCopyPage({ page, url }: { page: string; url: string }) {
   return (
     <Popover>
       <div className="group/buttons relative flex rounded-lg bg-secondary *:[[data-slot=button]]:focus-visible:relative *:[[data-slot=button]]:focus-visible:z-10">
-        <PopoverAnchor />
         <Button
           variant="secondary"
           size="sm"
@@ -180,17 +178,13 @@ export function DocsCopyPage({ page, url }: { page: string; url: string }) {
           Copy Page
         </Button>
         <DropdownMenu>
-          <DropdownMenuTrigger asChild className="hidden sm:flex">
-            {trigger}
-          </DropdownMenuTrigger>
+          <DropdownMenuTrigger render={trigger} className="hidden sm:flex" />
           <DropdownMenuContent
             align="end"
             className="animate-none! rounded-lg shadow-none"
           >
             {Object.entries(menuItems).map(([key, value]) => (
-              <DropdownMenuItem key={key} asChild>
-                {value(url)}
-              </DropdownMenuItem>
+              <DropdownMenuItem key={key} render={value(url)} />
             ))}
           </DropdownMenuContent>
         </DropdownMenu>
@@ -198,9 +192,7 @@ export function DocsCopyPage({ page, url }: { page: string; url: string }) {
           orientation="vertical"
           className="absolute top-1 right-8 z-0 h-6! bg-foreground/5! peer-focus-visible:opacity-0 sm:right-7 sm:h-5!"
         />
-        <PopoverTrigger asChild className="flex sm:hidden">
-          {trigger}
-        </PopoverTrigger>
+        <PopoverTrigger render={trigger} className="flex sm:hidden" />
         <PopoverContent
           className="w-52 origin-center! rounded-lg bg-background/70 p-1 shadow-none backdrop-blur-sm dark:bg-background/60"
           align="start"
@@ -209,12 +201,10 @@ export function DocsCopyPage({ page, url }: { page: string; url: string }) {
             <Button
               variant="ghost"
               size="lg"
-              asChild
+              render={value(url)}
               key={key}
               className="w-full justify-start text-base font-normal *:[svg]:text-muted-foreground"
-            >
-              {value(url)}
-            </Button>
+            />
           ))}
         </PopoverContent>
       </div>

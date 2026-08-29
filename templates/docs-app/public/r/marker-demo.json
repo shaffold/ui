@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marker-demo",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "marker",
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/marker-demo.tsx",
+      "content": "import { GitBranchIcon, SearchIcon } from \"lucide-react\"\n\nimport { Marker, MarkerContent, MarkerIcon } from \"@/registry/ui/marker\"\nimport { Spinner } from \"@/registry/ui/spinner\"\n\nexport function MarkerDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Marker>\n        <MarkerIcon>\n          <GitBranchIcon />\n        </MarkerIcon>\n        <MarkerContent>Switched to a new branch</MarkerContent>\n      </Marker>\n      <Marker role=\"status\">\n        <MarkerIcon>\n          <Spinner />\n        </MarkerIcon>\n        <MarkerContent className=\"shimmer\">Thinking...</MarkerContent>\n      </Marker>\n      <Marker variant=\"separator\">\n        <MarkerContent>Conversation compacted</MarkerContent>\n      </Marker>\n      <Marker>\n        <MarkerIcon>\n          <SearchIcon />\n        </MarkerIcon>\n        <MarkerContent>Explored 4 files</MarkerContent>\n      </Marker>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

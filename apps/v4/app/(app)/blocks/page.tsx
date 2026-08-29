@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { BlockDisplay } from "@/components/block-display"
 import { getActiveStyle } from "@/registry/_legacy-styles"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 
 export const dynamic = "force-static"
 export const revalidate = false
@@ -25,8 +25,8 @@ export default async function BlocksPage() {
       ))}
       <div className="container-wrapper">
         <div className="container flex justify-center py-6">
-          <Button asChild variant="outline">
-            <Link href="/blocks/sidebar">Browse more blocks</Link>
+          <Button variant="outline" render={<Link href="/blocks/sidebar" />}>
+            Browse more blocks
           </Button>
         </div>
       </div>

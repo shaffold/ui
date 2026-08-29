@@ -2,21 +2,16 @@ import { type Metadata } from "next"
 import Image from "next/image"
 import { RotateCcw } from "lucide-react"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/new-york-v4/ui/hover-card"
-import { Label } from "@/registry/new-york-v4/ui/label"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/new-york-v4/ui/tabs"
-import { Textarea } from "@/registry/new-york-v4/ui/textarea"
+} from "@/registry/ui/hover-card"
+import { Label } from "@/registry/ui/label"
+import { Separator } from "@/registry/ui/separator"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs"
+import { Textarea } from "@/registry/ui/textarea"
 
 import { CodeViewer } from "./components/code-viewer"
 import { MaxLengthSelector } from "./components/maxlength-selector"
@@ -74,10 +69,12 @@ export default function PlaygroundPage() {
               <div className="hidden flex-col gap-6 sm:flex md:order-2">
                 <div className="grid gap-3">
                   <HoverCard openDelay={200}>
-                    <HoverCardTrigger asChild>
-                      <span className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                        Mode
-                      </span>
+                    <HoverCardTrigger
+                      render={
+                        <span className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70" />
+                      }
+                    >
+                      Mode
                     </HoverCardTrigger>
                     <HoverCardContent className="w-[320px] text-sm" side="left">
                       Choose the interface that best suits your task. You can

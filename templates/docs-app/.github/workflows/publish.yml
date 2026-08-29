@@ -1,0 +1,61 @@
+name: Publish
+
+# Builds the design-system registry + docs and deploys them together.
+# The Next app serves public/r/** at /r/, so one deploy publishes BOTH the
+# docs site and the shadcn-compatible registry (https://<site>/r/{name}.json)
+# that `shadcn add @ds/*` and `shadcn mcp` consume.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      # Set this repo secret to enable the Vercel deploy step below.
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # registry/ui + theme.css are committed (owned), so `styles` skips with no
+      # host contact. It only rebuilds if you changed base/style in components.json.
+      - name: Build components + theme
+        run: pnpm styles
+
+      - name: Build the shadcn-compatible registry (public/r/**)
+        run: pnpm registry:build
+
+      - name: Verify the registry index (MCP prerequisite)
+        run: test -f public/r/registry.json && echo "registry index OK"
+
+      - name: Build the docs site
+        run: pnpm build
+
+      # --- Deploy (default: Vercel). Replace this step for another host. ---
+      - name: Deploy to Vercel
+        if: ${{ env.VERCEL_TOKEN != '' }}
+        run: npx vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
+
+      # No VERCEL_TOKEN? Keep the built output as an artifact instead.
+      - name: Upload build artifact
+        if: ${{ env.VERCEL_TOKEN == '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-and-registry
+          path: |
+            .next
+            public/r

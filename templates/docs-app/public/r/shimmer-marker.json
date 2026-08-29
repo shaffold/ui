@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shimmer-marker",
+  "registryDependencies": [
+    "marker",
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/shimmer-marker.tsx",
+      "content": "import { Marker, MarkerContent, MarkerIcon } from \"@/registry/ui/marker\"\nimport { Spinner } from \"@/registry/ui/spinner\"\n\nexport function ShimmerMarker() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <Marker role=\"status\">\n        <MarkerIcon>\n          <Spinner />\n        </MarkerIcon>\n        <MarkerContent className=\"shimmer\">Thinking...</MarkerContent>\n      </Marker>\n      <Marker variant=\"separator\" role=\"status\">\n        <MarkerContent className=\"shimmer\">Reading 4 files</MarkerContent>\n      </Marker>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

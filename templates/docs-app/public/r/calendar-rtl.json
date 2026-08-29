@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-rtl",
+  "dependencies": [
+    "react-day-picker"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/calendar-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { arSA, he } from \"react-day-picker/locale\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Calendar } from \"@/styles/base-nova/ui-rtl/calendar\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {},\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {},\n  },\n  he: {\n    dir: \"rtl\",\n    values: {},\n  },\n}\n\nconst locales = {\n  ar: arSA,\n  he: he,\n} as const\n\nexport function CalendarRtl() {\n  const { dir, language } = useTranslation(translations, \"ar\")\n  const [date, setDate] = React.useState<Date | undefined>(new Date())\n\n  return (\n    <Calendar\n      mode=\"single\"\n      selected={date}\n      onSelect={setDate}\n      className=\"rounded-lg border [--cell-size:--spacing(9)]\"\n      captionLayout=\"dropdown\"\n      dir={dir}\n      locale={\n        dir === \"rtl\" ? locales[language as keyof typeof locales] : undefined\n      }\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

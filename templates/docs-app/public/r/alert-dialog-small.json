@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-small",
+  "registryDependencies": [
+    "alert-dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/alert-dialog-small.tsx",
+      "content": "import {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/registry/ui/alert-dialog\"\nimport { Button } from \"@/registry/ui/button\"\n\nexport function AlertDialogSmall() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger\n        render={<Button variant=\"outline\">Show Dialog</Button>}\n      />\n      <AlertDialogContent size=\"sm\">\n        <AlertDialogHeader>\n          <AlertDialogTitle>Allow accessory to connect?</AlertDialogTitle>\n          <AlertDialogDescription>\n            Do you want to allow the USB accessory to connect to this device?\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Don&apos;t allow</AlertDialogCancel>\n          <AlertDialogAction>Allow</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

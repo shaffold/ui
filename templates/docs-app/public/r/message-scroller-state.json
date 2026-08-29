@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "message-scroller-state",
+  "registryDependencies": [
+    "bubble",
+    "card",
+    "message",
+    "message-scroller"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/message-scroller-state.tsx",
+      "content": "\"use client\"\n\nimport { Bubble, BubbleContent } from \"@/registry/ui/bubble\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\"\nimport { Message, MessageContent } from \"@/registry/ui/message\"\nimport {\n  MessageScroller,\n  MessageScrollerButton,\n  MessageScrollerContent,\n  MessageScrollerItem,\n  MessageScrollerProvider,\n  MessageScrollerViewport,\n  useMessageScrollerScrollable,\n} from \"@/registry/ui/message-scroller\"\n\nconst messages = Array.from({ length: 12 }, (_, index) => ({\n  id: `state-${index + 1}`,\n  role: index % 2 === 0 ? \"user\" : \"assistant\",\n  text:\n    index % 2 === 0\n      ? `Check section ${index + 1} of the transcript.`\n      : `Section ${index + 1} is ready. Scroll state updates without rerendering the rows.`,\n})) satisfies Array<{\n  id: string\n  role: \"user\" | \"assistant\"\n  text: string\n}>\n\nexport function MessageScrollerState() {\n  return (\n    <Card className=\"mx-auto h-112 w-full max-w-md gap-0\">\n      <CardHeader className=\"border-b\">\n        <CardTitle>Scroll State</CardTitle>\n        <CardDescription>\n          Read scroll state in JavaScript with the state hook.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"min-h-0 flex-1 p-0\">\n        <MessageScrollerProvider defaultScrollPosition=\"start\">\n          <MessageScroller>\n            <StatusBar />\n            <MessageScrollerViewport>\n              <MessageScrollerContent className=\"gap-4 p-4 pt-12\">\n                {messages.map((message) => (\n                  <MessageScrollerItem\n                    key={message.id}\n                    messageId={message.id}\n                    scrollAnchor={message.role === \"user\"}\n                  >\n                    <Message align={message.role === \"user\" ? \"end\" : \"start\"}>\n                      <MessageContent>\n                        <Bubble\n                          variant={\n                            message.role === \"user\" ? \"default\" : \"muted\"\n                          }\n                        >\n                          <BubbleContent>{message.text}</BubbleContent>\n                        </Bubble>\n                      </MessageContent>\n                    </Message>\n                  </MessageScrollerItem>\n                ))}\n              </MessageScrollerContent>\n            </MessageScrollerViewport>\n            <MessageScrollerButton />\n          </MessageScroller>\n        </MessageScrollerProvider>\n      </CardContent>\n    </Card>\n  )\n}\n\nfunction StatusBar() {\n  const { start, end } = useMessageScrollerScrollable()\n  const states = [\n    { label: \"At top\", on: !start },\n    { label: \"At bottom\", on: !end },\n    { label: \"Older above\", on: start },\n    { label: \"Newer below\", on: end },\n  ]\n\n  return (\n    <div className=\"pointer-events-none absolute inset-x-3 top-3 z-10 flex flex-wrap gap-1.5\">\n      {states.map((state) => (\n        <span\n          key={state.label}\n          data-on={state.on}\n          className=\"rounded-full border bg-background px-2 py-0.5 text-xs text-muted-foreground data-[on=true]:border-transparent data-[on=true]:bg-primary data-[on=true]:text-primary-foreground\"\n        >\n          {state.label}\n        </span>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

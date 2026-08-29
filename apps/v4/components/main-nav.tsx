@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 
 import { PAGES_NEW } from "@/lib/docs"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 
 export function MainNav({
   items,
@@ -22,18 +22,18 @@ export function MainNav({
         <Button
           key={item.href}
           variant="ghost"
-          asChild
           size="sm"
           className="px-2.5"
+          render={
+            <Link
+              href={item.href}
+              data-active={pathname === item.href}
+              data-new={PAGES_NEW.includes(item.href)}
+              className="relative items-center"
+            />
+          }
         >
-          <Link
-            href={item.href}
-            data-active={pathname === item.href}
-            data-new={PAGES_NEW.includes(item.href)}
-            className="relative items-center"
-          >
-            {item.label}
-          </Link>
+          {item.label}
         </Button>
       ))}
     </nav>

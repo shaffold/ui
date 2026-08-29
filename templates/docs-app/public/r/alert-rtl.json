@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-rtl",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/alert-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckCircle2Icon, InfoIcon } from \"lucide-react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@/styles/base-nova/ui-rtl/alert\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      paymentTitle: \"Payment successful\",\n      paymentDescription:\n        \"Your payment of $29.99 has been processed. A receipt has been sent to your email address.\",\n      featureTitle: \"New feature available\",\n      featureDescription:\n        \"We've added dark mode support. You can enable it in your account settings.\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      paymentTitle: \"تم الدفع بنجاح\",\n      paymentDescription:\n        \"تمت معالجة دفعتك البالغة 29.99 دولارًا. تم إرسال إيصال إلى عنوان بريدك الإلكتروني.\",\n      featureTitle: \"ميزة جديدة متاحة\",\n      featureDescription:\n        \"لقد أضفنا دعم الوضع الداكن. يمكنك تفعيله في إعدادات حسابك.\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      paymentTitle: \"התשלום בוצע בהצלחה\",\n      paymentDescription:\n        \"התשלום שלך בסך 29.99 דולר עובד. קבלה נשלחה לכתובת האימייל שלך.\",\n      featureTitle: \"תכונה חדשה זמינה\",\n      featureDescription:\n        \"הוספנו תמיכה במצב כהה. אתה יכול להפעיל אותו בהגדרות החשבון שלך.\",\n    },\n  },\n}\n\nconst alerts = [\n  {\n    icon: CheckCircle2Icon,\n    titleKey: \"paymentTitle\" as const,\n    descriptionKey: \"paymentDescription\" as const,\n  },\n  {\n    icon: InfoIcon,\n    titleKey: \"featureTitle\" as const,\n    descriptionKey: \"featureDescription\" as const,\n  },\n] as const\n\nexport function AlertRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <div className=\"grid w-full max-w-md items-start gap-4\" dir={dir}>\n      {alerts.map((alert, index) => {\n        const Icon = alert.icon\n        return (\n          <Alert key={index}>\n            <Icon />\n            <AlertTitle>{t[alert.titleKey]}</AlertTitle>\n            <AlertDescription>{t[alert.descriptionKey]}</AlertDescription>\n          </Alert>\n        )\n      })}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

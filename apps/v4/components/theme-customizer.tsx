@@ -14,7 +14,7 @@ import {
   baseColorsOKLCH,
   type BaseColor,
 } from "@/registry/_legacy-base-colors"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -22,7 +22,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ui/dialog"
 import {
   Drawer,
   DrawerContent,
@@ -30,9 +30,9 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/new-york-v4/ui/drawer"
-import { Label } from "@/registry/new-york-v4/ui/label"
-import { ScrollArea, ScrollBar } from "@/registry/new-york-v4/ui/scroll-area"
+} from "@/registry/ui/drawer"
+import { Label } from "@/registry/ui/label"
+import { ScrollArea, ScrollBar } from "@/registry/ui/scroll-area"
 import {
   Select,
   SelectContent,
@@ -40,13 +40,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/new-york-v4/ui/tabs"
+} from "@/registry/ui/select"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs"
 
 interface BaseColorOKLCH {
   light: Record<string, string>
@@ -121,10 +116,10 @@ export function CopyCodeButton({
   return (
     <>
       <Drawer>
-        <DrawerTrigger asChild>
-          <Button className={cn("sm:hidden", className)} {...props}>
-            Copy Code
-          </Button>
+        <DrawerTrigger
+          render={<Button className={cn("sm:hidden", className)} {...props} />}
+        >
+          Copy Code
         </DrawerTrigger>
         <DrawerContent className="h-auto rounded-t-2xl">
           <DrawerHeader>
@@ -137,17 +132,19 @@ export function CopyCodeButton({
         </DrawerContent>
       </Drawer>
       <Dialog>
-        <DialogTrigger asChild>
-          <Button
-            data-size={props.size}
-            className={cn("group/button hidden sm:flex", className)}
-            {...props}
-          >
-            <IconCopy />
-            <span className="group-data-[size=icon-sm]/button:sr-only">
-              Copy Code
-            </span>
-          </Button>
+        <DialogTrigger
+          render={
+            <Button
+              data-size={props.size}
+              className={cn("group/button hidden sm:flex", className)}
+              {...props}
+            />
+          }
+        >
+          <IconCopy />
+          <span className="group-data-[size=icon-sm]/button:sr-only">
+            Copy Code
+          </span>
         </DialogTrigger>
         <DialogContent className="rounded-2xl border-none bg-clip-padding shadow-2xl ring-4 ring-neutral-200/80 outline-none md:max-w-2xl dark:bg-neutral-800 dark:ring-neutral-900">
           <DialogHeader>

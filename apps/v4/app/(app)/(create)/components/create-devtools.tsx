@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { BASES } from "@/registry/config"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import { getDocsPathForItem } from "@/app/(app)/(create)/lib/devtools"
 import {
   serializeDesignSystemSearchParams,
@@ -47,25 +47,21 @@ export function CreateDevtools() {
       ))}
       <div className="mx-0.5 h-4 w-px bg-border/80" />
       <Button
-        asChild
         variant="ghost"
         size="sm"
         className="h-7 rounded-lg px-2.5 text-xs font-medium text-muted-foreground hover:text-foreground"
+        render={<a href={previewUrl} target="_blank" rel="noreferrer" />}
       >
-        <a href={previewUrl} target="_blank" rel="noreferrer">
-          Open in New Tab
-        </a>
+        Open in New Tab
       </Button>
       <div className="mx-0.5 h-4 w-px bg-border/80" />
       <Button
-        asChild
         variant="ghost"
         size="sm"
         className="h-7 rounded-lg px-2.5 text-xs font-medium text-muted-foreground hover:text-foreground"
+        render={<a href={docsUrl} target="_blank" rel="noreferrer" />}
       >
-        <a href={docsUrl} target="_blank" rel="noreferrer">
-          Open Docs
-        </a>
+        Open Docs
       </Button>
     </div>
   )

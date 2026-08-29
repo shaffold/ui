@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marker-icon",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "marker"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/marker-icon.tsx",
+      "content": "import { BookOpenCheck, GitBranchIcon, SearchIcon } from \"lucide-react\"\n\nimport { Marker, MarkerContent, MarkerIcon } from \"@/registry/ui/marker\"\n\nexport function MarkerIconDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-12 py-12\">\n      <Marker>\n        <MarkerIcon>\n          <GitBranchIcon />\n        </MarkerIcon>\n        <MarkerContent>Switched to a new branch</MarkerContent>\n      </Marker>\n      <Marker variant=\"separator\">\n        <MarkerIcon>\n          <SearchIcon />\n        </MarkerIcon>\n        <MarkerContent>Explored 4 files</MarkerContent>\n      </Marker>\n      <Marker className=\"flex-col\">\n        <MarkerIcon>\n          <BookOpenCheck />\n        </MarkerIcon>\n        <MarkerContent>Syncing completed</MarkerContent>\n      </Marker>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble-popover",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "bubble",
+    "button",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/bubble-popover.tsx",
+      "content": "import { InfoIcon } from \"lucide-react\"\n\nimport {\n  Bubble,\n  BubbleContent,\n  BubbleReactions,\n} from \"@/registry/ui/bubble\"\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@/registry/ui/popover\"\n\nexport function BubblePopoverDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 py-12\">\n      <Bubble align=\"end\">\n        <BubbleContent>Run the build script.</BubbleContent>\n      </Bubble>\n      <Bubble variant=\"destructive\">\n        <BubbleContent>Failed to run the command.</BubbleContent>\n        <BubbleReactions>\n          <Popover>\n            <PopoverTrigger\n              render={\n                <Button\n                  variant=\"ghost\"\n                  size=\"icon-xs\"\n                  aria-label=\"Show error details\"\n                  className=\"aria-expanded:text-destructive\"\n                />\n              }\n            >\n              <InfoIcon />\n            </PopoverTrigger>\n            <PopoverContent>\n              <PopoverHeader>\n                <PopoverTitle className=\"text-sm\">\n                  Command failed with exit code 1\n                </PopoverTitle>\n                <PopoverDescription className=\"text-sm\">\n                  ENOENT: no such file or directory, open pnpm-lock.yaml\n                </PopoverDescription>\n              </PopoverHeader>\n            </PopoverContent>\n          </Popover>\n        </BubbleReactions>\n      </Bubble>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

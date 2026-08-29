@@ -52,11 +52,19 @@ export default function ChangelogPage() {
               <h1 className="scroll-m-24 text-4xl font-semibold tracking-tight sm:text-3xl">
                 Changelog
               </h1>
-              <Button variant="secondary" size="sm" asChild>
-                <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
-                  <IconRss />
-                  RSS
-                </a>
+              <Button
+                variant="secondary"
+                size="sm"
+                render={
+                  <a
+                    href="/rss.xml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                }
+              >
+                <IconRss />
+                RSS
               </Button>
             </div>
             <p className="text-[1.05rem] text-muted-foreground sm:text-base sm:text-balance md:max-w-[80%]">

@@ -3,7 +3,7 @@
 import { LinkSquare02Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Tooltip,
   TooltipContent,
@@ -97,19 +97,17 @@ function OpenInNewTab() {
 
   return (
     <Button
-      asChild
       variant="ghost"
       size="sm"
       className="h-7 cursor-pointer rounded-lg px-2.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+      render={<a href={href} target="_blank" rel="noreferrer" />}
     >
-      <a href={href} target="_blank" rel="noreferrer">
-        <HugeiconsIcon
-          icon={LinkSquare02Icon}
-          strokeWidth={2}
-          className="size-3.5 md:hidden"
-        />
-        <span className="max-md:sr-only">Open in New Tab</span>
-      </a>
+      <HugeiconsIcon
+        icon={LinkSquare02Icon}
+        strokeWidth={2}
+        className="size-3.5 md:hidden"
+      />
+      <span className="max-md:sr-only">Open in New Tab</span>
     </Button>
   )
 }

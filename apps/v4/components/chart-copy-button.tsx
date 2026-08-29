@@ -5,12 +5,8 @@ import { IconCheck, IconCopy } from "@tabler/icons-react"
 
 import { trackEvent, type Event } from "@/lib/events"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+import { Button } from "@/registry/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ui/tooltip"
 
 export function ChartCopyButton({
   event,
@@ -33,29 +29,31 @@ export function ChartCopyButton({
 
   return (
     <Tooltip>
-      <TooltipTrigger asChild>
-        <Button
-          size="icon"
-          variant="ghost"
-          className={cn(
-            "[&_svg]-h-3.5 h-7 w-7 rounded-[6px] [&_svg]:w-3.5",
-            className
-          )}
-          onClick={() => {
-            navigator.clipboard.writeText(code)
-            trackEvent({
-              name: event,
-              properties: {
-                name,
-              },
-            })
-            setHasCopied(true)
-          }}
-          {...props}
-        >
-          <span className="sr-only">Copy</span>
-          {hasCopied ? <IconCheck /> : <IconCopy />}
-        </Button>
+      <TooltipTrigger
+        render={
+          <Button
+            size="icon"
+            variant="ghost"
+            className={cn(
+              "[&_svg]-h-3.5 h-7 w-7 rounded-[6px] [&_svg]:w-3.5",
+              className
+            )}
+            onClick={() => {
+              navigator.clipboard.writeText(code)
+              trackEvent({
+                name: event,
+                properties: {
+                  name,
+                },
+              })
+              setHasCopied(true)
+            }}
+            {...props}
+          />
+        }
+      >
+        <span className="sr-only">Copy</span>
+        {hasCopied ? <IconCheck /> : <IconCopy />}
       </TooltipTrigger>
       <TooltipContent className="bg-black text-white">Copy code</TooltipContent>
     </Tooltip>

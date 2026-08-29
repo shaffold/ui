@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-edge-to-edge",
+  "registryDependencies": [
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/card-edge-to-edge.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\"\n\nexport function CardEdgeToEdge() {\n  return (\n    <Card className=\"mx-auto w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Terms of Service</CardTitle>\n        <CardDescription>\n          Review the terms before accepting the agreement.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"-mb-(--card-spacing)\">\n        <div className=\"-mx-(--card-spacing) max-h-48 space-y-4 overflow-y-scroll border-t bg-muted/50 px-(--card-spacing) py-4 text-sm leading-relaxed\">\n          <p>\n            These terms govern your use of the workspace, including access to\n            shared documents, project files, and collaboration tools.\n          </p>\n          <p>\n            You are responsible for the content you upload and for ensuring that\n            your team has the appropriate permissions to view or edit it.\n          </p>\n          <p>\n            We may update features or limits as the service evolves. When those\n            changes materially affect your workflow, we will notify your\n            workspace administrators.\n          </p>\n          <p>\n            By continuing, you agree to keep your account credentials secure and\n            to follow your organization&apos;s acceptable use policies.\n          </p>\n        </div>\n      </CardContent>\n      <CardFooter className=\"justify-end gap-2\">\n        <Button variant=\"outline\">Decline</Button>\n        <Button>Accept</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

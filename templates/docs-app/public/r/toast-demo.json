@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-demo",
+  "registryDependencies": [
+    "button",
+    "toast"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/toast-demo.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport { toast } from \"@/registry/ui/toast\"\n\nexport function ToastDemo() {\n  function showToast() {\n    const id = toast.add({\n      title: \"Event created\",\n      description: \"Sunday, December 3 at 9:00 AM\",\n      actionProps: {\n        children: \"Undo\",\n        onClick() {\n          toast.close(id)\n        },\n      },\n    })\n  }\n\n  return (\n    <Button variant=\"outline\" onClick={showToast}>\n      Show Toast\n    </Button>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-demo",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button",
+    "drawer",
+    "field",
+    "radio-group",
+    "use-mobile"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/drawer-demo.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { toast } from \"sonner\"\n\nimport { useIsMobile } from \"@/hooks/use-mobile\"\nimport { Badge } from \"@/registry/ui/badge\"\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerDescription,\n  DrawerFooter,\n  DrawerHeader,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@/registry/ui/drawer\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@/registry/ui/field\"\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\"\n\nconst deliveryTimes = [\n  {\n    value: \"asap\",\n    id: \"delivery-asap\",\n    label: \"Standard delivery\",\n    description: \"25–35 min · Driver assigned now\",\n    badge: \"Fastest\",\n  },\n  {\n    value: \"5-00\",\n    id: \"delivery-5-00\",\n    label: \"5:00 PM – 5:15 PM\",\n    description: \"Prep starts at 4:45 PM\",\n  },\n  {\n    value: \"5-30\",\n    id: \"delivery-5-30\",\n    label: \"5:30 PM – 5:45 PM\",\n    description: \"Good if you're heading home\",\n  },\n  {\n    value: \"6-00\",\n    id: \"delivery-6-00\",\n    label: \"6:00 PM – 6:15 PM\",\n    description: \"Most popular · High demand\",\n  },\n  {\n    value: \"6-30\",\n    id: \"delivery-6-30\",\n    label: \"6:30 PM – 6:45 PM\",\n    description: \"Last slot before kitchen closes\",\n  },\n]\n\nexport function DrawerDemo() {\n  const [open, setOpen] = React.useState(false)\n  const [deliveryTime, setDeliveryTime] = React.useState(\"asap\")\n  const isMobile = useIsMobile()\n\n  function handleConfirm() {\n    const selected = deliveryTimes.find((time) => time.value === deliveryTime)\n\n    if (!selected) {\n      return\n    }\n\n    setOpen(false)\n    toast(\"Delivery time confirmed\", {\n      description: selected.label,\n    })\n  }\n\n  return (\n    <Drawer\n      open={open}\n      onOpenChange={setOpen}\n      showSwipeHandle={isMobile}\n      swipeDirection={isMobile ? \"down\" : \"right\"}\n    >\n      <DrawerTrigger render={<Button variant=\"secondary\" />}>\n        Open Drawer\n      </DrawerTrigger>\n      <DrawerContent>\n        <DrawerHeader>\n          <DrawerTitle>Pick a delivery time</DrawerTitle>\n          <DrawerDescription>\n            We&apos;ll prepare your order as soon as possible.\n          </DrawerDescription>\n        </DrawerHeader>\n        <div className=\"flex-1 scroll-fade overflow-y-auto p-4\">\n          <RadioGroup\n            value={deliveryTime}\n            onValueChange={setDeliveryTime}\n            className=\"gap-2\"\n          >\n            {deliveryTimes.map((time) => (\n              <FieldLabel key={time.value} htmlFor={time.id}>\n                <Field orientation=\"horizontal\">\n                  <FieldContent>\n                    <FieldTitle className=\"flex items-center gap-2\">\n                      {time.label}\n                      {time.badge ? (\n                        <Badge variant=\"secondary\">{time.badge}</Badge>\n                      ) : null}\n                    </FieldTitle>\n                    <FieldDescription>{time.description}</FieldDescription>\n                  </FieldContent>\n                  <RadioGroupItem value={time.value} id={time.id} />\n                </Field>\n              </FieldLabel>\n            ))}\n          </RadioGroup>\n        </div>\n        <DrawerFooter>\n          <Button onClick={handleConfirm} className=\"h-[34px]\">\n            Confirm Delivery Time\n          </Button>\n          <DrawerClose render={<Button variant=\"outline\" />}>\n            Cancel\n          </DrawerClose>\n        </DrawerFooter>\n      </DrawerContent>\n    </Drawer>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

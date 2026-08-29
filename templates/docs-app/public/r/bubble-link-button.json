@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble-link-button",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "bubble"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/bubble-link-button.tsx",
+      "content": "\"use client\"\n\nimport { toast } from \"sonner\"\n\nimport {\n  Bubble,\n  BubbleContent,\n  BubbleGroup,\n} from \"@/registry/ui/bubble\"\n\nexport function BubbleLinkButtonDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Bubble variant=\"muted\">\n        <BubbleContent>How can I help you today?</BubbleContent>\n      </Bubble>\n      <BubbleGroup>\n        <Bubble variant=\"tinted\" align=\"end\">\n          <BubbleContent\n            render={\n              <button onClick={() => toast(\"You clicked forgot password\")} />\n            }\n          >\n            I forgot my password\n          </BubbleContent>\n        </Bubble>\n        <Bubble variant=\"tinted\" align=\"end\">\n          <BubbleContent\n            render={\n              <button\n                onClick={() => toast(\"You clicked help with subscription\")}\n              />\n            }\n          >\n            I need help with my subscription\n          </BubbleContent>\n        </Bubble>\n        <Bubble variant=\"tinted\" align=\"end\">\n          <BubbleContent\n            render={\n              <button\n                onClick={() =>\n                  toast(\"You clicked something else. Talk to a human.\")\n                }\n              />\n            }\n          >\n            Something else. Talk to a human.\n          </BubbleContent>\n        </Bubble>\n      </BubbleGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

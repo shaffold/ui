@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-checkboxes-icons",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/dropdown-menu-checkboxes-icons.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BellIcon, MailIcon, MessageSquareIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuCheckboxItem,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuLabel,\n  DropdownMenuTrigger,\n} from \"@/registry/ui/dropdown-menu\"\n\nexport function DropdownMenuCheckboxesIcons() {\n  const [notifications, setNotifications] = React.useState({\n    email: true,\n    sms: false,\n    push: true,\n  })\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger render={<Button variant=\"outline\" />}>\n        Notifications\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"w-48\">\n        <DropdownMenuGroup>\n          <DropdownMenuLabel>Notification Preferences</DropdownMenuLabel>\n          <DropdownMenuCheckboxItem\n            checked={notifications.email}\n            onCheckedChange={(checked) =>\n              setNotifications({ ...notifications, email: checked === true })\n            }\n          >\n            <MailIcon />\n            Email notifications\n          </DropdownMenuCheckboxItem>\n          <DropdownMenuCheckboxItem\n            checked={notifications.sms}\n            onCheckedChange={(checked) =>\n              setNotifications({ ...notifications, sms: checked === true })\n            }\n          >\n            <MessageSquareIcon />\n            SMS notifications\n          </DropdownMenuCheckboxItem>\n          <DropdownMenuCheckboxItem\n            checked={notifications.push}\n            onCheckedChange={(checked) =>\n              setNotifications({ ...notifications, push: checked === true })\n            }\n          >\n            <BellIcon />\n            Push notifications\n          </DropdownMenuCheckboxItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

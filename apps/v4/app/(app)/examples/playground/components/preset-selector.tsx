@@ -5,7 +5,7 @@ import { Check, ChevronsUpDown } from "lucide-react"
 import type { Popover as PopoverPrimitive } from "radix-ui"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -14,12 +14,8 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/new-york-v4/ui/command"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+} from "@/registry/ui/command"
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/ui/popover"
 
 import { type Preset } from "../data/presets"
 
@@ -34,17 +30,19 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
 
   return (
     <Popover open={open} onOpenChange={setOpen} {...props}>
-      <PopoverTrigger asChild>
-        <Button
-          variant="outline"
-          role="combobox"
-          aria-label="Load a preset..."
-          aria-expanded={open}
-          className="flex-1 justify-between md:max-w-[200px] lg:max-w-[300px]"
-        >
-          {selectedPreset ? selectedPreset.name : "Load a preset..."}
-          <ChevronsUpDown className="opacity-50" />
-        </Button>
+      <PopoverTrigger
+        render={
+          <Button
+            variant="outline"
+            role="combobox"
+            aria-label="Load a preset..."
+            aria-expanded={open}
+            className="flex-1 justify-between md:max-w-[200px] lg:max-w-[300px]"
+          />
+        }
+      >
+        {selectedPreset ? selectedPreset.name : "Load a preset..."}
+        <ChevronsUpDown className="opacity-50" />
       </PopoverTrigger>
       <PopoverContent className="w-[300px] p-0">
         <Command>

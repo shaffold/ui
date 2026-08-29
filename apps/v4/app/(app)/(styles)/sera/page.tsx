@@ -47,11 +47,9 @@ export default function SeraPage() {
           {description}
         </PageHeaderDescription>
         <PageActions className="**:[.container]:justify-start">
-          <Button asChild size="sm">
-            <Link href="/create?preset=b4xFeBLg4O">
-              Open in shadcn/create
-              <ArrowRightIcon data-icon="inline-end" />
-            </Link>
+          <Button size="sm" render={<Link href="/create?preset=b4xFeBLg4O" />}>
+            Open in shadcn/create
+            <ArrowRightIcon data-icon="inline-end" />
           </Button>
         </PageActions>
       </PageHeader>

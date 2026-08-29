@@ -10,7 +10,7 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 
 const title = "Building Blocks for the Web"
 const description =
@@ -52,23 +52,27 @@ export default function BlocksLayout({
         <PageHeaderHeading>{title}</PageHeaderHeading>
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
-          <Button asChild size="sm">
-            <a href="#blocks">Browse Blocks</a>
+          <Button size="sm" render={<a href="#blocks" />}>
+            Browse Blocks
           </Button>
-          <Button asChild variant="ghost" size="sm">
-            <Link href="/docs/components">View Components</Link>
+          <Button
+            variant="ghost"
+            size="sm"
+            render={<Link href="/docs/components" />}
+          >
+            View Components
           </Button>
         </PageActions>
       </PageHeader>
       <PageNav id="blocks">
         <BlocksNav />
         <Button
-          asChild
           variant="secondary"
           size="sm"
           className="mr-7 hidden shadow-none lg:flex"
+          render={<Link href="/blocks/sidebar" />}
         >
-          <Link href="/blocks/sidebar">Browse all blocks</Link>
+          Browse all blocks
         </Button>
       </PageNav>
       <div className="container-wrapper flex-1 section-soft md:py-12">

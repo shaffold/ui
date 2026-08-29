@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar-radio",
+  "registryDependencies": [
+    "menubar"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/menubar-radio.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Menubar,\n  MenubarContent,\n  MenubarItem,\n  MenubarMenu,\n  MenubarRadioGroup,\n  MenubarRadioItem,\n  MenubarSeparator,\n  MenubarTrigger,\n} from \"@/registry/ui/menubar\"\n\nexport function MenubarRadio() {\n  const [user, setUser] = React.useState(\"benoit\")\n  const [theme, setTheme] = React.useState(\"system\")\n\n  return (\n    <Menubar className=\"w-72\">\n      <MenubarMenu>\n        <MenubarTrigger>Profiles</MenubarTrigger>\n        <MenubarContent>\n          <MenubarRadioGroup value={user} onValueChange={setUser}>\n            <MenubarRadioItem value=\"andy\">Andy</MenubarRadioItem>\n            <MenubarRadioItem value=\"benoit\">Benoit</MenubarRadioItem>\n            <MenubarRadioItem value=\"luis\">Luis</MenubarRadioItem>\n          </MenubarRadioGroup>\n          <MenubarSeparator />\n          <MenubarItem inset>Edit...</MenubarItem>\n          <MenubarItem inset>Add Profile...</MenubarItem>\n        </MenubarContent>\n      </MenubarMenu>\n      <MenubarMenu>\n        <MenubarTrigger>Theme</MenubarTrigger>\n        <MenubarContent>\n          <MenubarRadioGroup value={theme} onValueChange={setTheme}>\n            <MenubarRadioItem value=\"light\">Light</MenubarRadioItem>\n            <MenubarRadioItem value=\"dark\">Dark</MenubarRadioItem>\n            <MenubarRadioItem value=\"system\">System</MenubarRadioItem>\n          </MenubarRadioGroup>\n        </MenubarContent>\n      </MenubarMenu>\n    </Menubar>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

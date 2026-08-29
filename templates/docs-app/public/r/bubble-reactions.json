@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble-reactions",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "bubble",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/bubble-reactions.tsx",
+      "content": "\"use client\"\n\nimport { toast } from \"sonner\"\n\nimport {\n  Bubble,\n  BubbleContent,\n  BubbleReactions,\n} from \"@/registry/ui/bubble\"\nimport { Button } from \"@/registry/ui/button\"\n\nexport function BubbleReactionsDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-12 py-12\">\n      <Bubble variant=\"muted\" align=\"end\">\n        <BubbleContent>\n          I don&apos;t need tests, I know my code works.\n        </BubbleContent>\n        <BubbleReactions\n          align=\"start\"\n          role=\"img\"\n          aria-label=\"Reactions: thumbs up, surprised\"\n        >\n          <span>👍</span>\n          <span>😮</span>\n        </BubbleReactions>\n      </Bubble>\n      <Bubble variant=\"muted\">\n        <BubbleContent>\n          Bold. Fine I&apos;ll add some tests. I&apos;ll let you know when\n          they&apos;re done.\n        </BubbleContent>\n        <BubbleReactions\n          role=\"img\"\n          aria-label=\"Reactions: eyes, rocket, and 2 more\"\n        >\n          <span>👀</span>\n          <span>🚀</span>\n          <span>+2</span>\n        </BubbleReactions>\n      </Bubble>\n      <Bubble variant=\"default\" align=\"end\">\n        <BubbleContent>\n          Tests passed on the first try. All 142 of them. Looking good!\n        </BubbleContent>\n        <BubbleReactions\n          side=\"top\"\n          align=\"start\"\n          role=\"img\"\n          aria-label=\"Reactions: party popper, clapping hands\"\n        >\n          <span>🎉</span>\n          <span>👏</span>\n        </BubbleReactions>\n      </Bubble>\n      <Bubble variant=\"destructive\">\n        <BubbleContent>Are you sure I can run this command?</BubbleContent>\n        <BubbleReactions>\n          <Button\n            variant=\"ghost\"\n            size=\"xs\"\n            onClick={() => toast.success(\"You clicked yes, running command...\")}\n          >\n            Yes, run it\n          </Button>\n        </BubbleReactions>\n      </Bubble>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

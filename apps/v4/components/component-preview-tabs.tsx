@@ -15,8 +15,8 @@ import {
 } from "@/components/language-selector"
 import { DirectionProvider as BaseDirectionProvider } from "@/registry/bases/base/ui/direction"
 import { DirectionProvider as RadixDirectionProvider } from "@/registry/bases/radix/ui/direction"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+import { Button } from "@/registry/ui/button"
+import { Separator } from "@/registry/ui/separator"
 import {
   Popover,
   PopoverContent,

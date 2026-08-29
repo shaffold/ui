@@ -13,7 +13,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/new-york-v4/ui/breadcrumb"
+} from "@/registry/ui/breadcrumb"
 
 export function DocsBreadcrumb({
   tree,
@@ -31,10 +31,12 @@ export function DocsBreadcrumb({
     <Breadcrumb className={className}>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink asChild>
-            <Link href="/docs" className="hover:text-accent-foreground">
-              Docs
-            </Link>
+          <BreadcrumbLink
+            render={
+              <Link href="/docs" className="hover:text-accent-foreground" />
+            }
+          >
+            Docs
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
@@ -43,13 +45,15 @@ export function DocsBreadcrumb({
             {i !== 0 && <BreadcrumbSeparator />}
             {item.url ? (
               <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link
-                    href={item.url}
-                    className="truncate hover:text-accent-foreground"
-                  >
-                    {item.name}
-                  </Link>
+                <BreadcrumbLink
+                  render={
+                    <Link
+                      href={item.url}
+                      className="truncate hover:text-accent-foreground"
+                    />
+                  }
+                >
+                  {item.name}
                 </BreadcrumbLink>
               </BreadcrumbItem>
             ) : (

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "message-markdown",
+  "registryDependencies": [
+    "bubble",
+    "message"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/message-markdown.tsx",
+      "content": "import { Markdown } from \"@/components/markdown\"\nimport { Bubble, BubbleContent } from \"@/registry/ui/bubble\"\nimport { Message, MessageContent } from \"@/registry/ui/message\"\n\nconst response = `Here's how to render markdown in a message:\n\n1. Render assistant text through **Markdown**.\n2. Keep user messages as plain text.\n3. Use a \\`ghost\\` bubble so the response is unframed.\n`\n\nexport function MessageMarkdownDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Message align=\"end\">\n        <MessageContent>\n          <Bubble>\n            <BubbleContent>\n              How do I render markdown in a message?\n            </BubbleContent>\n          </Bubble>\n        </MessageContent>\n      </Message>\n      <Message>\n        <MessageContent>\n          <Bubble variant=\"ghost\">\n            <BubbleContent>\n              <Markdown>{response}</Markdown>\n            </BubbleContent>\n          </Bubble>\n        </MessageContent>\n      </Message>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

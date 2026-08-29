@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-booked-dates",
+  "registryDependencies": [
+    "calendar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/calendar-booked-dates.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Calendar } from \"@/registry/ui/calendar\"\nimport { Card, CardContent } from \"@/registry/ui/card\"\n\nexport function CalendarBookedDates() {\n  const [date, setDate] = React.useState<Date | undefined>(\n    new Date(new Date().getFullYear(), 0, 6)\n  )\n  const bookedDates = Array.from(\n    { length: 15 },\n    (_, i) => new Date(new Date().getFullYear(), 0, 12 + i)\n  )\n\n  return (\n    <Card className=\"mx-auto w-fit p-0\">\n      <CardContent className=\"p-0\">\n        <Calendar\n          mode=\"single\"\n          defaultMonth={date}\n          selected={date}\n          onSelect={setDate}\n          disabled={bookedDates}\n          modifiers={{\n            booked: bookedDates,\n          }}\n          modifiersClassNames={{\n            booked: \"[&>button]:line-through opacity-100\",\n          }}\n        />\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

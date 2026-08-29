@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-sizes",
+  "registryDependencies": [
+    "toggle"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/toggle-sizes.tsx",
+      "content": "import { Toggle } from \"@/registry/ui/toggle\"\n\nexport function ToggleSizes() {\n  return (\n    <div className=\"flex flex-wrap items-center gap-2\">\n      <Toggle variant=\"outline\" aria-label=\"Toggle small\" size=\"sm\">\n        Small\n      </Toggle>\n      <Toggle variant=\"outline\" aria-label=\"Toggle default\" size=\"default\">\n        Default\n      </Toggle>\n      <Toggle variant=\"outline\" aria-label=\"Toggle large\" size=\"lg\">\n        Large\n      </Toggle>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

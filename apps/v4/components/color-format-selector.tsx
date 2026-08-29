@@ -10,8 +10,8 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-} from "@/registry/new-york-v4/ui/select"
-import { Skeleton } from "@/registry/new-york-v4/ui/skeleton"
+} from "@/registry/ui/select"
+import { Skeleton } from "@/registry/ui/skeleton"
 
 export function ColorFormatSelector({
   color,
@@ -40,7 +40,7 @@ export function ColorFormatSelector({
         <span className="font-medium">Format: </span>
         <span className="font-mono text-muted-foreground">{format}</span>
       </SelectTrigger>
-      <SelectContent align="end" position="popper" className="rounded-xl">
+      <SelectContent align="end" alignItemWithTrigger={false} className="rounded-xl">
         {Object.entries(formats).map(([format, value]) => (
           <SelectItem
             key={format}

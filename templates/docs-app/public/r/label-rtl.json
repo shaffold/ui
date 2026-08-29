@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-rtl",
+  "files": [
+    {
+      "path": "registry/examples/label-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Checkbox } from \"@/styles/base-nova/ui-rtl/checkbox\"\nimport { Label } from \"@/styles/base-nova/ui-rtl/label\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      label: \"Accept terms and conditions\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      label: \"قبول الشروط والأحكام\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      label: \"קבל תנאים והגבלות\",\n    },\n  },\n}\n\nexport function LabelRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <div className=\"flex gap-2\" dir={dir}>\n      <Checkbox id=\"terms-rtl\" dir={dir} />\n      <Label htmlFor=\"terms-rtl\" dir={dir}>\n        {t.label}\n      </Label>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

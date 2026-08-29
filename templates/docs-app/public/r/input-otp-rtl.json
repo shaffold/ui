@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-rtl",
+  "files": [
+    {
+      "path": "registry/examples/input-otp-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Field, FieldLabel } from \"@/styles/base-nova/ui-rtl/field\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@/styles/base-nova/ui-rtl/input-otp\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      verificationCode: \"Verification code\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      verificationCode: \"رمز التحقق\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      verificationCode: \"קוד אימות\",\n    },\n  },\n}\n\nexport function InputOTPRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <Field className=\"mx-auto max-w-xs\">\n      <FieldLabel htmlFor=\"input-otp-rtl\">{t.verificationCode}</FieldLabel>\n      <InputOTP\n        maxLength={6}\n        defaultValue=\"123456\"\n        dir={dir}\n        id=\"input-otp-rtl\"\n      >\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

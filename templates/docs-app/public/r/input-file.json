@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-file",
+  "registryDependencies": [
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-file.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\n\nexport function InputFile() {\n  return (\n    <Field>\n      <FieldLabel htmlFor=\"picture\">Picture</FieldLabel>\n      <Input id=\"picture\" type=\"file\" />\n      <FieldDescription>Select a picture to upload.</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

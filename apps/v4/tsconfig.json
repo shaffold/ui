@@ -27,6 +27,10 @@
       // payloads) are migrated to the real path.
       "@/app/(create)/*": ["./app/(app)/(create)/*"],
       "@/app/(app)/create/*": ["./app/(app)/(create)/*"],
+      // Platform docs chrome renders in the default design system (base-nova).
+      // Chrome imports the stable @/registry/ui/* alias; the scaffolded docs
+      // template rewrites this to the adopter's styles/<combo>/ui.
+      "@/registry/ui/*": ["./styles/base-nova/ui/*"],
       "@/*": ["./*"],
       "react": ["./node_modules/@types/react"]
     }

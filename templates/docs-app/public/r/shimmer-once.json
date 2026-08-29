@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shimmer-once",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/shimmer-once.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@/registry/ui/button\"\n\nexport function ShimmerOnce() {\n  const [key, setKey] = React.useState(0)\n\n  return (\n    <div className=\"flex flex-col items-center gap-4\">\n      <p\n        key={key}\n        className=\"shimmer text-sm text-muted-foreground shimmer-duration-1100 shimmer-once\"\n      >\n        Generating response&hellip;\n      </p>\n      <Button\n        variant=\"outline\"\n        size=\"sm\"\n        onClick={() => setKey((value) => value + 1)}\n      >\n        Replay\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

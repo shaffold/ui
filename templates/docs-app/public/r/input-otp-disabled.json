@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-disabled",
+  "registryDependencies": [
+    "field",
+    "input-otp"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-otp-disabled.tsx",
+      "content": "import { Field, FieldLabel } from \"@/registry/ui/field\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@/registry/ui/input-otp\"\n\nexport function InputOTPDisabled() {\n  return (\n    <InputOTP id=\"disabled\" maxLength={6} disabled value=\"123456\">\n      <InputOTPGroup>\n        <InputOTPSlot index={0} />\n        <InputOTPSlot index={1} />\n        <InputOTPSlot index={2} />\n      </InputOTPGroup>\n      <InputOTPSeparator />\n      <InputOTPGroup>\n        <InputOTPSlot index={3} />\n        <InputOTPSlot index={4} />\n        <InputOTPSlot index={5} />\n      </InputOTPGroup>\n    </InputOTP>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

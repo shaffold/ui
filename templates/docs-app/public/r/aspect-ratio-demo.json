@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-demo",
+  "registryDependencies": [
+    "aspect-ratio"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/aspect-ratio-demo.tsx",
+      "content": "import Image from \"next/image\"\n\nimport { AspectRatio } from \"@/registry/ui/aspect-ratio\"\n\nexport default function AspectRatioDemo() {\n  return (\n    <AspectRatio ratio={16 / 9} className=\"w-full max-w-sm rounded-lg bg-muted\">\n      <Image\n        src=\"https://avatar.vercel.sh/shadcn1\"\n        alt=\"Photo\"\n        fill\n        className=\"rounded-lg object-cover grayscale dark:brightness-20\"\n      />\n    </AspectRatio>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

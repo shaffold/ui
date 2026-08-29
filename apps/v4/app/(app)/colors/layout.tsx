@@ -9,7 +9,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 
 const title = "Tailwind Colors in Every Format"
 const description =
@@ -51,11 +51,15 @@ export default function ColorsLayout({
         <PageHeaderHeading>{title}</PageHeaderHeading>
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
-          <Button asChild size="sm">
-            <a href="#colors">Browse Colors</a>
+          <Button size="sm" render={<a href="#colors" />}>
+            Browse Colors
           </Button>
-          <Button asChild variant="ghost" size="sm">
-            <Link href="/docs/theming">Documentation</Link>
+          <Button
+            variant="ghost"
+            size="sm"
+            render={<Link href="/docs/theming" />}
+          >
+            Documentation
           </Button>
         </PageActions>
       </PageHeader>

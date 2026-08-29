@@ -1,4 +1,4 @@
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -6,13 +6,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ui/dialog"
 
 export function CodeViewer() {
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="secondary">View code</Button>
+      <DialogTrigger render={<Button variant="secondary" />}>
+        View code
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

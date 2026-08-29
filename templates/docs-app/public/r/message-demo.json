@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "message-demo",
+  "registryDependencies": [
+    "avatar",
+    "bubble",
+    "marker",
+    "message"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/message-demo.tsx",
+      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/ui/avatar\"\nimport {\n  Bubble,\n  BubbleContent,\n  BubbleGroup,\n  BubbleReactions,\n} from \"@/registry/ui/bubble\"\nimport { Marker, MarkerContent } from \"@/registry/ui/marker\"\nimport {\n  Message,\n  MessageAvatar,\n  MessageContent,\n  MessageFooter,\n} from \"@/registry/ui/message\"\n\nexport function MessageDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-6 py-12\">\n      <Message align=\"end\">\n        <MessageAvatar>\n          <Avatar>\n            <AvatarImage src=\"/avatars/10.png\" alt=\"@me\" />\n            <AvatarFallback>ME</AvatarFallback>\n          </Avatar>\n        </MessageAvatar>\n        <MessageContent>\n          <Bubble>\n            <BubbleContent>Deploying to prod real quick.</BubbleContent>\n          </Bubble>\n        </MessageContent>\n      </Message>\n      <Message>\n        <MessageAvatar>\n          <Avatar>\n            <AvatarImage src=\"/avatars/02.png\" alt=\"@rabbit\" />\n            <AvatarFallback>R</AvatarFallback>\n          </Avatar>\n        </MessageAvatar>\n        <MessageContent>\n          <Bubble variant=\"muted\">\n            <BubbleContent>It&apos;s 4:55 PM. On a Friday.</BubbleContent>\n          </Bubble>\n        </MessageContent>\n      </Message>\n      <Message align=\"end\">\n        <MessageAvatar>\n          <Avatar>\n            <AvatarImage src=\"/avatars/10.png\" alt=\"@me\" />\n            <AvatarFallback>ME</AvatarFallback>\n          </Avatar>\n        </MessageAvatar>\n        <MessageContent>\n          <Bubble>\n            <BubbleContent>It&apos;s a one-line change.</BubbleContent>\n          </Bubble>\n          <MessageFooter>Delivered</MessageFooter>\n        </MessageContent>\n      </Message>\n      <Message>\n        <MessageAvatar>\n          <Avatar>\n            <AvatarImage src=\"/avatars/02.png\" alt=\"@rabbit\" />\n            <AvatarFallback>R</AvatarFallback>\n          </Avatar>\n        </MessageAvatar>\n        <MessageContent>\n          <BubbleGroup>\n            <Bubble variant=\"muted\">\n              <BubbleContent>\n                It&apos;s always a one-line change 😭.\n              </BubbleContent>\n            </Bubble>\n            <Bubble variant=\"muted\">\n              <BubbleContent>Alright, let me take a look.</BubbleContent>\n              <BubbleReactions aria-label=\"Reactions: thumbs up\">\n                <span>👍</span>\n              </BubbleReactions>\n            </Bubble>\n          </BubbleGroup>\n        </MessageContent>\n      </Message>\n      <Marker role=\"status\">\n        <MarkerContent className=\"shimmer\">\n          <span className=\"font-medium\">Oliver</span> is typing...\n        </MarkerContent>\n      </Marker>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

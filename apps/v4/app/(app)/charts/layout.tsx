@@ -11,7 +11,7 @@ import {
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
 import { ThemeSelector } from "@/components/theme-selector"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 
 const title = "Beautiful Charts & Graphs"
 const description =
@@ -53,11 +53,15 @@ export default function ChartsLayout({
         <PageHeaderHeading>{title}</PageHeaderHeading>
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
-          <Button asChild size="sm">
-            <a href="#charts">Browse Charts</a>
+          <Button size="sm" render={<a href="#charts" />}>
+            Browse Charts
           </Button>
-          <Button asChild variant="ghost" size="sm">
-            <Link href="/docs/components/chart">Documentation</Link>
+          <Button
+            variant="ghost"
+            size="sm"
+            render={<Link href="/docs/components/chart" />}
+          >
+            Documentation
           </Button>
         </PageActions>
       </PageHeader>

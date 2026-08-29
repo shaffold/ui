@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-background",
+  "dependencies": [
+    "@tabler/icons-react",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "empty"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/empty-background.tsx",
+      "content": "import { IconBell } from \"@tabler/icons-react\"\nimport { RefreshCcwIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/registry/ui/empty\"\n\nexport function EmptyMuted() {\n  return (\n    <Empty className=\"h-full bg-muted/30\">\n      <EmptyHeader>\n        <EmptyMedia variant=\"icon\">\n          <IconBell />\n        </EmptyMedia>\n        <EmptyTitle>No Notifications</EmptyTitle>\n        <EmptyDescription className=\"max-w-xs text-pretty\">\n          You&apos;re all caught up. New notifications will appear here.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent>\n        <Button variant=\"outline\">\n          <RefreshCcwIcon data-icon=\"inline-start\" />\n          Refresh\n        </Button>\n      </EmptyContent>\n    </Empty>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

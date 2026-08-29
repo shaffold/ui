@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marker-status",
+  "registryDependencies": [
+    "marker",
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/marker-status.tsx",
+      "content": "import { Marker, MarkerContent, MarkerIcon } from \"@/registry/ui/marker\"\nimport { Spinner } from \"@/registry/ui/spinner\"\n\nexport function MarkerStatusDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Marker role=\"status\">\n        <MarkerIcon>\n          <Spinner />\n        </MarkerIcon>\n        <MarkerContent>Compacting conversation</MarkerContent>\n      </Marker>\n      <Marker variant=\"separator\" role=\"status\">\n        <MarkerIcon>\n          <Spinner />\n        </MarkerIcon>\n        <MarkerContent>Running tests</MarkerContent>\n      </Marker>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

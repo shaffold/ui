@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-demo",
+  "registryDependencies": [
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-demo.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\n\nexport function InputDemo() {\n  return (\n    <Field>\n      <FieldLabel htmlFor=\"input-demo-api-key\">API Key</FieldLabel>\n      <Input id=\"input-demo-api-key\" type=\"password\" placeholder=\"sk-...\" />\n      <FieldDescription>\n        Your API key is encrypted and stored securely.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

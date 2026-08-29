@@ -4,18 +4,9 @@ import * as React from "react"
 import { ArrowUpIcon, CheckIcon, PlusIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/new-york-v4/ui/avatar"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/registry/new-york-v4/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar"
+import { Button } from "@/registry/ui/button"
+import { Card, CardContent, CardFooter, CardHeader } from "@/registry/ui/card"
 import {
   Command,
   CommandEmpty,
@@ -23,7 +14,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york-v4/ui/command"
+} from "@/registry/ui/command"
 import {
   Dialog,
   DialogContent,
@@ -31,19 +22,19 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ui/dialog"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/registry/new-york-v4/ui/input-group"
+} from "@/registry/ui/input-group"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+} from "@/registry/ui/tooltip"
 
 const users = [
   {
@@ -114,18 +105,20 @@ export function CardsChat() {
               <p className="text-xs text-muted-foreground">m@example.com</p>
             </div>
           </div>
-          <TooltipProvider delayDuration={0}>
+          <TooltipProvider delay={0}>
             <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  size="icon"
-                  variant="secondary"
-                  className="ml-auto size-8 rounded-full"
-                  onClick={() => setOpen(true)}
-                >
-                  <PlusIcon />
-                  <span className="sr-only">New message</span>
-                </Button>
+              <TooltipTrigger
+                render={
+                  <Button
+                    size="icon"
+                    variant="secondary"
+                    className="ml-auto size-8 rounded-full"
+                    onClick={() => setOpen(true)}
+                  />
+                }
+              >
+                <PlusIcon />
+                <span className="sr-only">New message</span>
               </TooltipTrigger>
               <TooltipContent sideOffset={10}>New message</TooltipContent>
             </Tooltip>

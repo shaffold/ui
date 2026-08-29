@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+.env*.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# NOTE: the built design-system artifacts are intentionally COMMITTED (owned):
+#   registry/ui/**        the components, built for this base + style
+#   app/styles/theme.css  the color theme
+#   components/nav-link.tsx  the per-base chrome
+#   registry.json + public/r/**  the shadcn-compatible registry
+# So the site builds and runs with NO dependency on the source host. Re-running
+# `pnpm styles` / `registry:build` (e.g. to switch style or add components) is
+# the only time the host is contacted — and it's opt-in.
+
+# fumadocs generated
+/.source/
+
+# private registry build output (served via app/r route, not statically)
+/private-registry/
+
+# npm-library build output (`pnpm package:build`) — fully derived from
+# registry/ui; regenerated before `npm publish`, so not committed.
+/packages/ui/

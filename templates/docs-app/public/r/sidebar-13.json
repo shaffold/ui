@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sidebar-13",
+  "files": [
+    {
+      "path": "registry/blocks/sidebar-13/page.tsx",
+      "content": "import { SettingsDialog } from \"@/registry/bases/base/blocks/sidebar-13/components/settings-dialog\"\n\nexport default function Page() {\n  return (\n    <div className=\"flex h-svh items-center justify-center\">\n      <SettingsDialog />\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/sidebar-13/page.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

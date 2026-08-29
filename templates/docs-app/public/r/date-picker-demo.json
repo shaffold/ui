@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-demo",
+  "dependencies": [
+    "date-fns",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/date-picker-demo.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\nimport { ChevronDownIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport { Calendar } from \"@/registry/ui/calendar\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/ui/popover\"\n\nexport function DatePickerDemo() {\n  const [date, setDate] = React.useState<Date>()\n\n  return (\n    <Popover>\n      <PopoverTrigger\n        render={\n          <Button\n            variant={\"outline\"}\n            data-empty={!date}\n            className=\"w-[212px] justify-between text-left font-normal data-[empty=true]:text-muted-foreground\"\n          />\n        }\n      >\n        {date ? format(date, \"PPP\") : <span>Pick a date</span>}\n        <ChevronDownIcon data-icon=\"inline-end\" />\n      </PopoverTrigger>\n      <PopoverContent className=\"w-auto p-0\" align=\"start\">\n        <Calendar\n          mode=\"single\"\n          selected={date}\n          onSelect={setDate}\n          defaultMonth={date}\n        />\n      </PopoverContent>\n    </Popover>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

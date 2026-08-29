@@ -8,7 +8,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/registry/new-york-v4/ui/navigation-menu"
+} from "@/registry/ui/navigation-menu"
 
 export function NavHeader() {
   const pathname = usePathname()
@@ -17,18 +17,27 @@ export function NavHeader() {
     <NavigationMenu className="hidden sm:flex">
       <NavigationMenuList className="gap-2 *:data-[slot=navigation-menu-item]:h-7 **:data-[slot=navigation-menu-link]:py-1 **:data-[slot=navigation-menu-link]:font-medium">
         <NavigationMenuItem>
-          <NavigationMenuLink asChild data-active={pathname === "/"}>
-            <Link href="/">Home</Link>
+          <NavigationMenuLink
+            data-active={pathname === "/"}
+            render={<Link href="/" />}
+          >
+            Home
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild data-active={pathname === "/charts"}>
-            <Link href="/charts">Charts</Link>
+          <NavigationMenuLink
+            data-active={pathname === "/charts"}
+            render={<Link href="/charts" />}
+          >
+            Charts
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild data-active={pathname === "/forms"}>
-            <Link href="/forms">Forms</Link>
+          <NavigationMenuLink
+            data-active={pathname === "/forms"}
+            render={<Link href="/forms" />}
+          >
+            Forms
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

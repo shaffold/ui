@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-week-numbers",
+  "registryDependencies": [
+    "calendar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/calendar-week-numbers.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Calendar } from \"@/registry/ui/calendar\"\nimport { Card, CardContent } from \"@/registry/ui/card\"\n\nexport function CalendarWeekNumbers() {\n  const [date, setDate] = React.useState<Date | undefined>(\n    new Date(new Date().getFullYear(), 0, 12)\n  )\n\n  return (\n    <Card className=\"mx-auto w-fit p-0\">\n      <CardContent className=\"p-0\">\n        <Calendar\n          mode=\"single\"\n          defaultMonth={date}\n          selected={date}\n          onSelect={setDate}\n          showWeekNumber\n        />\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

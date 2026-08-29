@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-basic",
+  "registryDependencies": [
+    "checkbox",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/checkbox-basic.tsx",
+      "content": "import { Checkbox } from \"@/registry/ui/checkbox\"\nimport { Field, FieldGroup, FieldLabel } from \"@/registry/ui/field\"\n\nexport function CheckboxBasic() {\n  return (\n    <FieldGroup className=\"mx-auto w-56\">\n      <Field orientation=\"horizontal\">\n        <Checkbox id=\"terms-checkbox-basic\" name=\"terms-checkbox-basic\" />\n        <FieldLabel htmlFor=\"terms-checkbox-basic\">\n          Accept terms and conditions\n        </FieldLabel>\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

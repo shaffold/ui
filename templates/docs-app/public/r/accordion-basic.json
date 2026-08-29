@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-basic",
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/accordion-basic.tsx",
+      "content": "import {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/registry/ui/accordion\"\n\nconst items = [\n  {\n    value: \"item-1\",\n    trigger: \"How do I reset my password?\",\n    content:\n      \"Click on 'Forgot Password' on the login page, enter your email address, and we'll send you a link to reset your password. The link will expire in 24 hours.\",\n  },\n  {\n    value: \"item-2\",\n    trigger: \"Can I change my subscription plan?\",\n    content:\n      \"Yes, you can upgrade or downgrade your plan at any time from your account settings. Changes will be reflected in your next billing cycle.\",\n  },\n  {\n    value: \"item-3\",\n    trigger: \"What payment methods do you accept?\",\n    content:\n      \"We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through our payment partners.\",\n  },\n]\n\nexport function AccordionBasic() {\n  return (\n    <Accordion defaultValue={[\"item-1\"]} className=\"max-w-lg\">\n      {items.map((item) => (\n        <AccordionItem key={item.value} value={item.value}>\n          <AccordionTrigger>{item.trigger}</AccordionTrigger>\n          <AccordionContent>{item.content}</AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

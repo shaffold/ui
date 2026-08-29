@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar-checkbox",
+  "registryDependencies": [
+    "menubar"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/menubar-checkbox.tsx",
+      "content": "import {\n  Menubar,\n  MenubarCheckboxItem,\n  MenubarContent,\n  MenubarItem,\n  MenubarMenu,\n  MenubarSeparator,\n  MenubarShortcut,\n  MenubarTrigger,\n} from \"@/registry/ui/menubar\"\n\nexport function MenubarCheckbox() {\n  return (\n    <Menubar className=\"w-72\">\n      <MenubarMenu>\n        <MenubarTrigger>View</MenubarTrigger>\n        <MenubarContent className=\"w-64\">\n          <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>\n          <MenubarCheckboxItem checked>\n            Always Show Full URLs\n          </MenubarCheckboxItem>\n          <MenubarSeparator />\n          <MenubarItem inset>\n            Reload <MenubarShortcut>⌘R</MenubarShortcut>\n          </MenubarItem>\n          <MenubarItem disabled inset>\n            Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>\n          </MenubarItem>\n        </MenubarContent>\n      </MenubarMenu>\n      <MenubarMenu>\n        <MenubarTrigger>Format</MenubarTrigger>\n        <MenubarContent>\n          <MenubarCheckboxItem checked>Strikethrough</MenubarCheckboxItem>\n          <MenubarCheckboxItem>Code</MenubarCheckboxItem>\n          <MenubarCheckboxItem>Superscript</MenubarCheckboxItem>\n        </MenubarContent>\n      </MenubarMenu>\n    </Menubar>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

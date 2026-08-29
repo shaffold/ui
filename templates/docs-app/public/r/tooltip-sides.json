@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-sides",
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/tooltip-sides.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/registry/ui/tooltip\"\n\nexport function TooltipSides() {\n  return (\n    <div className=\"flex flex-wrap gap-2\">\n      {([\"left\", \"top\", \"bottom\", \"right\"] as const).map((side) => (\n        <Tooltip key={side}>\n          <TooltipTrigger\n            render={<Button variant=\"outline\" className=\"w-fit capitalize\" />}\n          >\n            {side}\n          </TooltipTrigger>\n          <TooltipContent side={side}>\n            <p>Add to library</p>\n          </TooltipContent>\n        </Tooltip>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "outline-item-group",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "item"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/outline-item-group.tsx",
+      "content": "import { InboxIcon } from \"lucide-react\"\n\nimport {\n  Item,\n  ItemContent,\n  ItemDescription,\n  ItemGroup,\n  ItemMedia,\n  ItemTitle,\n} from \"@/registry/ui/item\"\n\nexport function OutlineItemGroup() {\n  return (\n    <ItemGroup>\n      <Item variant=\"outline\">\n        <ItemMedia variant=\"icon\">\n          <InboxIcon />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle>Item 1</ItemTitle>\n          <ItemDescription>First item with icon.</ItemDescription>\n        </ItemContent>\n      </Item>\n      <Item variant=\"outline\">\n        <ItemMedia variant=\"icon\">\n          <InboxIcon />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle>Item 2</ItemTitle>\n          <ItemDescription>Second item with icon.</ItemDescription>\n        </ItemContent>\n      </Item>\n      <Item variant=\"outline\">\n        <ItemMedia variant=\"icon\">\n          <InboxIcon />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle>Item 3</ItemTitle>\n          <ItemDescription>Third item with icon.</ItemDescription>\n        </ItemContent>\n      </Item>\n    </ItemGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

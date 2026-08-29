@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-rtl",
+  "dependencies": [
+    "date-fns",
+    "lucide-react",
+    "react-day-picker"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/date-picker-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\nimport { arSA, he } from \"date-fns/locale\"\nimport { ChevronDownIcon } from \"lucide-react\"\nimport {\n  arSA as arSADayPicker,\n  he as heDayPicker,\n} from \"react-day-picker/locale\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Button } from \"@/styles/base-nova/ui-rtl/button\"\nimport { Calendar } from \"@/styles/base-nova/ui-rtl/calendar\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/styles/base-nova/ui-rtl/popover\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      placeholder: \"Pick a date\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      placeholder: \"اختر تاريخًا\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      placeholder: \"בחר תאריך\",\n    },\n  },\n}\n\nconst dayPickerLocales = {\n  ar: arSADayPicker,\n  he: heDayPicker,\n} as const\n\nconst dateFnsLocales = {\n  ar: arSA,\n  he: he,\n} as const\n\nexport function DatePickerRtl() {\n  const { dir, t, language } = useTranslation(translations, \"ar\")\n  const [date, setDate] = React.useState<Date>()\n\n  const dateFnsLocale =\n    dir === \"rtl\"\n      ? dateFnsLocales[language as keyof typeof dateFnsLocales]\n      : undefined\n  const dayPickerLocale =\n    dir === \"rtl\"\n      ? dayPickerLocales[language as keyof typeof dayPickerLocales]\n      : undefined\n\n  return (\n    <Popover>\n      <PopoverTrigger\n        render={\n          <Button\n            variant={\"outline\"}\n            data-empty={!date}\n            className=\"w-[212px] justify-between text-left font-normal data-[empty=true]:text-muted-foreground\"\n            dir={dir}\n          />\n        }\n      >\n        {date ? (\n          format(date, \"PPP\", { locale: dateFnsLocale })\n        ) : (\n          <span>{t.placeholder}</span>\n        )}\n        <ChevronDownIcon data-icon=\"inline-end\" />\n      </PopoverTrigger>\n      <PopoverContent className=\"w-auto p-0\" align=\"start\" dir={dir}>\n        <Calendar\n          mode=\"single\"\n          selected={date}\n          onSelect={setDate}\n          defaultMonth={date}\n          dir={dir}\n          locale={dayPickerLocale}\n        />\n      </PopoverContent>\n    </Popover>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

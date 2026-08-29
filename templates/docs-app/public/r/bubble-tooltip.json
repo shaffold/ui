@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble-tooltip",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "bubble",
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/bubble-tooltip.tsx",
+      "content": "import { CheckIcon } from \"lucide-react\"\n\nimport {\n  Bubble,\n  BubbleContent,\n  BubbleReactions,\n} from \"@/registry/ui/bubble\"\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/registry/ui/tooltip\"\n\nexport function BubbleTooltipDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 py-12\">\n      <Bubble variant=\"secondary\">\n        <BubbleContent>Did you remove the stale route?</BubbleContent>\n      </Bubble>\n      <Bubble align=\"end\">\n        <BubbleContent>Yes, removed it from the registry.</BubbleContent>\n        <BubbleReactions>\n          <Tooltip>\n            <TooltipTrigger render={<Button variant=\"ghost\" size=\"icon-xs\" />}>\n              <CheckIcon />\n            </TooltipTrigger>\n            <TooltipContent>Read on Jan 5, 2026 at 4:32 PM</TooltipContent>\n          </Tooltip>\n        </BubbleReactions>\n      </Bubble>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

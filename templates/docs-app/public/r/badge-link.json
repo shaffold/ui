@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-link",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/badge-link.tsx",
+      "content": "import { ArrowUpRightIcon } from \"lucide-react\"\n\nimport { Badge } from \"@/registry/ui/badge\"\n\nexport function BadgeAsLink() {\n  return (\n    <Badge render={<a href=\"#link\" />}>\n      Open Link <ArrowUpRightIcon data-icon=\"inline-end\" />\n    </Badge>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

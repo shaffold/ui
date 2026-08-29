@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-demo",
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/accordion-demo.tsx",
+      "content": "import {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/registry/ui/accordion\"\n\nexport default function AccordionDemo() {\n  return (\n    <Accordion defaultValue={[\"shipping\"]} className=\"max-w-lg\">\n      <AccordionItem value=\"shipping\">\n        <AccordionTrigger>What are your shipping options?</AccordionTrigger>\n        <AccordionContent>\n          We offer standard (5-7 days), express (2-3 days), and overnight\n          shipping. Free shipping on international orders.\n        </AccordionContent>\n      </AccordionItem>\n      <AccordionItem value=\"returns\">\n        <AccordionTrigger>What is your return policy?</AccordionTrigger>\n        <AccordionContent>\n          Returns accepted within 30 days. Items must be unused and in original\n          packaging. Refunds processed within 5-7 business days.\n        </AccordionContent>\n      </AccordionItem>\n      <AccordionItem value=\"support\">\n        <AccordionTrigger>How can I contact customer support?</AccordionTrigger>\n        <AccordionContent>\n          Reach us via email, live chat, or phone. We respond within 24 hours\n          during business days.\n        </AccordionContent>\n      </AccordionItem>\n    </Accordion>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

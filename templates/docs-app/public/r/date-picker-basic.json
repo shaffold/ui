@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-basic",
+  "dependencies": [
+    "date-fns"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "field",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/date-picker-basic.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport { Calendar } from \"@/registry/ui/calendar\"\nimport { Field, FieldLabel } from \"@/registry/ui/field\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/registry/ui/popover\"\n\nexport function DatePickerSimple() {\n  const [date, setDate] = React.useState<Date>()\n\n  return (\n    <Field className=\"mx-auto w-44\">\n      <FieldLabel htmlFor=\"date-picker-simple\">Date</FieldLabel>\n      <Popover>\n        <PopoverTrigger\n          render={\n            <Button\n              variant=\"outline\"\n              id=\"date-picker-simple\"\n              className=\"justify-start font-normal\"\n            />\n          }\n        >\n          {date ? format(date, \"PPP\") : <span>Pick a date</span>}\n        </PopoverTrigger>\n        <PopoverContent className=\"w-auto p-0\" align=\"start\">\n          <Calendar\n            mode=\"single\"\n            selected={date}\n            onSelect={setDate}\n            defaultMonth={date}\n          />\n        </PopoverContent>\n      </Popover>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

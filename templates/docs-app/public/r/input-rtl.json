@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-rtl",
+  "files": [
+    {
+      "path": "registry/examples/input-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@/styles/base-nova/ui-rtl/field\"\nimport { Input } from \"@/styles/base-nova/ui-rtl/input\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      apiKey: \"API Key\",\n      placeholder: \"sk-...\",\n      description: \"Your API key is encrypted and stored securely.\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      apiKey: \"مفتاح API\",\n      placeholder: \"sk-...\",\n      description: \"مفتاح API الخاص بك مشفر ومخزن بأمان.\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      apiKey: \"מפתח API\",\n      placeholder: \"sk-...\",\n      description: \"מפתח ה-API שלך מוצפן ונשמר בצורה מאובטחת.\",\n    },\n  },\n}\n\nexport function InputRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <Field dir={dir}>\n      <FieldLabel htmlFor=\"input-rtl-api-key\">{t.apiKey}</FieldLabel>\n      <Input\n        id=\"input-rtl-api-key\"\n        type=\"password\"\n        placeholder={t.placeholder}\n        dir={dir}\n      />\n      <FieldDescription>{t.description}</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

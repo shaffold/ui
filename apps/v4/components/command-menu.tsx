@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils"
 import { useConfig } from "@/hooks/use-config"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -25,7 +25,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york-v4/ui/command"
+} from "@/registry/ui/command"
 import {
   Dialog,
   DialogDescription,
@@ -34,9 +34,9 @@ import {
   DialogPortal,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
-import { Spinner } from "@/registry/new-york-v4/ui/spinner"
+} from "@/registry/ui/dialog"
+import { Separator } from "@/registry/ui/separator"
+import { Spinner } from "@/registry/ui/spinner"
 import { STYLES } from "@/registry/styles"
 
 export function CommandMenu({
@@ -423,18 +423,20 @@ export function CommandMenu({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button
-          variant="outline"
-          className={cn(
-            "relative h-8 w-full justify-start rounded-lg border-none bg-muted pl-3 text-foreground shadow-none transition-colors hover:bg-muted/50 md:w-48 lg:w-40 xl:w-64 dark:bg-card"
-          )}
-          onClick={() => setOpen(true)}
-          {...props}
-        >
-          <span className="hidden xl:inline-flex">Search documentation...</span>
-          <span className="inline-flex xl:hidden">Search...</span>
-        </Button>
+      <DialogTrigger
+        render={
+          <Button
+            variant="outline"
+            className={cn(
+              "relative h-8 w-full justify-start rounded-lg border-none bg-muted pl-3 text-foreground shadow-none transition-colors hover:bg-muted/50 md:w-48 lg:w-40 xl:w-64 dark:bg-card"
+            )}
+            onClick={() => setOpen(true)}
+            {...props}
+          />
+        }
+      >
+        <span className="hidden xl:inline-flex">Search documentation...</span>
+        <span className="inline-flex xl:hidden">Search...</span>
       </DialogTrigger>
       <DialogContent className="rounded-xl border-none bg-clip-padding p-2 pb-11 shadow-2xl ring-4 ring-neutral-200/80 dark:bg-neutral-900 dark:ring-neutral-800">
         <DialogHeader className="sr-only">

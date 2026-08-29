@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-badge-icon",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/avatar-badge-icon.tsx",
+      "content": "import { PlusIcon } from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/ui/avatar\"\n\nexport function AvatarBadgeIconExample() {\n  return (\n    <Avatar className=\"grayscale\">\n      <AvatarImage src=\"https://github.com/pranathip.png\" alt=\"@pranathip\" />\n      <AvatarFallback>PP</AvatarFallback>\n      <AvatarBadge>\n        <PlusIcon />\n      </AvatarBadge>\n    </Avatar>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-basic",
+  "registryDependencies": [
+    "button",
+    "card",
+    "collapsible"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/collapsible-basic.tsx",
+      "content": "import { ChevronDownIcon } from \"@/registry/icons/__lucide__\"\nimport { Button } from \"@/registry/ui/button\"\nimport { Card, CardContent } from \"@/registry/ui/card\"\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@/registry/ui/collapsible\"\n\nexport function CollapsibleBasic() {\n  return (\n    <Card className=\"mx-auto w-full max-w-sm\">\n      <CardContent>\n        <Collapsible className=\"rounded-md data-open:bg-muted\">\n          <CollapsibleTrigger\n            render={<Button variant=\"ghost\" className=\"w-full\" />}\n          >\n            Product details\n            <ChevronDownIcon className=\"ml-auto group-data-panel-open/button:rotate-180\" />\n          </CollapsibleTrigger>\n          <CollapsibleContent className=\"flex flex-col items-start gap-2 p-2.5 pt-0 text-sm\">\n            <div>\n              This panel can be expanded or collapsed to reveal additional\n              content.\n            </div>\n            <Button size=\"xs\">Learn More</Button>\n          </CollapsibleContent>\n        </Collapsible>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

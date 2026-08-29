@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "message-avatar",
+  "registryDependencies": [
+    "avatar",
+    "bubble",
+    "message"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/message-avatar.tsx",
+      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/ui/avatar\"\nimport {\n  Bubble,\n  BubbleContent,\n  BubbleGroup,\n} from \"@/registry/ui/bubble\"\nimport {\n  Message,\n  MessageAvatar,\n  MessageContent,\n} from \"@/registry/ui/message\"\n\nexport function MessageAvatarDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-6 py-12\">\n      <Message>\n        <MessageAvatar>\n          <Avatar>\n            <AvatarImage src=\"/avatars/03.png\" alt=\"@avatar\" />\n            <AvatarFallback>R</AvatarFallback>\n          </Avatar>\n        </MessageAvatar>\n        <MessageContent>\n          <Bubble variant=\"muted\">\n            <BubbleContent>\n              The build failed during dependency installation.\n            </BubbleContent>\n          </Bubble>\n        </MessageContent>\n      </Message>\n      <Message align=\"end\">\n        <MessageAvatar>\n          <Avatar>\n            <AvatarImage src=\"/avatars/10.png\" alt=\"@avatar\" />\n            <AvatarFallback>R</AvatarFallback>\n          </Avatar>\n        </MessageAvatar>\n        <MessageContent>\n          <Bubble>\n            <BubbleContent>Can you share the exact error?</BubbleContent>\n          </Bubble>\n        </MessageContent>\n      </Message>\n      <Message>\n        <MessageAvatar>\n          <Avatar>\n            <AvatarImage src=\"/avatars/03.png\" alt=\"@avatar\" />\n            <AvatarFallback>R</AvatarFallback>\n          </Avatar>\n        </MessageAvatar>\n        <MessageContent>\n          <BubbleGroup>\n            <Bubble variant=\"muted\">\n              <BubbleContent>Here&apos;s the error from the logs</BubbleContent>\n            </Bubble>\n            <Bubble variant=\"muted\">\n              <BubbleContent>\n                Something went wrong with the build. The libraries are not\n                installed correctly. Try running the build again.\n              </BubbleContent>\n            </Bubble>\n          </BubbleGroup>\n        </MessageContent>\n      </Message>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

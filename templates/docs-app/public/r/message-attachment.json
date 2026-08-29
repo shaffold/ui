@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "message-attachment",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "attachment",
+    "bubble",
+    "message"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/message-attachment.tsx",
+      "content": "\"use client\"\n\nimport { DownloadIcon, FileTextIcon } from \"lucide-react\"\n\nimport {\n  Attachment,\n  AttachmentAction,\n  AttachmentActions,\n  AttachmentContent,\n  AttachmentDescription,\n  AttachmentMedia,\n  AttachmentTitle,\n} from \"@/registry/ui/attachment\"\nimport { Bubble, BubbleContent } from \"@/registry/ui/bubble\"\nimport { Message, MessageContent } from \"@/registry/ui/message\"\n\nexport function MessageAttachmentDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Message align=\"end\">\n        <MessageContent>\n          <Attachment orientation=\"vertical\">\n            <AttachmentMedia variant=\"image\">\n              <img\n                src=\"https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&auto=format&fit=crop&q=80\"\n                alt=\"Workspace\"\n              />\n            </AttachmentMedia>\n          </Attachment>\n          <Bubble>\n            <BubbleContent>\n              Here&apos;s the image. Can you add it to the PDF? Use it for the\n              cover page.\n            </BubbleContent>\n          </Bubble>\n        </MessageContent>\n      </Message>\n      <Message>\n        <MessageContent>\n          <Bubble variant=\"muted\">\n            <BubbleContent>\n              Done. Here&apos;s the PDF with the image added as the cover page.\n            </BubbleContent>\n          </Bubble>\n          <Attachment>\n            <AttachmentMedia>\n              <FileTextIcon />\n            </AttachmentMedia>\n            <AttachmentContent>\n              <AttachmentTitle>sales-dashboard.pdf</AttachmentTitle>\n              <AttachmentDescription>PDF · 2.4 MB</AttachmentDescription>\n            </AttachmentContent>\n            <AttachmentActions>\n              <AttachmentAction\n                type=\"button\"\n                title=\"Download\"\n                aria-label=\"Download\"\n                size=\"icon-sm\"\n                variant=\"secondary\"\n              >\n                <DownloadIcon />\n              </AttachmentAction>\n            </AttachmentActions>\n          </Attachment>\n        </MessageContent>\n      </Message>\n      <Message align=\"end\">\n        <MessageContent>\n          <Bubble>\n            <BubbleContent>Thanks. Looks good.</BubbleContent>\n          </Bubble>\n        </MessageContent>\n      </Message>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

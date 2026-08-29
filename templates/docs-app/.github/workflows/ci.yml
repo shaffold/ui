@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      # Regenerate the registry and fail if it drifts from what's committed —
+      # keeps registry.json + public/r/** honest against registry/ui.
+      - name: Registry builds
+        run: pnpm registry:build
+
+      - name: Verify registry index
+        run: test -f public/r/registry.json && echo "registry index OK"

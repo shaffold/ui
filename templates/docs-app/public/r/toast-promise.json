@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-promise",
+  "registryDependencies": [
+    "button",
+    "toast"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/toast-promise.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport { toast } from \"@/registry/ui/toast\"\n\nexport function ToastPromise() {\n  function showToast() {\n    toast.promise(\n      new Promise<{ name: string }>((resolve) => {\n        window.setTimeout(() => resolve({ name: \"Event\" }), 2000)\n      }),\n      {\n        loading: \"Creating event…\",\n        success: (data) => `${data.name} created.`,\n        error: \"Could not create event.\",\n      }\n    )\n  }\n\n  return (\n    <Button variant=\"outline\" onClick={showToast}>\n      Create Event\n    </Button>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

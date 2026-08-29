@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-rtl",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/badge-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BadgeCheck, BookmarkIcon } from \"lucide-react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Badge } from \"@/styles/base-nova/ui-rtl/badge\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      badge: \"Badge\",\n      secondary: \"Secondary\",\n      destructive: \"Destructive\",\n      outline: \"Outline\",\n      verified: \"Verified\",\n      bookmark: \"Bookmark\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      badge: \"شارة\",\n      secondary: \"ثانوي\",\n      destructive: \"مدمر\",\n      outline: \"مخطط\",\n      verified: \"متحقق\",\n      bookmark: \"إشارة مرجعية\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      badge: \"תג\",\n      secondary: \"משני\",\n      destructive: \"הרסני\",\n      outline: \"קווי מתאר\",\n      verified: \"מאומת\",\n      bookmark: \"סימנייה\",\n    },\n  },\n}\n\nexport function BadgeRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <div className=\"flex w-full flex-wrap justify-center gap-2\" dir={dir}>\n      <Badge>{t.badge}</Badge>\n      <Badge variant=\"secondary\">{t.secondary}</Badge>\n      <Badge variant=\"destructive\">{t.destructive}</Badge>\n      <Badge variant=\"outline\">{t.outline}</Badge>\n      <Badge variant=\"secondary\">\n        <BadgeCheck data-icon=\"inline-start\" />\n        {t.verified}\n      </Badge>\n      <Badge variant=\"outline\">\n        {t.bookmark}\n        <BookmarkIcon data-icon=\"inline-end\" />\n      </Badge>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

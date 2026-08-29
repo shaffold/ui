@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-disabled",
+  "registryDependencies": [
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-disabled.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\n\nexport function InputDisabled() {\n  return (\n    <Field data-disabled>\n      <FieldLabel htmlFor=\"input-demo-disabled\">Email</FieldLabel>\n      <Input\n        id=\"input-demo-disabled\"\n        type=\"email\"\n        placeholder=\"Email\"\n        disabled\n      />\n      <FieldDescription>This field is currently disabled.</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

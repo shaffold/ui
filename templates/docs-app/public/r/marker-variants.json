@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marker-variants",
+  "registryDependencies": [
+    "marker"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/marker-variants.tsx",
+      "content": "import { Marker, MarkerContent } from \"@/registry/ui/marker\"\n\nexport function MarkerVariantsDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Marker>\n        <MarkerContent>A default marker for inline notes.</MarkerContent>\n      </Marker>\n      <Marker variant=\"separator\">\n        <MarkerContent>A separator marker</MarkerContent>\n      </Marker>\n      <Marker variant=\"border\">\n        <MarkerContent>A border marker for row boundaries.</MarkerContent>\n      </Marker>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble-demo",
+  "registryDependencies": [
+    "bubble"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/bubble-demo.tsx",
+      "content": "import {\n  Bubble,\n  BubbleContent,\n  BubbleGroup,\n  BubbleReactions,\n} from \"@/registry/ui/bubble\"\n\nexport function BubbleDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Bubble align=\"end\">\n        <BubbleContent>Hey there! what&apos;s up?</BubbleContent>\n      </Bubble>\n      <BubbleGroup>\n        <Bubble variant=\"muted\">\n          <BubbleContent>Hey! Want to see chat bubbles?</BubbleContent>\n        </Bubble>\n        <Bubble variant=\"muted\">\n          <BubbleContent>\n            I can group messages, switch sides, and keep the whole thread easy\n            to scan.\n          </BubbleContent>\n          <BubbleReactions role=\"img\" aria-label=\"Reaction: thumbs up\">\n            <span>👍</span>\n          </BubbleReactions>\n        </Bubble>\n      </BubbleGroup>\n      <Bubble align=\"end\">\n        <BubbleContent>Sure. Hit me with your best demo.</BubbleContent>\n      </Bubble>\n      <Bubble variant=\"muted\">\n        <BubbleContent>\n          Yes. You are reading a demo that is demoing itself. Very meta. Very\n          on-brand.\n        </BubbleContent>\n        <BubbleReactions\n          role=\"img\"\n          aria-label=\"Reactions: thumbs up, fire, eyes, and 2 more\"\n        >\n          <span>👍</span>\n          <span>🔥</span>\n          <span>👀</span>\n          <span>+2</span>\n        </BubbleReactions>\n      </Bubble>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

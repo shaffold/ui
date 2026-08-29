@@ -11,7 +11,7 @@ import {
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
 import { ThemeSelector } from "@/components/theme-selector"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 
 export const dynamic = "force-static"
 export const revalidate = false
@@ -56,11 +56,15 @@ export default function ExamplesLayout({
         <PageHeaderHeading className="max-w-4xl">{title}</PageHeaderHeading>
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
-          <Button asChild size="sm">
-            <Link href="/docs/installation">Get Started</Link>
+          <Button size="sm" render={<Link href="/docs/installation" />}>
+            Get Started
           </Button>
-          <Button asChild size="sm" variant="ghost">
-            <Link href="/docs/components">View Components</Link>
+          <Button
+            size="sm"
+            variant="ghost"
+            render={<Link href="/docs/components" />}
+          >
+            View Components
           </Button>
         </PageActions>
       </PageHeader>

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-rtl",
+  "files": [
+    {
+      "path": "registry/examples/avatar-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n  AvatarGroup,\n  AvatarGroupCount,\n  AvatarImage,\n} from \"@/styles/base-nova/ui-rtl/avatar\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      moreUsers: \"+3\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      moreUsers: \"+٣\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      moreUsers: \"+3\",\n    },\n  },\n}\n\nexport function AvatarRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <div\n      className=\"flex flex-row flex-wrap items-center gap-6 md:gap-12\"\n      dir={dir}\n    >\n      <Avatar>\n        <AvatarImage\n          src=\"https://github.com/shadcn.png\"\n          alt=\"@shadcn\"\n          className=\"grayscale\"\n        />\n        <AvatarFallback>CN</AvatarFallback>\n      </Avatar>\n      <Avatar>\n        <AvatarImage\n          src=\"https://github.com/evilrabbit.png\"\n          alt=\"@evilrabbit\"\n        />\n        <AvatarFallback>ER</AvatarFallback>\n        <AvatarBadge className=\"bg-green-600 dark:bg-green-800\" />\n      </Avatar>\n      <AvatarGroup className=\"grayscale\">\n        <Avatar>\n          <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarImage\n            src=\"https://github.com/maxleiter.png\"\n            alt=\"@maxleiter\"\n          />\n          <AvatarFallback>LR</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarImage\n            src=\"https://github.com/evilrabbit.png\"\n            alt=\"@evilrabbit\"\n          />\n          <AvatarFallback>ER</AvatarFallback>\n        </Avatar>\n        <AvatarGroupCount>{t.moreUsers}</AvatarGroupCount>\n      </AvatarGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-popover",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "button-group",
+    "field",
+    "popover",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/button-group-popover.tsx",
+      "content": "import { BotIcon, ChevronDownIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport { ButtonGroup } from \"@/registry/ui/button-group\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@/registry/ui/field\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@/registry/ui/popover\"\nimport { Textarea } from \"@/registry/ui/textarea\"\n\nexport default function ButtonGroupPopover() {\n  return (\n    <ButtonGroup>\n      <Button variant=\"outline\">\n        <BotIcon /> Copilot\n      </Button>\n      <Popover>\n        <PopoverTrigger\n          render={\n            <Button variant=\"outline\" size=\"icon\" aria-label=\"Open Popover\" />\n          }\n        >\n          <ChevronDownIcon />\n        </PopoverTrigger>\n        <PopoverContent align=\"end\" className=\"rounded-xl text-sm\">\n          <PopoverHeader>\n            <PopoverTitle>Start a new task with Copilot</PopoverTitle>\n            <PopoverDescription>\n              Describe your task in natural language.\n            </PopoverDescription>\n          </PopoverHeader>\n          <Field>\n            <FieldLabel htmlFor=\"task\" className=\"sr-only\">\n              Task Description\n            </FieldLabel>\n            <Textarea\n              id=\"task\"\n              placeholder=\"I need to...\"\n              className=\"resize-none\"\n            />\n            <FieldDescription>\n              Copilot will open a pull request for review.\n            </FieldDescription>\n          </Field>\n        </PopoverContent>\n      </Popover>\n    </ButtonGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

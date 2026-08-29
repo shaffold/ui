@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-label",
+  "registryDependencies": [
+    "progress"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/progress-label.tsx",
+      "content": "import {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@/registry/ui/progress\"\n\nexport function ProgressWithLabel() {\n  return (\n    <Progress value={56} className=\"w-full max-w-sm\">\n      <ProgressLabel>Upload progress</ProgressLabel>\n      <ProgressValue />\n    </Progress>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

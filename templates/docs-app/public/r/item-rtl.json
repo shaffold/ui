@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item-rtl",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/item-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BadgeCheckIcon, ChevronRightIcon } from \"lucide-react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Button } from \"@/styles/base-nova/ui-rtl/button\"\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemMedia,\n  ItemTitle,\n} from \"@/styles/base-nova/ui-rtl/item\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      basicItem: \"Basic Item\",\n      basicItemDesc: \"A simple item with title and description.\",\n      action: \"Action\",\n      verifiedTitle: \"Your profile has been verified.\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      basicItem: \"عنصر أساسي\",\n      basicItemDesc: \"عنصر بسيط يحتوي على عنوان ووصف.\",\n      action: \"إجراء\",\n      verifiedTitle: \"تم التحقق من ملفك الشخصي.\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      basicItem: \"פריט בסיסי\",\n      basicItemDesc: \"פריט פשוט עם כותרת ותיאור.\",\n      action: \"פעולה\",\n      verifiedTitle: \"הפרופיל שלך אומת.\",\n    },\n  },\n}\n\nexport function ItemRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-6\" dir={dir}>\n      <Item variant=\"outline\" dir={dir}>\n        <ItemContent>\n          <ItemTitle>{t.basicItem}</ItemTitle>\n          <ItemDescription>{t.basicItemDesc}</ItemDescription>\n        </ItemContent>\n        <ItemActions>\n          <Button variant=\"outline\" size=\"sm\">\n            {t.action}\n          </Button>\n        </ItemActions>\n      </Item>\n      <Item variant=\"outline\" size=\"sm\" render={<a href=\"#\" />} dir={dir}>\n        <ItemMedia>\n          <BadgeCheckIcon className=\"size-5\" />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle>{t.verifiedTitle}</ItemTitle>\n        </ItemContent>\n        <ItemActions>\n          <ChevronRightIcon className=\"size-4\" />\n        </ItemActions>\n      </Item>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

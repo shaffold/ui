@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-button",
+  "registryDependencies": [
+    "button",
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/kbd-button.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\"\nimport { Kbd } from \"@/registry/ui/kbd\"\n\nexport default function KbdButton() {\n  return (\n    <Button variant=\"outline\">\n      Accept{\" \"}\n      <Kbd data-icon=\"inline-end\" className=\"translate-x-0.5\">\n        ⏎\n      </Kbd>\n    </Button>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

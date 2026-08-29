@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-types",
+  "registryDependencies": [
+    "button",
+    "toast"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/toast-types.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport { toast } from \"@/registry/ui/toast\"\n\nexport function ToastTypes() {\n  return (\n    <div className=\"flex flex-wrap gap-2\">\n      <Button\n        variant=\"outline\"\n        onClick={() => toast.add({ description: \"Event has been created.\" })}\n      >\n        Default\n      </Button>\n      <Button\n        variant=\"outline\"\n        onClick={() =>\n          toast.add({\n            type: \"success\",\n            description: \"Event has been created.\",\n          })\n        }\n      >\n        Success\n      </Button>\n      <Button\n        variant=\"outline\"\n        onClick={() =>\n          toast.add({\n            type: \"info\",\n            description: \"Arrive 10 minutes before the event.\",\n          })\n        }\n      >\n        Info\n      </Button>\n      <Button\n        variant=\"outline\"\n        onClick={() =>\n          toast.add({\n            type: \"warning\",\n            description: \"The event cannot start before 8:00 AM.\",\n          })\n        }\n      >\n        Warning\n      </Button>\n      <Button\n        variant=\"outline\"\n        onClick={() =>\n          toast.add({\n            type: \"error\",\n            description: \"The event could not be created.\",\n            priority: \"high\",\n          })\n        }\n      >\n        Error\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

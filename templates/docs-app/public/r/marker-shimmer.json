@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marker-shimmer",
+  "registryDependencies": [
+    "marker"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/marker-shimmer.tsx",
+      "content": "import { Marker, MarkerContent } from \"@/registry/ui/marker\"\n\nexport function MarkerShimmerDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Marker role=\"status\">\n        <MarkerContent className=\"shimmer\">Thinking...</MarkerContent>\n      </Marker>\n      <Marker variant=\"separator\" role=\"status\">\n        <MarkerContent className=\"shimmer\">Reading 4 files</MarkerContent>\n      </Marker>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble-group-demo",
+  "registryDependencies": [
+    "bubble"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/bubble-group-demo.tsx",
+      "content": "import {\n  Bubble,\n  BubbleContent,\n  BubbleGroup,\n  BubbleReactions,\n} from \"@/registry/ui/bubble\"\n\nexport function BubbleGroupDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Bubble variant=\"muted\">\n        <BubbleContent>Can you tell me what&apos;s the issue?</BubbleContent>\n      </Bubble>\n      <BubbleGroup>\n        <Bubble align=\"end\">\n          <BubbleContent>You tell me!</BubbleContent>\n        </Bubble>\n        <Bubble align=\"end\">\n          <BubbleContent>It worked yesterday. You broke it!</BubbleContent>\n        </Bubble>\n        <Bubble align=\"end\">\n          <BubbleContent>Find the bug and fix it.</BubbleContent>\n          <BubbleReactions aria-label=\"Reactions: eyes\" align=\"start\">\n            <span>👀</span>\n          </BubbleReactions>\n        </Bubble>\n      </BubbleGroup>\n      <Bubble variant=\"muted\">\n        <BubbleContent>\n          Want me to diff yesterday&apos;s you against today&apos;s you?\n          It&apos;s a bit embarrassing.\n        </BubbleContent>\n      </Bubble>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

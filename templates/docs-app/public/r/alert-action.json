@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-action",
+  "registryDependencies": [
+    "alert",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/alert-action.tsx",
+      "content": "import {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@/registry/ui/alert\"\nimport { Button } from \"@/registry/ui/button\"\n\nexport default function AlertActionExample() {\n  return (\n    <Alert className=\"max-w-md\">\n      <AlertTitle>Dark mode is now available</AlertTitle>\n      <AlertDescription>\n        Enable it under your profile settings to get started.\n      </AlertDescription>\n      <AlertAction>\n        <Button size=\"xs\" variant=\"default\">\n          Enable\n        </Button>\n      </AlertAction>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

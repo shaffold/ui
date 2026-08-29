@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-line",
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/tabs-line.tsx",
+      "content": "import { Tabs, TabsList, TabsTrigger } from \"@/registry/ui/tabs\"\n\nexport function TabsLine() {\n  return (\n    <Tabs defaultValue=\"overview\">\n      <TabsList variant=\"line\">\n        <TabsTrigger value=\"overview\">Overview</TabsTrigger>\n        <TabsTrigger value=\"analytics\">Analytics</TabsTrigger>\n        <TabsTrigger value=\"reports\">Reports</TabsTrigger>\n      </TabsList>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-badge",
+  "registryDependencies": [
+    "badge",
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-badge.tsx",
+      "content": "import { Badge } from \"@/registry/ui/badge\"\nimport { Field, FieldLabel } from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\n\nexport function InputBadge() {\n  return (\n    <Field>\n      <FieldLabel htmlFor=\"input-badge\">\n        Webhook URL{\" \"}\n        <Badge variant=\"secondary\" className=\"ml-auto\">\n          Beta\n        </Badge>\n      </FieldLabel>\n      <Input\n        id=\"input-badge\"\n        type=\"url\"\n        placeholder=\"https://api.example.com/webhook\"\n      />\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

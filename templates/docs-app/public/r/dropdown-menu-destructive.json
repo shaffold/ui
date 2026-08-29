@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-destructive",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/dropdown-menu-destructive.tsx",
+      "content": "\"use client\"\n\nimport { PencilIcon, ShareIcon, TrashIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/ui/dropdown-menu\"\n\nexport function DropdownMenuDestructive() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger render={<Button variant=\"outline\" />}>\n        Actions\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            <PencilIcon />\n            Edit\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <ShareIcon />\n            Share\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuGroup>\n          <DropdownMenuItem variant=\"destructive\">\n            <TrashIcon />\n            Delete\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

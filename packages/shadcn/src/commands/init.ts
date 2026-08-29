@@ -129,7 +129,7 @@ export const init = new Command()
   .argument("[components...]", "names, url or local path to component")
   .option(
     "-t, --template <template>",
-    "the template to use. (next, start, vite, react-router, laravel, astro)"
+    "the template to use. (next, start, vite, react-router, laravel, astro, docs)"
   )
   .option(
     "-b, --base <base>",

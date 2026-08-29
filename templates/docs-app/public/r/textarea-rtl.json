@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-rtl",
+  "files": [
+    {
+      "path": "registry/examples/textarea-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@/styles/base-nova/ui-rtl/field\"\nimport { Textarea } from \"@/styles/base-nova/ui-rtl/textarea\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      label: \"Feedback\",\n      placeholder: \"Your feedback helps us improve...\",\n      description: \"Share your thoughts about our service.\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      label: \"التعليقات\",\n      placeholder: \"تعليقاتك تساعدنا على التحسين...\",\n      description: \"شاركنا أفكارك حول خدمتنا.\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      label: \"משוב\",\n      placeholder: \"המשוב שלך עוזר לנו להשתפר...\",\n      description: \"שתף את מחשבותיך על השירות שלנו.\",\n    },\n  },\n}\n\nexport default function TextareaRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <Field className=\"w-full max-w-xs\" dir={dir}>\n      <FieldLabel htmlFor=\"feedback\" dir={dir}>\n        {t.label}\n      </FieldLabel>\n      <Textarea id=\"feedback\" placeholder={t.placeholder} dir={dir} rows={4} />\n      <FieldDescription dir={dir}>{t.description}</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

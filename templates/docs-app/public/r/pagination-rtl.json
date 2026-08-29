@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-rtl",
+  "files": [
+    {
+      "path": "registry/examples/pagination-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/styles/base-nova/ui-rtl/pagination\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      previous: \"Previous\",\n      next: \"Next\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      previous: \"السابق\",\n      next: \"التالي\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      previous: \"הקודם\",\n      next: \"הבא\",\n    },\n  },\n}\n\nfunction toArabicNumerals(num: number): string {\n  const arabicNumerals = [\"٠\", \"١\", \"٢\", \"٣\", \"٤\", \"٥\", \"٦\", \"٧\", \"٨\", \"٩\"]\n  return num\n    .toString()\n    .split(\"\")\n    .map((digit) => arabicNumerals[parseInt(digit, 10)])\n    .join(\"\")\n}\n\nexport function PaginationRtl() {\n  const { dir, t, language } = useTranslation(translations, \"ar\")\n\n  const formatNumber = (num: number): string => {\n    if (language === \"ar\") {\n      return toArabicNumerals(num)\n    }\n    return num.toString()\n  }\n\n  return (\n    <Pagination dir={dir}>\n      <PaginationContent>\n        <PaginationItem>\n          <PaginationPrevious href=\"#\" text={t.previous} />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href=\"#\">{formatNumber(1)}</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href=\"#\" isActive>\n            {formatNumber(2)}\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href=\"#\">{formatNumber(3)}</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationEllipsis />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href=\"#\" text={t.next} />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-fade-demo",
+  "files": [
+    {
+      "path": "registry/examples/scroll-fade-demo.tsx",
+      "content": "export function ScrollFadeDemo() {\n  return (\n    <div className=\"mx-auto w-full max-w-xs overflow-hidden rounded-2xl border\">\n      <div className=\"h-72 scroll-fade scrollbar-none overflow-y-auto\">\n        <div className=\"flex flex-col gap-1.5 p-1.5\">\n          {Array.from({ length: 12 }, (_, index) => (\n            <div\n              key={index}\n              className=\"rounded-lg bg-muted px-3 py-2.5 text-sm\"\n            >\n              Item {index + 1}\n            </div>\n          ))}\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

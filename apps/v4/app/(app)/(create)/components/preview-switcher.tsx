@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import { useDesignSystemSearchParams } from "@/app/(app)/(create)/lib/search-params"
 
 const PREVIEW_ITEMS = [

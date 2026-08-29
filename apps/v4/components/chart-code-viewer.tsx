@@ -6,7 +6,7 @@ import { ChartCopyButton } from "@/components/chart-copy-button"
 import { type Chart } from "@/components/chart-display"
 import { getIconForLanguageExtension } from "@/components/icons"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Drawer,
   DrawerContent,
@@ -14,7 +14,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/new-york-v4/ui/drawer"
+} from "@/registry/ui/drawer"
 import {
   Sheet,
   SheetContent,
@@ -22,7 +22,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/new-york-v4/ui/sheet"
+} from "@/registry/ui/sheet"
 
 export function ChartCodeViewer({
   chart,
@@ -82,7 +82,7 @@ export function ChartCodeViewer({
   if (!isDesktop) {
     return (
       <Drawer>
-        <DrawerTrigger asChild>{button}</DrawerTrigger>
+        <DrawerTrigger render={button} />
         <DrawerContent
           className={cn(
             "flex max-h-[80vh] flex-col sm:max-h-[90vh] [&>div.bg-muted]:shrink-0",
@@ -101,7 +101,7 @@ export function ChartCodeViewer({
 
   return (
     <Sheet>
-      <SheetTrigger asChild>{button}</SheetTrigger>
+      <SheetTrigger render={button} />
       <SheetContent
         side="right"
         className={cn(

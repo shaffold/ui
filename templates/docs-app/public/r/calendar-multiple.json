@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-multiple",
+  "registryDependencies": [
+    "calendar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/calendar-multiple.tsx",
+      "content": "import { Calendar } from \"@/registry/ui/calendar\"\nimport { Card, CardContent } from \"@/registry/ui/card\"\n\nexport function CalendarMultiple() {\n  return (\n    <Card className=\"mx-auto w-fit p-0\">\n      <CardContent className=\"p-0\">\n        <Calendar mode=\"multiple\" />\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-media",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert-dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/alert-dialog-media.tsx",
+      "content": "import { CircleFadingPlusIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/registry/ui/alert-dialog\"\nimport { Button } from \"@/registry/ui/button\"\n\nexport function AlertDialogWithMedia() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger\n        render={<Button variant=\"outline\">Share Project</Button>}\n      />\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogMedia>\n            <CircleFadingPlusIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Share this project?</AlertDialogTitle>\n          <AlertDialogDescription>\n            Anyone with the link will be able to view and edit this project.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction>Share</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

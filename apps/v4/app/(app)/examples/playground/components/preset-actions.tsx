@@ -12,8 +12,8 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/registry/new-york-v4/ui/alert-dialog"
-import { Button } from "@/registry/new-york-v4/ui/button"
+} from "@/registry/ui/alert-dialog"
+import { Button } from "@/registry/ui/button"
 import {
   Dialog,
   DialogClose,
@@ -22,16 +22,16 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ui/dialog"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/new-york-v4/ui/dropdown-menu"
-import { Label } from "@/registry/new-york-v4/ui/label"
-import { Switch } from "@/registry/new-york-v4/ui/switch"
+} from "@/registry/ui/dropdown-menu"
+import { Label } from "@/registry/ui/label"
+import { Switch } from "@/registry/ui/switch"
 
 export function PresetActions() {
   const [open, setIsOpen] = React.useState(false)
@@ -40,11 +40,11 @@ export function PresetActions() {
   return (
     <>
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="secondary" size="icon">
-            <span className="sr-only">Actions</span>
-            <MoreHorizontal />
-          </Button>
+        <DropdownMenuTrigger
+          render={<Button variant="secondary" size="icon" />}
+        >
+          <span className="sr-only">Actions</span>
+          <MoreHorizontal />
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem onSelect={() => setIsOpen(true)}>
@@ -87,8 +87,8 @@ export function PresetActions() {
             </div>
           </div>
           <DialogFooter>
-            <DialogClose asChild>
-              <Button variant="secondary">Close</Button>
+            <DialogClose render={<Button variant="secondary" />}>
+              Close
             </DialogClose>
           </DialogFooter>
         </DialogContent>

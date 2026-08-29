@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-group-basic",
+  "registryDependencies": [
+    "field",
+    "input",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-group-basic.tsx",
+      "content": "import { Field, FieldGroup, FieldLabel } from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\nimport { InputGroup, InputGroupInput } from \"@/registry/ui/input-group\"\n\nexport function InputGroupBasic() {\n  return (\n    <FieldGroup>\n      <Field>\n        <FieldLabel htmlFor=\"input-default-01\">\n          Default (No Input Group)\n        </FieldLabel>\n        <Input placeholder=\"Placeholder\" id=\"input-default-01\" />\n      </Field>\n      <Field>\n        <FieldLabel htmlFor=\"input-group-02\">Input Group</FieldLabel>\n        <InputGroup>\n          <InputGroupInput id=\"input-group-02\" placeholder=\"Placeholder\" />\n        </InputGroup>\n      </Field>\n      <Field data-disabled=\"true\">\n        <FieldLabel htmlFor=\"input-disabled-03\">Disabled</FieldLabel>\n        <InputGroup>\n          <InputGroupInput\n            id=\"input-disabled-03\"\n            placeholder=\"This field is disabled\"\n            disabled\n          />\n        </InputGroup>\n      </Field>\n      <Field data-invalid=\"true\">\n        <FieldLabel htmlFor=\"input-invalid-04\">Invalid</FieldLabel>\n        <InputGroup>\n          <InputGroupInput\n            id=\"input-invalid-04\"\n            placeholder=\"This field is invalid\"\n            aria-invalid=\"true\"\n          />\n        </InputGroup>\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

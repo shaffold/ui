@@ -3,7 +3,7 @@
 import { Suspense } from "react"
 import { usePathname } from "next/navigation"
 
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+import { Separator } from "@/registry/ui/separator"
 import { ProjectForm } from "@/app/(app)/(create)/components/project-form"
 import { V0Button } from "@/app/(app)/(create)/components/v0-button"
 

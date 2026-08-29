@@ -1,0 +1,6998 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "ds",
+  "homepage": "https://REPLACE_ME.example.com",
+  "items": [
+    {
+      "name": "docs-nav",
+      "type": "registry:lib",
+      "files": [
+        {
+          "path": "lib/docs-nav.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "highlight-code",
+      "type": "registry:lib",
+      "dependencies": [
+        "shiki"
+      ],
+      "files": [
+        {
+          "path": "lib/highlight-code.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "read-file",
+      "type": "registry:lib",
+      "dependencies": [
+        "fs",
+        "path"
+      ],
+      "files": [
+        {
+          "path": "lib/read-file.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "source",
+      "type": "registry:lib",
+      "dependencies": [
+        "fumadocs-core"
+      ],
+      "files": [
+        {
+          "path": "lib/source.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "path": "lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "use-mobile",
+      "type": "registry:hook",
+      "files": [
+        {
+          "path": "hooks/use-mobile.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/aspect-ratio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "attachment",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/attachment.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bubble",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/bubble.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "separator",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/button-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "dependencies": [
+        "lucide-react",
+        "react-day-picker"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "dependencies": [
+        "embla-carousel-react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/carousel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "recharts"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "input-group",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "dialog",
+        "input-group",
+        "utils"
+      ],
+      "dependencies": [
+        "cmdk",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/context-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "direction",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "registry/ui/direction.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/empty.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "label",
+        "separator",
+        "utils"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "input",
+        "textarea",
+        "utils"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/input-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "input-otp",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/input-otp.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "item",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "separator",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/item.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "marker",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/marker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "dropdown-menu",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/menubar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "message-scroller",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "dependencies": [
+        "@shadcn/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/message-scroller.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "message",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/message.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "native-select",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/native-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/navigation-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "resizable",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "react-resizable-panels"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/resizable.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "input",
+        "separator",
+        "sheet",
+        "skeleton",
+        "tooltip",
+        "use-mobile",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:ui",
+      "dependencies": [
+        "lucide-react",
+        "next-themes",
+        "sonner"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/sonner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "toggle",
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "registry/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dashboard-01",
+      "type": "registry:block",
+      "registryDependencies": [
+        "separator",
+        "sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/dashboard-01/components/nav-secondary.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/blocks/dashboard-01/components/site-header.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/blocks/dashboard-01/data.json",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-01",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card",
+        "field",
+        "input",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/login-01/components/login-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-02",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/login-02/components/login-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-03",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card",
+        "field",
+        "input",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/login-03/components/login-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-04",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card",
+        "field",
+        "input",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/login-04/components/login-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-06",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card",
+        "sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/sidebar-06/components/sidebar-opt-in-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-08",
+      "type": "registry:block",
+      "registryDependencies": [
+        "sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/sidebar-08/components/nav-secondary.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-10",
+      "type": "registry:block",
+      "registryDependencies": [
+        "sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/sidebar-10/components/nav-main.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/blocks/sidebar-10/components/nav-secondary.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-12",
+      "type": "registry:block",
+      "registryDependencies": [
+        "calendar",
+        "sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/sidebar-12/components/date-picker.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-14",
+      "type": "registry:block",
+      "registryDependencies": [
+        "sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/sidebar-14/components/app-sidebar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-15",
+      "type": "registry:block",
+      "registryDependencies": [
+        "calendar",
+        "sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/sidebar-15/components/date-picker.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/blocks/sidebar-15/components/nav-main.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/blocks/sidebar-15/components/nav-secondary.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-16",
+      "type": "registry:block",
+      "registryDependencies": [
+        "sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/sidebar-16/components/nav-secondary.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-01",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card",
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/signup-01/components/signup-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-02",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/signup-02/components/signup-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-03",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card",
+        "field",
+        "input",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/signup-03/components/signup-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-04",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card",
+        "field",
+        "input",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/blocks/signup-04/components/signup-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "__index__",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/__index__.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "accordion-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/accordion-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "accordion-borders",
+      "type": "registry:example",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/accordion-borders.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "accordion-card",
+      "type": "registry:example",
+      "registryDependencies": [
+        "accordion",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/accordion-card.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "accordion-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/accordion-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "accordion-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/accordion-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "accordion-multiple",
+      "type": "registry:example",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/accordion-multiple.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-action",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-action.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-colors",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-colors.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-destructive",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-destructive.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert-dialog",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-dialog-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert-dialog",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-dialog-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-destructive",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert-dialog",
+        "button"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-dialog-destructive.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-media",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert-dialog",
+        "button"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-dialog-media.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-small-media",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert-dialog",
+        "button"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-dialog-small-media.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-small",
+      "type": "registry:example",
+      "registryDependencies": [
+        "alert-dialog",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/alert-dialog-small.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "aspect-ratio-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "aspect-ratio"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/aspect-ratio-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "aspect-ratio-portrait",
+      "type": "registry:example",
+      "registryDependencies": [
+        "aspect-ratio"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/aspect-ratio-portrait.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "aspect-ratio-square",
+      "type": "registry:example",
+      "registryDependencies": [
+        "aspect-ratio"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/aspect-ratio-square.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "attachment-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "attachment",
+        "spinner"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/attachment-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "attachment-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "attachment"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/attachment-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "attachment-image",
+      "type": "registry:example",
+      "registryDependencies": [
+        "attachment"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/attachment-image.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "attachment-sizes",
+      "type": "registry:example",
+      "registryDependencies": [
+        "attachment"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/attachment-sizes.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "attachment-states",
+      "type": "registry:example",
+      "registryDependencies": [
+        "attachment",
+        "spinner"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/attachment-states.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "attachment-trigger",
+      "type": "registry:example",
+      "registryDependencies": [
+        "attachment",
+        "dialog"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/attachment-trigger.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-badge-icon",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/avatar-badge-icon.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-badge",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/avatar-badge.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/avatar-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/avatar-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-dropdown",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/avatar-dropdown.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-group-count-icon",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/avatar-group-count-icon.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-group-count",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/avatar-group-count.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/avatar-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-size",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/avatar-size.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "badge-colors",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/badge-colors.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "badge-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/badge-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "badge-icon",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/badge-icon.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "badge-link",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/badge-link.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "badge-spinner",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/badge-spinner.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "badge-variants",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/badge-variants.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "breadcrumb"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/breadcrumb-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "breadcrumb",
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/breadcrumb-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb-dropdown",
+      "type": "registry:example",
+      "registryDependencies": [
+        "breadcrumb",
+        "dropdown-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/breadcrumb-dropdown.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb-ellipsis",
+      "type": "registry:example",
+      "registryDependencies": [
+        "breadcrumb"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/breadcrumb-ellipsis.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb-link",
+      "type": "registry:example",
+      "registryDependencies": [
+        "breadcrumb"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/breadcrumb-link.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb-separator",
+      "type": "registry:example",
+      "registryDependencies": [
+        "breadcrumb"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/breadcrumb-separator.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "bubble-alignment",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/bubble-alignment.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "bubble-collapsible",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble",
+        "button",
+        "collapsible"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/bubble-collapsible.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "bubble-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/bubble-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "bubble-group-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/bubble-group-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "bubble-popover",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble",
+        "button",
+        "popover"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/bubble-popover.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "bubble-tooltip",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble",
+        "button",
+        "tooltip"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/bubble-tooltip.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-default",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-default.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-destructive",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-destructive.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-ghost",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-ghost.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "dropdown-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-dropdown",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "dropdown-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-dropdown.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-input-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "input-group",
+        "tooltip"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-input-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-input",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "input"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-input.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-nested",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "input",
+        "input-group",
+        "tooltip"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-nested.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-orientation",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-orientation.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-popover",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "field",
+        "popover",
+        "textarea"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-popover.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-select",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "input",
+        "select"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-select.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-separator",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-separator.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-group-size",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-group-size.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-icon",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-icon.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-link",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-link.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-outline",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-outline.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-render",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-render.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-rounded",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-rounded.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-secondary",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-secondary.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-size",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-size.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "button-spinner",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/button-spinner.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "calendar-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "calendar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/calendar-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "calendar-booked-dates",
+      "type": "registry:example",
+      "registryDependencies": [
+        "calendar",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/calendar-booked-dates.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "calendar-caption",
+      "type": "registry:example",
+      "registryDependencies": [
+        "calendar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/calendar-caption.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "calendar-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "calendar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/calendar-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "calendar-multiple",
+      "type": "registry:example",
+      "registryDependencies": [
+        "calendar",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/calendar-multiple.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "calendar-time",
+      "type": "registry:example",
+      "registryDependencies": [
+        "calendar",
+        "card",
+        "field",
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/calendar-time.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "calendar-week-numbers",
+      "type": "registry:example",
+      "registryDependencies": [
+        "calendar",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/calendar-week-numbers.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "card-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/card-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "card-edge-to-edge",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/card-edge-to-edge.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "card-image",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/card-image.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "card-small",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/card-small.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "card-spacing",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "label",
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/card-spacing.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "carousel-api",
+      "type": "registry:example",
+      "registryDependencies": [
+        "card",
+        "carousel"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/carousel-api.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "carousel-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "card",
+        "carousel"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/carousel-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "carousel-multiple",
+      "type": "registry:example",
+      "registryDependencies": [
+        "card",
+        "carousel"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/carousel-multiple.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "carousel-orientation",
+      "type": "registry:example",
+      "registryDependencies": [
+        "card",
+        "carousel"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/carousel-orientation.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "carousel-size",
+      "type": "registry:example",
+      "registryDependencies": [
+        "card",
+        "carousel"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/carousel-size.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "carousel-spacing",
+      "type": "registry:example",
+      "registryDependencies": [
+        "card",
+        "carousel"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/carousel-spacing.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "chart-tooltip",
+      "type": "registry:example",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/chart-tooltip.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/checkbox-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "field",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/checkbox-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-description",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/checkbox-description.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/checkbox-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/checkbox-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-invalid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/checkbox-invalid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-table",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "table"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/checkbox-table.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "collapsible-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "collapsible"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/collapsible-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "collapsible-file-tree",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "card",
+        "collapsible",
+        "tabs"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/collapsible-file-tree.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "collapsible-settings",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "card",
+        "collapsible",
+        "field",
+        "input"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/collapsible-settings.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-auto-highlight",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-auto-highlight.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-clear",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-clear.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-custom",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox",
+        "item"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-custom.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-groups",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-groups.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-input-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox",
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-input-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-invalid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-invalid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-multiple",
+      "type": "registry:example",
+      "registryDependencies": [
+        "combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-multiple.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "combobox-popup",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/combobox-popup.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "command-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "command"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/command-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "command-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "command"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/command-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "command-dialog",
+      "type": "registry:example",
+      "registryDependencies": [
+        "command"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/command-dialog.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "command-groups",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "command"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/command-groups.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "command-scrollable",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "command"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/command-scrollable.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "command-shortcuts",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "command"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/command-shortcuts.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-checkboxes",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-checkboxes.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-destructive",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-destructive.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-groups",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-groups.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-icons",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-icons.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-radio",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-radio.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-shortcuts",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-shortcuts.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-sides",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-sides.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "context-menu-submenu",
+      "type": "registry:example",
+      "registryDependencies": [
+        "context-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/context-menu-submenu.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "date-picker-dob",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "calendar",
+        "field",
+        "popover"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/date-picker-dob.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "date-picker-input",
+      "type": "registry:example",
+      "registryDependencies": [
+        "calendar",
+        "field",
+        "input-group",
+        "popover"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/date-picker-input.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dialog-close-button",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dialog",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dialog-close-button.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dialog-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dialog",
+        "field",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dialog-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dialog-no-close-button",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dialog-no-close-button.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dialog-scrollable-content",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dialog-scrollable-content.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dialog-sticky-footer",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dialog-sticky-footer.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "drawer-nested",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "drawer",
+        "use-mobile"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/drawer-nested.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "drawer-non-modal",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "drawer"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/drawer-non-modal.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "drawer-sides",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "drawer"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/drawer-sides.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "drawer-snap-points",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "drawer"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/drawer-snap-points.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "drawer-swipe-handle",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "drawer"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/drawer-swipe-handle.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-avatar",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "dropdown-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-avatar.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-checkboxes-icons",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-checkboxes-icons.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-checkboxes",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-checkboxes.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-complex",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-complex.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-destructive",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-destructive.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-icons",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-icons.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-radio-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-radio-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-radio-icons",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-radio-icons.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-shortcuts",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-shortcuts.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-submenu",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/dropdown-menu-submenu.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "empty-avatar-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "empty"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/empty-avatar-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "empty-avatar",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "empty"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/empty-avatar.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "empty-card",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "empty"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/empty-card.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "empty-input-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "empty",
+        "input-group",
+        "kbd"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/empty-input-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-checkbox",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-checkbox.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-choice-card",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-choice-card.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "field",
+        "input",
+        "select",
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-fieldset",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-fieldset.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-input",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-input.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-radio",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-radio.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-responsive",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-responsive.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-select",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-select.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-slider",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-slider.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-switch",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-switch.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "field-textarea",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/field-textarea.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "file-upload-list",
+      "type": "registry:example",
+      "registryDependencies": [
+        "item",
+        "progress"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/file-upload-list.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "hover-card-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "hover-card"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/hover-card-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "hover-card-sides",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "hover-card"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/hover-card-sides.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-badge",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge",
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-badge.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-button-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-button-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-field",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-field.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-fieldgroup",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-fieldgroup.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-file",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-file.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-form",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-form.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-grid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-grid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-block-end",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-block-end.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-block-start",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-block-start.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-button-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button-group",
+        "input-group",
+        "label"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-button-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-dropdown",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu",
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-dropdown.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-icon",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-icon.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-in-card",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "card",
+        "field",
+        "input",
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-in-card.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-inline-end",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-inline-end.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-inline-start",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-inline-start.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-kbd",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-group",
+        "kbd"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-kbd.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-label",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-group",
+        "label",
+        "tooltip"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-label.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-spinner",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-group",
+        "spinner"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-spinner.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-text",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-text.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-textarea-examples",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input",
+        "input-group",
+        "textarea"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-textarea-examples.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-tooltip",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-group",
+        "tooltip"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-tooltip.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-with-buttons",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-with-buttons.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-group-with-kbd",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input",
+        "input-group",
+        "kbd",
+        "spinner"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-group-with-kbd.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-inline",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-inline.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-input-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-input-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-invalid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-invalid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-controlled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-otp-controlled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-otp-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input-otp"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-otp-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-form",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "card",
+        "field",
+        "input-otp"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-otp-form.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-invalid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-otp-invalid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-separator",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-otp-separator.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "input-required",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/input-required.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-avatar",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "item"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-avatar.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "item"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-dropdown",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "dropdown-menu",
+        "item"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-dropdown.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "item"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-header",
+      "type": "registry:example",
+      "registryDependencies": [
+        "item"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-header.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-icon",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "item"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-icon.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-image",
+      "type": "registry:example",
+      "registryDependencies": [
+        "item"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-image.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-link",
+      "type": "registry:example",
+      "registryDependencies": [
+        "item"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-link.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-size",
+      "type": "registry:example",
+      "registryDependencies": [
+        "item"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-size.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "item-variant",
+      "type": "registry:example",
+      "registryDependencies": [
+        "item"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/item-variant.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "kbd-button",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "kbd"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/kbd-button.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "kbd-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "kbd"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/kbd-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "kbd-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "kbd"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/kbd-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "kbd-input-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-group",
+        "kbd"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/kbd-input-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "kbd-tooltip",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "kbd",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/kbd-tooltip.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "label-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/label-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "marker-border",
+      "type": "registry:example",
+      "registryDependencies": [
+        "marker"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/marker-border.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "marker-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "marker",
+        "spinner"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/marker-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "marker-icon",
+      "type": "registry:example",
+      "registryDependencies": [
+        "marker"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/marker-icon.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "marker-separator",
+      "type": "registry:example",
+      "registryDependencies": [
+        "marker"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/marker-separator.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "marker-shimmer",
+      "type": "registry:example",
+      "registryDependencies": [
+        "marker"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/marker-shimmer.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "marker-status",
+      "type": "registry:example",
+      "registryDependencies": [
+        "marker",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/marker-status.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "marker-variants",
+      "type": "registry:example",
+      "registryDependencies": [
+        "marker"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/marker-variants.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "menubar-checkbox",
+      "type": "registry:example",
+      "registryDependencies": [
+        "menubar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/menubar-checkbox.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "menubar-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "menubar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/menubar-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "menubar-icons",
+      "type": "registry:example",
+      "registryDependencies": [
+        "menubar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/menubar-icons.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "menubar-radio",
+      "type": "registry:example",
+      "registryDependencies": [
+        "menubar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/menubar-radio.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "menubar-submenu",
+      "type": "registry:example",
+      "registryDependencies": [
+        "menubar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/menubar-submenu.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "message-actions",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble",
+        "button",
+        "message"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/message-actions.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "message-attachment",
+      "type": "registry:example",
+      "registryDependencies": [
+        "attachment",
+        "bubble",
+        "message"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/message-attachment.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "message-avatar",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "bubble",
+        "message"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/message-avatar.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "message-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "bubble",
+        "marker",
+        "message"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/message-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "message-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "bubble",
+        "message"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/message-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "message-header-footer",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble",
+        "message"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/message-header-footer.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "message-scroller-group-chat",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble",
+        "button",
+        "card",
+        "marker",
+        "message",
+        "message-scroller",
+        "tooltip"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/message-scroller-group-chat.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "message-scroller-opening-position",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble",
+        "button",
+        "card",
+        "message",
+        "message-scroller",
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/message-scroller-opening-position.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "message-scroller-state",
+      "type": "registry:example",
+      "registryDependencies": [
+        "bubble",
+        "card",
+        "message",
+        "message-scroller"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/message-scroller-state.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "muted-item-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "item"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/muted-item-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "native-select-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "native-select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/native-select-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "native-select-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "native-select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/native-select-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "native-select-groups",
+      "type": "registry:example",
+      "registryDependencies": [
+        "native-select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/native-select-groups.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "native-select-invalid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "native-select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/native-select-invalid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "navigation-menu"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/navigation-menu-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "outline-item-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "item"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/outline-item-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "pagination-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "pagination"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/pagination-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "pagination-icons-only",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "pagination",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/pagination-icons-only.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "pagination-simple",
+      "type": "registry:example",
+      "registryDependencies": [
+        "pagination"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/pagination-simple.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "popover-alignments",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "popover"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/popover-alignments.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "popover-basic",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "popover"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/popover-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "popover-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label",
+        "popover"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/popover-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "popover-form",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "popover"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/popover-form.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "progress-controlled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "progress",
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/progress-controlled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "progress-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "progress"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/progress-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "progress-label",
+      "type": "registry:example",
+      "registryDependencies": [
+        "progress"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/progress-label.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "radio-fields",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/radio-fields.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-choice-card",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/radio-group-choice-card.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "label",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/radio-group-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-description",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/radio-group-description.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/radio-group-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-fieldset",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/radio-group-fieldset.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-invalid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/radio-group-invalid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "resizable-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "resizable"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/resizable-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "resizable-handle",
+      "type": "registry:example",
+      "registryDependencies": [
+        "resizable"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/resizable-handle.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "resizable-vertical",
+      "type": "registry:example",
+      "registryDependencies": [
+        "resizable"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/resizable-vertical.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "scroll-area",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/scroll-area-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area-horizontal-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "scroll-area"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/scroll-area-horizontal-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-fade-demo",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/scroll-fade-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-fade-edge",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/scroll-fade-edge.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-fade-horizontal",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/scroll-fade-horizontal.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-fade-none",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/scroll-fade-none.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-fade-overflow",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/scroll-fade-overflow.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-fade-size",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/scroll-fade-size.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "select-align-item",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "label",
+        "select",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/select-align-item.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "select-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/select-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "select-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/select-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "select-groups",
+      "type": "registry:example",
+      "registryDependencies": [
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/select-groups.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "select-invalid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/select-invalid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "select-scrollable",
+      "type": "registry:example",
+      "registryDependencies": [
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/select-scrollable.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "separator-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/separator-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "separator-list",
+      "type": "registry:example",
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/separator-list.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "separator-menu",
+      "type": "registry:example",
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/separator-menu.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "separator-vertical",
+      "type": "registry:example",
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/separator-vertical.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sheet-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label",
+        "sheet"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sheet-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sheet-no-close-button",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "sheet"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sheet-no-close-button.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sheet-side",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "sheet"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sheet-side.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-angle",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/shimmer-angle.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-color",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/shimmer-color.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-demo",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/shimmer-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-duration",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/shimmer-duration.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-marker",
+      "type": "registry:example",
+      "registryDependencies": [
+        "marker",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/shimmer-marker.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-none",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/shimmer-none.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-once",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/shimmer-once.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-rtl",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/shimmer-rtl.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-spread",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/shimmer-spread.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-controlled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-controlled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "avatar",
+        "collapsible",
+        "dropdown-menu",
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-footer",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu",
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-footer.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-group-collapsible",
+      "type": "registry:example",
+      "registryDependencies": [
+        "collapsible",
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-group-collapsible.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-header",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu",
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-header.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-menu-action",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu",
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-menu-action.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-menu-badge",
+      "type": "registry:example",
+      "registryDependencies": [
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-menu-badge.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-menu-collapsible",
+      "type": "registry:example",
+      "registryDependencies": [
+        "collapsible",
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-menu-collapsible.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-menu-sub",
+      "type": "registry:example",
+      "registryDependencies": [
+        "sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-menu-sub.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-menu",
+      "type": "registry:example",
+      "registryDependencies": [
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-menu.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-rsc",
+      "type": "registry:example",
+      "registryDependencies": [
+        "sidebar"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/sidebar-rsc.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-avatar",
+      "type": "registry:example",
+      "registryDependencies": [
+        "skeleton"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/skeleton-avatar.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-card",
+      "type": "registry:example",
+      "registryDependencies": [
+        "card",
+        "skeleton"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/skeleton-card.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "skeleton"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/skeleton-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-form",
+      "type": "registry:example",
+      "registryDependencies": [
+        "skeleton"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/skeleton-form.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-table",
+      "type": "registry:example",
+      "registryDependencies": [
+        "skeleton"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/skeleton-table.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-text",
+      "type": "registry:example",
+      "registryDependencies": [
+        "skeleton"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/skeleton-text.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "slider-controlled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "label",
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/slider-controlled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "slider-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/slider-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "slider-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/slider-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "slider-multiple",
+      "type": "registry:example",
+      "registryDependencies": [
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/slider-multiple.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "slider-range",
+      "type": "registry:example",
+      "registryDependencies": [
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/slider-range.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "slider-vertical",
+      "type": "registry:example",
+      "registryDependencies": [
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/slider-vertical.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "spinner-badge",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/spinner-badge.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "spinner-button",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/spinner-button.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "spinner-custom",
+      "type": "registry:example",
+      "registryDependencies": [
+        "utils"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/spinner-custom.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "spinner-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "item",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/spinner-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "spinner-empty",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "empty",
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/spinner-empty.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "spinner-input-group",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-group",
+        "spinner"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/spinner-input-group.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "spinner-size",
+      "type": "registry:example",
+      "registryDependencies": [
+        "spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/spinner-size.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "switch-choice-card",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/switch-choice-card.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "switch-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "label",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/switch-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "switch-description",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/switch-description.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "switch-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/switch-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "switch-invalid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/switch-invalid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "switch-sizes",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/switch-sizes.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "table-actions",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu",
+        "table"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/table-actions.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "table-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "table"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/table-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "table-footer",
+      "type": "registry:example",
+      "registryDependencies": [
+        "table"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/table-footer.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tabs-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "card",
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/tabs-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tabs-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/tabs-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tabs-icons",
+      "type": "registry:example",
+      "registryDependencies": [
+        "tabs"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/tabs-icons.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tabs-line",
+      "type": "registry:example",
+      "registryDependencies": [
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/tabs-line.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tabs-vertical",
+      "type": "registry:example",
+      "registryDependencies": [
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/tabs-vertical.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "textarea-button",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/textarea-button.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "textarea-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/textarea-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "textarea-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/textarea-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "textarea-field",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/textarea-field.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "textarea-invalid",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/textarea-invalid.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toast-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "toast"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toast-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toast-promise",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "toast"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toast-promise.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toast-types",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "toast"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toast-types.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-group-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-group-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group-font-weight-selector",
+      "type": "registry:example",
+      "registryDependencies": [
+        "field",
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-group-font-weight-selector.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group-outline",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-group-outline.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group-sizes",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-group-sizes.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group-spacing",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-group-spacing.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group-vertical",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle-group"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-group-vertical.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-outline",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-outline.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-sizes",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-sizes.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "toggle-text",
+      "type": "registry:example",
+      "registryDependencies": [
+        "toggle"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/toggle-text.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/tooltip-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-disabled",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/tooltip-disabled.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-keyboard",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "kbd",
+        "tooltip"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/tooltip-keyboard.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-sides",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/examples/tooltip-sides.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-blockquote",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-blockquote.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-demo",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-h1",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-h1.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-h2",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-h2.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-h3",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-h3.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-h4",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-h4.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-inline-code",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-inline-code.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-large",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-large.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-lead",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-lead.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-list",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-list.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-muted",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-muted.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-p",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-p.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-small",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-small.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typography-table",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/examples/typography-table.tsx",
+          "type": "registry:example"
+        }
+      ]
+    }
+  ]
+}

@@ -19,21 +19,21 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/new-york-v4/ui/accordion"
+} from "@/registry/ui/accordion"
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/new-york-v4/ui/alert"
-import { AspectRatio } from "@/registry/new-york-v4/ui/aspect-ratio"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Kbd } from "@/registry/new-york-v4/ui/kbd"
+} from "@/registry/ui/alert"
+import { AspectRatio } from "@/registry/ui/aspect-ratio"
+import { Button } from "@/registry/ui/button"
+import { Kbd } from "@/registry/ui/kbd"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york-v4/ui/tabs"
+} from "@/registry/ui/tabs"
 
 function getComponentsFolder() {
   const componentsFolder = source.pageTree.children.find(

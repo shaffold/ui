@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marker-link-button",
+  "dependencies": [
+    "lucide-react",
+    "sonner"
+  ],
+  "registryDependencies": [
+    "marker"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/marker-link-button.tsx",
+      "content": "\"use client\"\n\nimport { GitBranchIcon, RotateCcwIcon } from \"lucide-react\"\nimport { toast } from \"sonner\"\n\nimport { Marker, MarkerContent, MarkerIcon } from \"@/registry/ui/marker\"\n\nexport function MarkerLinkButtonDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Marker render={<a href=\"#links-and-buttons\" />}>\n        <MarkerIcon>\n          <GitBranchIcon />\n        </MarkerIcon>\n        <MarkerContent>View the pull request</MarkerContent>\n      </Marker>\n      <Marker\n        render={\n          <button\n            type=\"button\"\n            className=\"transition-colors hover:text-foreground\"\n            onClick={() => toast(\"You clicked the revert button\")}\n          />\n        }\n      >\n        <MarkerIcon>\n          <RotateCcwIcon />\n        </MarkerIcon>\n        <MarkerContent>Revert this change</MarkerContent>\n      </Marker>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

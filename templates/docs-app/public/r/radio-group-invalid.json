@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-invalid",
+  "registryDependencies": [
+    "field",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/radio-group-invalid.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@/registry/ui/field\"\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\"\n\nexport function RadioGroupInvalid() {\n  return (\n    <FieldSet className=\"w-full max-w-xs\">\n      <FieldLegend variant=\"label\">Notification Preferences</FieldLegend>\n      <FieldDescription>\n        Choose how you want to receive notifications.\n      </FieldDescription>\n      <RadioGroup defaultValue=\"email\">\n        <Field orientation=\"horizontal\" data-invalid>\n          <RadioGroupItem value=\"email\" id=\"invalid-email\" aria-invalid />\n          <FieldLabel htmlFor=\"invalid-email\" className=\"font-normal\">\n            Email only\n          </FieldLabel>\n        </Field>\n        <Field orientation=\"horizontal\" data-invalid>\n          <RadioGroupItem value=\"sms\" id=\"invalid-sms\" aria-invalid />\n          <FieldLabel htmlFor=\"invalid-sms\" className=\"font-normal\">\n            SMS only\n          </FieldLabel>\n        </Field>\n        <Field orientation=\"horizontal\" data-invalid>\n          <RadioGroupItem value=\"both\" id=\"invalid-both\" aria-invalid />\n          <FieldLabel htmlFor=\"invalid-both\" className=\"font-normal\">\n            Both Email & SMS\n          </FieldLabel>\n        </Field>\n      </RadioGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

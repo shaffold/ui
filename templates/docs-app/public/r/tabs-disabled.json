@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-disabled",
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/tabs-disabled.tsx",
+      "content": "import { Tabs, TabsList, TabsTrigger } from \"@/registry/ui/tabs\"\n\nexport function TabsDisabled() {\n  return (\n    <Tabs defaultValue=\"home\">\n      <TabsList>\n        <TabsTrigger value=\"home\">Home</TabsTrigger>\n        <TabsTrigger value=\"settings\" disabled>\n          Disabled\n        </TabsTrigger>\n      </TabsList>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

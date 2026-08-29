@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-rtl",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/toggle-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BookmarkIcon } from \"lucide-react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { Toggle } from \"@/styles/base-nova/ui-rtl/toggle\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      label: \"Bookmark\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      label: \"إشارة مرجعية\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      label: \"סימנייה\",\n    },\n  },\n}\n\nexport function ToggleRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <Toggle aria-label=\"Toggle bookmark\" size=\"sm\" variant=\"outline\" dir={dir}>\n      <BookmarkIcon className=\"group-aria-pressed/toggle:fill-foreground\" />\n      {t.label}\n    </Toggle>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,14 +1,16 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
-import { Badge } from "@/registry/new-york-v4/ui/badge"
+import { Badge } from "@/registry/ui/badge"
 
 export function Announcement() {
   return (
-    <Badge asChild variant="secondary" className="bg-muted">
-      <Link href="/docs/changelog">
-        React Aria is now available <ArrowRightIcon />
-      </Link>
+    <Badge
+      variant="secondary"
+      className="bg-muted"
+      render={<Link href="/docs/changelog" />}
+    >
+      React Aria is now available <ArrowRightIcon />
     </Badge>
   )
 }

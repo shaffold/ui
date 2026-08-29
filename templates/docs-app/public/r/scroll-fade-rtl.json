@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-fade-rtl",
+  "files": [
+    {
+      "path": "registry/examples/scroll-fade-rtl.tsx",
+      "content": "\"use client\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      design: \"Design\",\n      engineering: \"Engineering\",\n      marketing: \"Marketing\",\n      product: \"Product\",\n      research: \"Research\",\n      sales: \"Sales\",\n      support: \"Support\",\n      operations: \"Operations\",\n      finance: \"Finance\",\n      legal: \"Legal\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      design: \"تصميم\",\n      engineering: \"هندسة\",\n      marketing: \"تسويق\",\n      product: \"منتج\",\n      research: \"أبحاث\",\n      sales: \"مبيعات\",\n      support: \"دعم\",\n      operations: \"عمليات\",\n      finance: \"مالية\",\n      legal: \"قانوني\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      design: \"עיצוב\",\n      engineering: \"הנדסה\",\n      marketing: \"שיווק\",\n      product: \"מוצר\",\n      research: \"מחקר\",\n      sales: \"מכירות\",\n      support: \"תמיכה\",\n      operations: \"תפעול\",\n      finance: \"כספים\",\n      legal: \"משפטי\",\n    },\n  },\n}\n\nexport function ScrollFadeRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <div\n      className=\"mx-auto w-full max-w-xs overflow-hidden rounded-2xl border\"\n      dir={dir}\n    >\n      <div className=\"scroll-fade-x scrollbar-none overflow-x-auto\">\n        <div className=\"flex w-max gap-1.5 p-1.5\">\n          {Object.values(t).map((tag) => (\n            <div\n              key={tag}\n              className=\"shrink-0 rounded-lg bg-muted px-3 py-2.5 text-sm\"\n            >\n              {tag}\n            </div>\n          ))}\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

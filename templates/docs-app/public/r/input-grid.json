@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-grid",
+  "registryDependencies": [
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/input-grid.tsx",
+      "content": "import { Field, FieldGroup, FieldLabel } from \"@/registry/ui/field\"\nimport { Input } from \"@/registry/ui/input\"\n\nexport function InputGrid() {\n  return (\n    <FieldGroup className=\"grid max-w-sm grid-cols-2\">\n      <Field>\n        <FieldLabel htmlFor=\"first-name\">First Name</FieldLabel>\n        <Input id=\"first-name\" placeholder=\"Jordan\" />\n      </Field>\n      <Field>\n        <FieldLabel htmlFor=\"last-name\">Last Name</FieldLabel>\n        <Input id=\"last-name\" placeholder=\"Lee\" />\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

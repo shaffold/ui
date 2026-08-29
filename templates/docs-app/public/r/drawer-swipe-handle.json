@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-swipe-handle",
+  "registryDependencies": [
+    "button",
+    "drawer"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/drawer-swipe-handle.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerDescription,\n  DrawerFooter,\n  DrawerHeader,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@/registry/ui/drawer\"\n\nexport function DrawerSwipeHandle() {\n  return (\n    <Drawer showSwipeHandle>\n      <DrawerTrigger render={<Button variant=\"secondary\" />}>\n        Open Drawer\n      </DrawerTrigger>\n      <DrawerContent>\n        <DrawerHeader>\n          <DrawerTitle>Drawer</DrawerTitle>\n          <DrawerDescription>Drawer with a swipe handle.</DrawerDescription>\n        </DrawerHeader>\n        <div className=\"flex-1 p-4\">\n          <div className=\"rounded-2xl bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full\" />\n        </div>\n        <DrawerFooter>\n          <DrawerClose render={<Button />}>Close</DrawerClose>\n        </DrawerFooter>\n      </DrawerContent>\n    </Drawer>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

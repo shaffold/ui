@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-disabled",
+  "registryDependencies": [
+    "field",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/radio-group-disabled.tsx",
+      "content": "import { Field, FieldLabel } from \"@/registry/ui/field\"\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\"\n\nexport function RadioGroupDisabled() {\n  return (\n    <RadioGroup defaultValue=\"option2\" className=\"w-fit\">\n      <Field orientation=\"horizontal\" data-disabled>\n        <RadioGroupItem value=\"option1\" id=\"disabled-1\" disabled />\n        <FieldLabel htmlFor=\"disabled-1\" className=\"font-normal\">\n          Disabled\n        </FieldLabel>\n      </Field>\n      <Field orientation=\"horizontal\">\n        <RadioGroupItem value=\"option2\" id=\"disabled-2\" />\n        <FieldLabel htmlFor=\"disabled-2\" className=\"font-normal\">\n          Option 2\n        </FieldLabel>\n      </Field>\n      <Field orientation=\"horizontal\">\n        <RadioGroupItem value=\"option3\" id=\"disabled-3\" />\n        <FieldLabel htmlFor=\"disabled-3\" className=\"font-normal\">\n          Option 3\n        </FieldLabel>\n      </Field>\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-card",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "empty"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/empty-card.tsx",
+      "content": "import { ArrowUpRightIcon, FolderIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/registry/ui/empty\"\n\nexport function EmptyInCard() {\n  return (\n    <Empty>\n      <EmptyHeader>\n        <EmptyMedia variant=\"icon\">\n          <FolderIcon />\n        </EmptyMedia>\n        <EmptyTitle>No projects yet</EmptyTitle>\n        <EmptyDescription>\n          You haven&apos;t created any projects yet. Get started by creating\n          your first project.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent>\n        <div className=\"flex gap-2\">\n          <Button render={<a href=\"#\" />} nativeButton={false}>\n            Create project\n          </Button>\n          <Button variant=\"outline\">Import project</Button>\n        </div>\n        <Button\n          variant=\"link\"\n          render={<a href=\"#\" />}\n          className=\"text-muted-foreground\"\n          nativeButton={false}\n        >\n          Learn more <ArrowUpRightIcon />\n        </Button>\n      </EmptyContent>\n    </Empty>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

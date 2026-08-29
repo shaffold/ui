@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar-icons",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "menubar"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/menubar-icons.tsx",
+      "content": "import {\n  FileIcon,\n  FolderIcon,\n  HelpCircleIcon,\n  SaveIcon,\n  SettingsIcon,\n  TrashIcon,\n} from \"lucide-react\"\n\nimport {\n  Menubar,\n  MenubarContent,\n  MenubarGroup,\n  MenubarItem,\n  MenubarMenu,\n  MenubarSeparator,\n  MenubarShortcut,\n  MenubarTrigger,\n} from \"@/registry/ui/menubar\"\n\nexport function MenubarIcons() {\n  return (\n    <Menubar className=\"w-72\">\n      <MenubarMenu>\n        <MenubarTrigger>File</MenubarTrigger>\n        <MenubarContent>\n          <MenubarItem>\n            <FileIcon />\n            New File <MenubarShortcut>⌘N</MenubarShortcut>\n          </MenubarItem>\n          <MenubarItem>\n            <FolderIcon />\n            Open Folder\n          </MenubarItem>\n          <MenubarSeparator />\n          <MenubarItem>\n            <SaveIcon />\n            Save <MenubarShortcut>⌘S</MenubarShortcut>\n          </MenubarItem>\n        </MenubarContent>\n      </MenubarMenu>\n      <MenubarMenu>\n        <MenubarTrigger>More</MenubarTrigger>\n        <MenubarContent>\n          <MenubarGroup>\n            <MenubarItem>\n              <SettingsIcon />\n              Settings\n            </MenubarItem>\n            <MenubarItem>\n              <HelpCircleIcon />\n              Help\n            </MenubarItem>\n            <MenubarSeparator />\n            <MenubarItem variant=\"destructive\">\n              <TrashIcon />\n              Delete\n            </MenubarItem>\n          </MenubarGroup>\n        </MenubarContent>\n      </MenubarMenu>\n    </Menubar>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

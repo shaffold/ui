@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-rtl",
+  "files": [
+    {
+      "path": "registry/examples/resizable-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@/styles/base-nova/ui-rtl/resizable\"\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      one: \"One\",\n      two: \"Two\",\n      three: \"Three\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      one: \"واحد\",\n      two: \"اثنان\",\n      three: \"ثلاثة\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      one: \"אחד\",\n      two: \"שניים\",\n      three: \"שלושה\",\n    },\n  },\n}\n\nexport function ResizableRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <ResizablePanelGroup\n      orientation=\"horizontal\"\n      className=\"max-w-sm rounded-lg border\"\n      dir={dir}\n    >\n      <ResizablePanel defaultSize=\"50%\">\n        <div className=\"flex h-[200px] items-center justify-center p-6\">\n          <span className=\"font-semibold\">{t.one}</span>\n        </div>\n      </ResizablePanel>\n      <ResizableHandle withHandle />\n      <ResizablePanel defaultSize=\"50%\">\n        <ResizablePanelGroup orientation=\"vertical\" dir={dir}>\n          <ResizablePanel defaultSize=\"25%\">\n            <div className=\"flex h-full items-center justify-center p-6\">\n              <span className=\"font-semibold\">{t.two}</span>\n            </div>\n          </ResizablePanel>\n          <ResizableHandle withHandle />\n          <ResizablePanel defaultSize=\"75%\">\n            <div className=\"flex h-full items-center justify-center p-6\">\n              <span className=\"font-semibold\">{t.three}</span>\n            </div>\n          </ResizablePanel>\n        </ResizablePanelGroup>\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

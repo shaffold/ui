@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-spacing",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label",
+    "toggle-group"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/card-spacing.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@/registry/ui/button\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\"\nimport { Input } from \"@/registry/ui/input\"\nimport { Label } from \"@/registry/ui/label\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@/registry/ui/toggle-group\"\n\nconst spacingOptions = [\n  {\n    className: \"[--card-spacing:--spacing(4)]\",\n    label: \"16px\",\n    value: \"4\",\n  },\n  {\n    className: \"[--card-spacing:--spacing(5)]\",\n    label: \"20px\",\n    value: \"5\",\n  },\n  {\n    className: \"[--card-spacing:--spacing(6)]\",\n    label: \"24px\",\n    value: \"6\",\n  },\n  {\n    className: \"[--card-spacing:--spacing(8)]\",\n    label: \"32px\",\n    value: \"8\",\n  },\n]\n\nexport function CardSpacing() {\n  const [spacing, setSpacing] = React.useState(\"4\")\n  const selectedSpacing = spacingOptions.find(\n    (option) => option.value === spacing\n  )\n\n  return (\n    <div className=\"mx-auto grid w-full max-w-sm gap-4\">\n      <ToggleGroup\n        value={[spacing]}\n        onValueChange={(value) => {\n          if (value[0]) {\n            setSpacing(value[0])\n          }\n        }}\n        variant=\"outline\"\n        size=\"sm\"\n        className=\"justify-center\"\n      >\n        {spacingOptions.map((option) => (\n          <ToggleGroupItem key={option.value} value={option.value}>\n            {option.label}\n          </ToggleGroupItem>\n        ))}\n      </ToggleGroup>\n      <Card className={selectedSpacing?.className}>\n        <CardHeader>\n          <CardTitle>Login to your account</CardTitle>\n          <CardDescription>\n            Enter your email below to login to your account\n          </CardDescription>\n          <CardAction>\n            <Button variant=\"link\">Sign Up</Button>\n          </CardAction>\n        </CardHeader>\n        <CardContent>\n          <form>\n            <div className=\"flex flex-col gap-6\">\n              <div className=\"grid gap-2\">\n                <Label htmlFor=\"email-spacing\">Email</Label>\n                <Input\n                  id=\"email-spacing\"\n                  type=\"email\"\n                  placeholder=\"m@example.com\"\n                  required\n                />\n              </div>\n              <div className=\"grid gap-2\">\n                <div className=\"flex items-center\">\n                  <Label htmlFor=\"password-spacing\">Password</Label>\n                  <a\n                    href=\"#\"\n                    className=\"ml-auto inline-block text-sm underline-offset-4 hover:underline\"\n                  >\n                    Forgot your password?\n                  </a>\n                </div>\n                <Input id=\"password-spacing\" type=\"password\" required />\n              </div>\n            </div>\n          </form>\n        </CardContent>\n        <CardFooter className=\"flex-col gap-2\">\n          <Button type=\"submit\" className=\"w-full\">\n            Login\n          </Button>\n          <Button variant=\"outline\" className=\"w-full\">\n            Login with Google\n          </Button>\n        </CardFooter>\n      </Card>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

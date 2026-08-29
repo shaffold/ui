@@ -3,13 +3,13 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/new-york-v4/ui/collapsible"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+} from "@/registry/ui/collapsible"
+import { Separator } from "@/registry/ui/separator"
 
 export function CodeCollapsibleWrapper({
   className,
@@ -25,17 +25,19 @@ export function CodeCollapsibleWrapper({
       className={cn("group/collapsible relative md:-mx-1", className)}
       {...props}
     >
-      <CollapsibleTrigger asChild>
-        <div className="absolute top-1.5 right-9 z-10 flex items-center">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="h-7 rounded-md px-2 text-muted-foreground"
-          >
-            {isOpened ? "Collapse" : "Expand"}
-          </Button>
-          <Separator orientation="vertical" className="mx-1.5 h-4!" />
-        </div>
+      <CollapsibleTrigger
+        render={
+          <div className="absolute top-1.5 right-9 z-10 flex items-center" />
+        }
+      >
+        <Button
+          variant="ghost"
+          size="sm"
+          className="h-7 rounded-md px-2 text-muted-foreground"
+        >
+          {isOpened ? "Collapse" : "Expand"}
+        </Button>
+        <Separator orientation="vertical" className="mx-1.5 h-4!" />
       </CollapsibleTrigger>
       <CollapsibleContent
         forceMount

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-field",
+  "registryDependencies": [
+    "field",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/textarea-field.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@/registry/ui/field\"\nimport { Textarea } from \"@/registry/ui/textarea\"\n\nexport function TextareaField() {\n  return (\n    <Field>\n      <FieldLabel htmlFor=\"textarea-message\">Message</FieldLabel>\n      <FieldDescription>Enter your message below.</FieldDescription>\n      <Textarea id=\"textarea-message\" placeholder=\"Type your message here.\" />\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

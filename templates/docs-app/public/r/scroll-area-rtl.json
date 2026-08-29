@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-rtl",
+  "files": [
+    {
+      "path": "registry/examples/scroll-area-rtl.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  useTranslation,\n  type Translations,\n} from \"@/components/language-selector\"\nimport { ScrollArea } from \"@/styles/base-nova/ui-rtl/scroll-area\"\nimport { Separator } from \"@/styles/base-nova/ui-rtl/separator\"\n\nconst tags = Array.from({ length: 50 }).map(\n  (_, i, a) => `v1.2.0-beta.${a.length - i}`\n)\n\nconst translations: Translations = {\n  en: {\n    dir: \"ltr\",\n    values: {\n      tags: \"Tags\",\n    },\n  },\n  ar: {\n    dir: \"rtl\",\n    values: {\n      tags: \"العلامات\",\n    },\n  },\n  he: {\n    dir: \"rtl\",\n    values: {\n      tags: \"תגיות\",\n    },\n  },\n}\n\nexport function ScrollAreaRtl() {\n  const { dir, t } = useTranslation(translations, \"ar\")\n\n  return (\n    <ScrollArea className=\"h-72 w-48 rounded-md border\" dir={dir}>\n      <div className=\"p-4\">\n        <h4 className=\"mb-4 text-sm leading-none font-medium\">{t.tags}</h4>\n        {tags.map((tag) => (\n          <React.Fragment key={tag}>\n            <div className=\"text-sm\">{tag}</div>\n            <Separator className=\"my-2\" />\n          </React.Fragment>\n        ))}\n      </div>\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

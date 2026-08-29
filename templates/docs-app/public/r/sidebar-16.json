@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sidebar-16",
+  "registryDependencies": [
+    "sidebar"
+  ],
+  "files": [
+    {
+      "path": "registry/blocks/sidebar-16/components/nav-secondary.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  SidebarGroup,\n  SidebarGroupContent,\n  SidebarMenu,\n  SidebarMenuButton,\n  SidebarMenuItem,\n} from \"@/registry/ui/sidebar\"\n\nexport function NavSecondary({\n  items,\n  ...props\n}: {\n  items: {\n    title: string\n    url: string\n    icon: React.ReactNode\n  }[]\n} & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {\n  return (\n    <SidebarGroup {...props}>\n      <SidebarGroupContent>\n        <SidebarMenu>\n          {items.map((item) => (\n            <SidebarMenuItem key={item.title}>\n              <SidebarMenuButton size=\"sm\" render={<a href={item.url} />}>\n                {item.icon}\n                <span>{item.title}</span>\n              </SidebarMenuButton>\n            </SidebarMenuItem>\n          ))}\n        </SidebarMenu>\n      </SidebarGroupContent>\n    </SidebarGroup>\n  )\n}\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "registry/blocks/sidebar-16/page.tsx",
+      "content": "import { AppSidebar } from \"@/registry/bases/base/blocks/sidebar-16/components/app-sidebar\"\nimport { SiteHeader } from \"@/registry/bases/base/blocks/sidebar-16/components/site-header\"\nimport { SidebarInset, SidebarProvider } from \"@/registry/ui/sidebar\"\n\nexport const iframeHeight = \"800px\"\n\nexport const description = \"A sidebar with a header and a search form.\"\n\nexport default function Page() {\n  return (\n    <div className=\"[--header-height:calc(--spacing(14))]\">\n      <SidebarProvider className=\"flex flex-col\">\n        <SiteHeader />\n        <div className=\"flex flex-1\">\n          <AppSidebar />\n          <SidebarInset>\n            <div className=\"flex flex-1 flex-col gap-4 p-4\">\n              <div className=\"grid auto-rows-min gap-4 md:grid-cols-3\">\n                <div className=\"aspect-video rounded-xl bg-muted/50\" />\n                <div className=\"aspect-video rounded-xl bg-muted/50\" />\n                <div className=\"aspect-video rounded-xl bg-muted/50\" />\n              </div>\n              <div className=\"min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min\" />\n            </div>\n          </SidebarInset>\n        </div>\n      </SidebarProvider>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/sidebar-16/page.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

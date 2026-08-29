@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-invalid",
+  "registryDependencies": [
+    "checkbox",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/checkbox-invalid.tsx",
+      "content": "import { Checkbox } from \"@/registry/ui/checkbox\"\nimport { Field, FieldGroup, FieldLabel } from \"@/registry/ui/field\"\n\nexport function CheckboxInvalid() {\n  return (\n    <FieldGroup className=\"mx-auto w-56\">\n      <Field orientation=\"horizontal\" data-invalid>\n        <Checkbox\n          id=\"terms-checkbox-invalid\"\n          name=\"terms-checkbox-invalid\"\n          aria-invalid\n        />\n        <FieldLabel htmlFor=\"terms-checkbox-invalid\">\n          Accept terms and conditions\n        </FieldLabel>\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

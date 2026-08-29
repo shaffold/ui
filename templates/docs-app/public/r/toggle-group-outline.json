@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-outline",
+  "registryDependencies": [
+    "toggle-group"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/toggle-group-outline.tsx",
+      "content": "import {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@/registry/ui/toggle-group\"\n\nexport function ToggleGroupOutline() {\n  return (\n    <ToggleGroup variant=\"outline\" defaultValue={[\"all\"]}>\n      <ToggleGroupItem value=\"all\" aria-label=\"Toggle all\">\n        All\n      </ToggleGroupItem>\n      <ToggleGroupItem value=\"missed\" aria-label=\"Toggle missed\">\n        Missed\n      </ToggleGroupItem>\n    </ToggleGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

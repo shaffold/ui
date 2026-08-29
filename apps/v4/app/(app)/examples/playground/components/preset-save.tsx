@@ -1,4 +1,4 @@
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -7,16 +7,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
-import { Input } from "@/registry/new-york-v4/ui/input"
-import { Label } from "@/registry/new-york-v4/ui/label"
-import { Textarea } from "@/registry/new-york-v4/ui/textarea"
+} from "@/registry/ui/dialog"
+import { Input } from "@/registry/ui/input"
+import { Label } from "@/registry/ui/label"
+import { Textarea } from "@/registry/ui/textarea"
 
 export function PresetSave() {
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="secondary">Save</Button>
+      <DialogTrigger render={<Button variant="secondary" />}>
+        Save
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

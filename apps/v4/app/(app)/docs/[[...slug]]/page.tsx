@@ -11,7 +11,7 @@ import { DocsBaseSwitcher } from "@/components/docs-base-switcher"
 import { DocsCopyPage } from "@/components/docs-copy-page"
 import { DocsTableOfContents } from "@/components/docs-toc"
 import { OpenInV0Cta } from "@/components/open-in-v0-cta"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ui/button"
 
 export const revalidate = false
 export const dynamic = "force-static"
@@ -110,12 +110,10 @@ export default async function Page(props: {
                         variant="secondary"
                         size="icon"
                         className="extend-touch-target size-8 shadow-none md:size-7"
-                        asChild
+                        render={<Link href={neighbours.previous.url} />}
                       >
-                        <Link href={neighbours.previous.url}>
-                          <IconArrowLeft />
-                          <span className="sr-only">Previous</span>
-                        </Link>
+                        <IconArrowLeft />
+                        <span className="sr-only">Previous</span>
                       </Button>
                     )}
                     {neighbours.next && (
@@ -123,12 +121,10 @@ export default async function Page(props: {
                         variant="secondary"
                         size="icon"
                         className="extend-touch-target size-8 shadow-none md:size-7"
-                        asChild
+                        render={<Link href={neighbours.next.url} />}
                       >
-                        <Link href={neighbours.next.url}>
-                          <span className="sr-only">Next</span>
-                          <IconArrowRight />
-                        </Link>
+                        <span className="sr-only">Next</span>
+                        <IconArrowRight />
                       </Button>
                     )}
                   </div>
@@ -159,12 +155,10 @@ export default async function Page(props: {
               <Button
                 variant="secondary"
                 size="sm"
-                asChild
                 className="shadow-none"
+                render={<Link href={neighbours.previous.url} />}
               >
-                <Link href={neighbours.previous.url}>
-                  <IconArrowLeft /> {neighbours.previous.name}
-                </Link>
+                <IconArrowLeft /> {neighbours.previous.name}
               </Button>
             )}
             {neighbours.next && (
@@ -172,11 +166,9 @@ export default async function Page(props: {
                 variant="secondary"
                 size="sm"
                 className="ml-auto shadow-none"
-                asChild
+                render={<Link href={neighbours.next.url} />}
               >
-                <Link href={neighbours.next.url}>
-                  {neighbours.next.name} <IconArrowRight />
-                </Link>
+                {neighbours.next.name} <IconArrowRight />
               </Button>
             )}
           </div>

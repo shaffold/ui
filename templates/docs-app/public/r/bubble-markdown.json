@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble-markdown",
+  "registryDependencies": [
+    "bubble"
+  ],
+  "files": [
+    {
+      "path": "registry/examples/bubble-markdown.tsx",
+      "content": "import { Markdown } from \"@/components/markdown\"\nimport { Bubble, BubbleContent } from \"@/registry/ui/bubble\"\n\nexport function BubbleMarkdownDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-12\">\n      <Bubble align=\"end\" variant=\"muted\">\n        <BubbleContent>\n          <Markdown>{`Hello! Are you actually **thinking**?`}</Markdown>\n        </BubbleContent>\n      </Bubble>\n      <Bubble variant=\"ghost\">\n        <BubbleContent>\n          <Markdown>{`Ghost bubbles work for assistant text, **markdown**, and other content that should not be framed.\n\nThis is perfect for assistant messages that should not have a frame and can take the full width of the container. You can also render \\`code\\` in it.\n\nGhost bubbles are full width and can take the full width of the container.\n`}</Markdown>\n        </BubbleContent>\n      </Bubble>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}
