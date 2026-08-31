@@ -6,6 +6,10 @@
    (prebuild:styles / preset) rewrites theme.css for the chosen baseColor. */
 @import "./styles/theme.css";
 
+/* shadcn/typeset — prose styling for docs MDX. Applied via a `.typeset`
+   wrapper; elements opt out with `data-not-typeset` (previews, code blocks). */
+@import "./typeset.css";
+
 /* Tailwind scans the built design-system components + the docs chrome. */
 @source "../registry/**/*.tsx";
 @source "../components/**/*.tsx";

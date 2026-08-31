@@ -33,7 +33,7 @@ export default async function Page(props: {
       {page.data.description ? (
         <p className="mt-2 text-muted-foreground">{page.data.description}</p>
       ) : null}
-      <div className="mt-6">
+      <div className="typeset mt-6">
         <MDX components={mdxComponents} />
       </div>
     </article>
