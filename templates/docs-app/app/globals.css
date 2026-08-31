@@ -66,3 +66,42 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* rehype-pretty-code — highlighted prose code fences. Dual theme: light colors
+   are applied inline by the plugin; the .dark rules swap to the dark palette.
+   (Attribute selectors outrank typeset's :where() prose rules; token colors are
+   inline styles, so they win regardless.) */
+[data-rehype-pretty-code-figure] {
+  margin: 1.25rem 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 0.5rem);
+  font-size: 0.875rem;
+}
+[data-rehype-pretty-code-figure] pre {
+  overflow-x: auto;
+  padding: 0.875rem 1rem;
+  line-height: 1.6;
+}
+[data-rehype-pretty-code-figure] code {
+  display: grid;
+  background: transparent;
+  font-family: var(--font-mono, ui-monospace, monospace);
+}
+[data-rehype-pretty-code-figure] code span {
+  color: var(--shiki-light);
+}
+[data-rehype-pretty-code-title] {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8125rem;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  color: var(--muted-foreground);
+}
+.dark [data-rehype-pretty-code-figure] pre,
+.dark [data-rehype-pretty-code-figure] code {
+  background-color: var(--shiki-dark-bg) !important;
+}
+.dark [data-rehype-pretty-code-figure] code span {
+  color: var(--shiki-dark) !important;
+}
