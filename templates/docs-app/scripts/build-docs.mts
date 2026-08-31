@@ -52,10 +52,45 @@ function yamlString(v: string): string {
   return `"${v.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`
 }
 
+// Strip LIVE (out-of-fence) ESM imports. Canonical pages import icons/components
+// (e.g. @tabler/icons-react, @/components/ui/*) that don't resolve in a scaffold;
+// every live tag is instead supplied via mdxComponents. Imports inside ```code```
+// fences are example source and are kept.
+function stripLiveImports(body: string): string {
+  const out: string[] = []
+  let inFence = false
+  let inImport = false
+  for (const line of body.split("\n")) {
+    if (/^```/.test(line)) {
+      inFence = !inFence
+      out.push(line)
+      continue
+    }
+    if (inFence) {
+      out.push(line)
+      continue
+    }
+    if (inImport) {
+      // skip until the import statement terminates
+      if (/from\s+["'][^"']+["']\s*;?\s*$/.test(line) || /["'][^"']+["']\s*;?\s*$/.test(line))
+        inImport = false
+      continue
+    }
+    if (/^import\b/.test(line)) {
+      // multi-line import continues unless it ends on this line
+      if (!/from\s+["'][^"']+["']\s*;?\s*$/.test(line) && !/^import\s+["']/.test(line))
+        inImport = true
+      continue
+    }
+    out.push(line)
+  }
+  return out.join("\n")
+}
+
 // Rewrite one canonical MDX into a scaffold page for this DS.
 function transform(mdx: string, base: string, registryKey: string, name: string) {
   const { data, body: rawBody } = frontmatter(mdx)
-  let body = rawBody
+  let body = stripLiveImports(rawBody)
 
   // 1. a scaffold has a single base×style — styleName is implicit.
   body = body.replace(/\s+styleName="[^"]*"/g, "")
