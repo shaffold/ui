@@ -105,3 +105,14 @@
 .dark [data-rehype-pretty-code-figure] code span {
   color: var(--shiki-dark) !important;
 }
+
+/* shiki dual-theme output from lib/highlight-code (ComponentPreview Code tab +
+   ComponentSource). Light colors/bg are inline; swap to the dark palette under
+   .dark, otherwise the Code tab stays white in dark mode. */
+.dark .shiki {
+  background-color: var(--shiki-dark-bg) !important;
+  color: var(--shiki-dark) !important;
+}
+.dark .shiki span {
+  color: var(--shiki-dark) !important;
+}
