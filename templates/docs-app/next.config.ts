@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "github.com" },
     ],
   },
+  // Serve each doc page's raw Markdown at `<page>.md` (Copy Page → View as
+  // Markdown, and for LLMs/tools).
+  async rewrites() {
+    return [{ source: "/docs/:path*.md", destination: "/api/md/:path*" }]
+  },
 }
 
 export default withMDX(nextConfig)

@@ -59,7 +59,7 @@ export default async function Page(props: {
           </h1>
           <div className="flex shrink-0 items-center gap-2">
             <div className="hidden sm:block">
-              <DocsCopyPage page={raw} />
+              <DocsCopyPage page={raw} url={page.url} />
             </div>
             {neighbours.previous ? (
               <Button
