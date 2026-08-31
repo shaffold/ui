@@ -23,6 +23,7 @@ export function ComponentPreviewTabs({
   return (
     <div
       data-slot="component-preview"
+      data-not-typeset
       className={cn("my-6 overflow-hidden rounded-xl border", className)}
     >
       <Tabs defaultValue="preview" className="gap-0">
