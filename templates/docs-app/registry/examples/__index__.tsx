@@ -207,8 +207,16 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/bubble-group-demo")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "bubble-link-button": React.lazy(async () => {
+    const m = await import("@/registry/examples/bubble-link-button")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "bubble-popover": React.lazy(async () => {
     const m = await import("@/registry/examples/bubble-popover")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "bubble-reactions": React.lazy(async () => {
+    const m = await import("@/registry/examples/bubble-reactions")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "bubble-tooltip": React.lazy(async () => {
@@ -271,6 +279,10 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/button-group-size")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "button-group-split": React.lazy(async () => {
+    const m = await import("@/registry/examples/button-group-split")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "button-icon": React.lazy(async () => {
     const m = await import("@/registry/examples/button-icon")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
@@ -303,6 +315,10 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/button-spinner")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "button-with-icon": React.lazy(async () => {
+    const m = await import("@/registry/examples/button-with-icon")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "calendar-basic": React.lazy(async () => {
     const m = await import("@/registry/examples/calendar-basic")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
@@ -315,12 +331,28 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/calendar-caption")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "calendar-custom-days": React.lazy(async () => {
+    const m = await import("@/registry/examples/calendar-custom-days")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "calendar-demo": React.lazy(async () => {
     const m = await import("@/registry/examples/calendar-demo")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "calendar-hijri": React.lazy(async () => {
+    const m = await import("@/registry/examples/calendar-hijri")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "calendar-multiple": React.lazy(async () => {
     const m = await import("@/registry/examples/calendar-multiple")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "calendar-presets": React.lazy(async () => {
+    const m = await import("@/registry/examples/calendar-presets")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "calendar-range": React.lazy(async () => {
+    const m = await import("@/registry/examples/calendar-range")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "calendar-time": React.lazy(async () => {
@@ -367,12 +399,36 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/carousel-orientation")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "carousel-plugin": React.lazy(async () => {
+    const m = await import("@/registry/examples/carousel-plugin")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "carousel-size": React.lazy(async () => {
     const m = await import("@/registry/examples/carousel-size")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "carousel-spacing": React.lazy(async () => {
     const m = await import("@/registry/examples/carousel-spacing")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "chart-example-axis": React.lazy(async () => {
+    const m = await import("@/registry/examples/chart-example-axis")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "chart-example-grid": React.lazy(async () => {
+    const m = await import("@/registry/examples/chart-example-grid")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "chart-example-legend": React.lazy(async () => {
+    const m = await import("@/registry/examples/chart-example-legend")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "chart-example-tooltip": React.lazy(async () => {
+    const m = await import("@/registry/examples/chart-example-tooltip")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "chart-example": React.lazy(async () => {
+    const m = await import("@/registry/examples/chart-example")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "chart-tooltip": React.lazy(async () => {
@@ -527,12 +583,40 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/context-menu-submenu")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "data-picker-with-dropdowns": React.lazy(async () => {
+    const m = await import("@/registry/examples/data-picker-with-dropdowns")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "data-table-demo": React.lazy(async () => {
+    const m = await import("@/registry/examples/data-table-demo")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "date-picker-basic": React.lazy(async () => {
+    const m = await import("@/registry/examples/date-picker-basic")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "date-picker-demo": React.lazy(async () => {
+    const m = await import("@/registry/examples/date-picker-demo")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "date-picker-dob": React.lazy(async () => {
     const m = await import("@/registry/examples/date-picker-dob")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "date-picker-input": React.lazy(async () => {
     const m = await import("@/registry/examples/date-picker-input")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "date-picker-natural-language": React.lazy(async () => {
+    const m = await import("@/registry/examples/date-picker-natural-language")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "date-picker-range": React.lazy(async () => {
+    const m = await import("@/registry/examples/date-picker-range")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "date-picker-time": React.lazy(async () => {
+    const m = await import("@/registry/examples/date-picker-time")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "dialog-close-button": React.lazy(async () => {
@@ -553,6 +637,10 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
   }),
   "dialog-sticky-footer": React.lazy(async () => {
     const m = await import("@/registry/examples/dialog-sticky-footer")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "drawer-demo": React.lazy(async () => {
+    const m = await import("@/registry/examples/drawer-demo")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "drawer-nested": React.lazy(async () => {
@@ -631,12 +719,24 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/empty-avatar")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "empty-background": React.lazy(async () => {
+    const m = await import("@/registry/examples/empty-background")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "empty-card": React.lazy(async () => {
     const m = await import("@/registry/examples/empty-card")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "empty-demo": React.lazy(async () => {
+    const m = await import("@/registry/examples/empty-demo")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "empty-input-group": React.lazy(async () => {
     const m = await import("@/registry/examples/empty-input-group")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "empty-outline": React.lazy(async () => {
+    const m = await import("@/registry/examples/empty-outline")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "field-checkbox": React.lazy(async () => {
@@ -755,6 +855,10 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/input-group-button-group")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "input-group-custom": React.lazy(async () => {
+    const m = await import("@/registry/examples/input-group-custom")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "input-group-demo": React.lazy(async () => {
     const m = await import("@/registry/examples/input-group-demo")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
@@ -799,8 +903,16 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/input-group-textarea-examples")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "input-group-textarea": React.lazy(async () => {
+    const m = await import("@/registry/examples/input-group-textarea")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "input-group-tooltip": React.lazy(async () => {
     const m = await import("@/registry/examples/input-group-tooltip")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "input-group-with-addons": React.lazy(async () => {
+    const m = await import("@/registry/examples/input-group-with-addons")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "input-group-with-buttons": React.lazy(async () => {
@@ -809,6 +921,10 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
   }),
   "input-group-with-kbd": React.lazy(async () => {
     const m = await import("@/registry/examples/input-group-with-kbd")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "input-group-with-tooltip": React.lazy(async () => {
+    const m = await import("@/registry/examples/input-group-with-tooltip")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "input-inline": React.lazy(async () => {
@@ -821,6 +937,10 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
   }),
   "input-invalid": React.lazy(async () => {
     const m = await import("@/registry/examples/input-invalid")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "input-otp-alphanumeric": React.lazy(async () => {
+    const m = await import("@/registry/examples/input-otp-alphanumeric")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "input-otp-controlled": React.lazy(async () => {
@@ -839,8 +959,16 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
     const m = await import("@/registry/examples/input-otp-form")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
+  "input-otp-four-digits": React.lazy(async () => {
+    const m = await import("@/registry/examples/input-otp-four-digits")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
   "input-otp-invalid": React.lazy(async () => {
     const m = await import("@/registry/examples/input-otp-invalid")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "input-otp-pattern": React.lazy(async () => {
+    const m = await import("@/registry/examples/input-otp-pattern")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "input-otp-separator": React.lazy(async () => {
@@ -925,6 +1053,10 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
   }),
   "marker-icon": React.lazy(async () => {
     const m = await import("@/registry/examples/marker-icon")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "marker-link-button": React.lazy(async () => {
+    const m = await import("@/registry/examples/marker-link-button")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "marker-separator": React.lazy(async () => {
@@ -1237,6 +1369,10 @@ export const examples: Record<string, React.LazyExoticComponent<React.ComponentT
   }),
   "sidebar-footer": React.lazy(async () => {
     const m = await import("@/registry/examples/sidebar-footer")
+    return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
+  }),
+  "sidebar-group-action": React.lazy(async () => {
+    const m = await import("@/registry/examples/sidebar-group-action")
     return { default: m.default ?? Object.values(m).find((v) => typeof v === "function") }
   }),
   "sidebar-group-collapsible": React.lazy(async () => {
