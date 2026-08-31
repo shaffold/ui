@@ -32,7 +32,9 @@
       // template rewrites this to the adopter's styles/<combo>/ui.
       "@/registry/ui/*": ["./styles/base-nova/ui/*"],
       "@/*": ["./*"],
-      "react": ["./node_modules/@types/react"]
+      "react": ["./node_modules/@types/react"],
+      "react/jsx-runtime": ["./node_modules/@types/react/jsx-runtime"],
+      "react/jsx-dev-runtime": ["./node_modules/@types/react/jsx-dev-runtime"]
     }
   },
   "include": [
