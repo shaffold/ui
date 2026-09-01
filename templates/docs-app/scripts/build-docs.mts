@@ -211,6 +211,7 @@ async function writeNav(components: { title: string; name: string }[]) {
     `    title: "Getting Started",\n` +
     `    items: [\n` +
     `      { title: "Introduction", href: "/docs" },\n` +
+    `      { title: "Changelog", href: "/docs/changelog" },\n` +
     `    ],\n` +
     `  },\n` +
     `  {\n` +

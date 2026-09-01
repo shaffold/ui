@@ -10,6 +10,7 @@ export const docsNav: DocsNavGroup[] = [
     title: "Getting Started",
     items: [
       { title: "Introduction", href: "/docs" },
+      { title: "Changelog", href: "/docs/changelog" },
     ],
   },
   {
