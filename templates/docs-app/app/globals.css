@@ -106,9 +106,18 @@
   color: var(--shiki-dark) !important;
 }
 
-/* shiki dual-theme output from lib/highlight-code (ComponentPreview Code tab +
+/* Code surface — matches the shiki github light/dark backgrounds so the
+   ComponentPreview "View Code" gradient fades seamlessly into the code. */
+:root {
+  --color-code: #ffffff;
+}
+.dark {
+  --color-code: #24292e;
+}
+
+/* shiki dual-theme output from lib/highlight-code (ComponentPreview code +
    ComponentSource). Light colors/bg are inline; swap to the dark palette under
-   .dark, otherwise the Code tab stays white in dark mode. */
+   .dark, otherwise the code stays white in dark mode. */
 .dark .shiki {
   background-color: var(--shiki-dark-bg) !important;
   color: var(--shiki-dark) !important;
